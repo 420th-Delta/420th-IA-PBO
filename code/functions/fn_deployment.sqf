@@ -311,9 +311,12 @@ if (_mode isEqualTo 'PRESET') exitWith {
 			[],
 			[WEST],
 			{
-				_spawnpos = (markerPos ['QS_marker_respawn_jetpilot',TRUE]);
-				QS_player setDir (markerDir 'QS_marker_respawn_jetpilot');
-				QS_player setPosASL _spawnpos;
+				// _spawnpos = (markerPos ['QS_marker_respawn_jetpilot',TRUE]);
+				// QS_player setDir (markerDir 'QS_marker_respawn_jetpilot');
+				// QS_player setPosASL _spawnpos;
+				_spawnpos = [14890.1,16545.5,20.4]; // CUSTOM LOCATION
+				QS_player setDir 314;
+				QS_player setPosWorld _spawnpos;
 			},
 			{TRUE},
 			{
