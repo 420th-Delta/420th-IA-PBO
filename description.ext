@@ -30,13 +30,13 @@ missionGroup = "ApexFramework";										/*/ Required for missionProfileNamespac
 class Header {
 	gameType = COOP;												/*/ Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend./*/
 	minPlayers = 1;													/*/ Min # of players the MISSION supports/*/
-	maxPlayers = 84;												/*/ Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots./*/
+	maxPlayers = 112;												/*/ Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots./*/
 };
 skipLobby = 0;											// Player skips lobby on join. An attractive idea, however many players report "Stuck on receieving data" when this is enabled due to bugged lobby slots. So we leave this off for stability.
 disabledAI = 1;											/*/ No AI in playable units/*/
 aiKills = 0; 											/*/ disable scorelist for AI players/*/
 enableItemsDropping = 0; 								/*/ disabled with 0/*/
-joinUnassigned = 0;										/*/ 0 = players forced into role on join/*/
+joinUnassigned = 1;										/*/ 0 = players forced into role on join/*/
 showUAVFeed = 1;										/*/ Enables/Disables the UAV Feed./*/
 showGroupIndicator = 0;
 showSquadRadar = 0;
@@ -79,7 +79,23 @@ respawnDialog = 0;										/*/ default = 1. show respawn timer and scoreboard w
 respawnOnStart = 0;
 
 // Security - CfgRemoteExec + CfgDisabledCommands
-#include "code\config\security.hpp"						// Delete this line if you are having issues with Mod/DLC compatibility. This file contains CfgRemoteExec + CfgDisabledCommands
+// #include "code\config\security.hpp"						// Delete this line if you are having issues with Mod/DLC compatibility. This file contains CfgRemoteExec + CfgDisabledCommands
+
+//class CfgRemoteExec
+//{
+//	class Functions
+//	{
+//		mode = 2;
+//		jip = 1;
+//	};
+//
+//	class Commands
+//	{
+//		mode = 2;
+//		jip = 1;
+//	};
+//};
+
 
 // CfgFunctions
 class CfgFunctions {

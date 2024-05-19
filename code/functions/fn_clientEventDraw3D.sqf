@@ -240,7 +240,7 @@ if ((missionNamespace getVariable ['QS_enabledWaypoints',2]) isEqualTo 0) then {
 		(_cwp isNotEqualTo []) &&
 		((worldToScreen _cwp) isNotEqualTo [])
 	) then {
-		if (
+/*		if (
 			(
 				(!(_cameraOn isKindOf 'Plane')) || 
 				(_cameraOn isKindOf 'VTOL_01_base_F')
@@ -253,7 +253,8 @@ if ((missionNamespace getVariable ['QS_enabledWaypoints',2]) isEqualTo 0) then {
 				) || 
 				(!(_cameraOn isKindOf 'CAManBase'))
 			)
-		) then {
+		) */
+		if (true) then {
 			private _cwpCanShow = TRUE;
 			_gpsJammers = missionNamespace getVariable ['QS_mission_gpsJammers',[]];
 			if (_gpsJammers isNotEqualTo []) then {
