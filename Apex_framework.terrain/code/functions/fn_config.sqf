@@ -164,9 +164,49 @@ if (isNil {uiNamespace getVariable 'QS_fnc_serverCommandPassword'}) exitWith {
 	] remoteExec ['call',-2,TRUE];
 };
 
-missionNamespace setVariable ['QS_server_isUsingDB',FALSE,FALSE];
+private _extDB3_version = "extDB3" callExtension "9:VERSION";
+private _has_extDB3 = _extDB3_version isNotEqualTo "";
+missionNamespace setVariable ['QS_server_isUsingDB',_has_extDB3,FALSE];
 
 /*/ EXTDB3 - Database - Server Setup component would go here /*/
+private _extDB3_ready = false;
+if (_has_extDB3) then {
+	diag_log format ["Setting up extDB3 database (version %1)", _extDB3_version];
+	private "_ret";
+
+	if ("extDB3" callExtension "9:LOCK_STATUS" isEqualTo "[1]") exitWith {
+		// A mission reload probably occurred, verify that our protocol exists
+		_ret = parseSimpleArray ("extDB3" callExtension "0:ina:getProtocolVersion");
+		if (_ret # 0 isNotEqualTo 0) then {
+			diag_log "Database is locked but appears to be configured, finishing setup";
+			_extDB3_ready = true;
+		} else {
+			diag_log "Database is locked and unable to be configured";
+		};
+	};
+
+	_ret = "extDB3" callExtension "9:ADD_DATABASE:INA";
+	if (_ret isNotEqualTo "[1]") exitWith {diag_log format ["extDB3 ADD_DATABASE failed with: %1", _ret]};
+
+	_ret = "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:INA:SQL_CUSTOM:ina:ina.ini";
+	if (_ret isNotEqualTo "[1]") exitWith {diag_log format ["extDB3 ADD_DATABASE_PROTOCOL failed with: %1", _ret]};
+
+	diag_log format ["extDB3 OUTPUTSIZE: %1", "extDB3" callExtension "9:OUTPUTSIZE"];
+	diag_log format ["extDB3 LOCK: %1", "extDB3" callExtension "9:LOCK"];
+
+	_extDB3_ready = true;
+};
+
+QS_script_dbWhitelistRefresher = scriptNull;
+if (_extDB3_ready && QS_missionConfig_dbWhitelistEnabled) then {
+	diag_log "Database whitelisting enabled";
+	QS_fnc_whitelist = compileFinal "call QS_fnc_dbWhitelist";
+	QS_script_dbWhitelistRefresher = 0 spawn QS_fnc_dbWhitelistRefresher;
+} else {
+	diag_log "Database whitelisting disabled, using whitelist.sqf";
+	QS_fnc_whitelist = compileScript ['@Apex_cfg\whitelist.sqf',TRUE];
+};
+publicVariable "QS_fnc_whitelist";
 
 // Server Event Handler
 serverNamespace setVariable ['QS_fnc_serverEventHandler',compileScript ["code\functions\fn_serverEventHandler.sqf",TRUE]];
