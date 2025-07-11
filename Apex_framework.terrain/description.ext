@@ -735,6 +735,11 @@ class CfgFunctions {
 			class zonePreset {file = "code\functions\fn_zonePreset.sqf";};
 		};
 	};
+    class TGC {
+        class Settings {
+            class addSetting {};
+        };
+    };
 };
 class CfgDebriefing {
 	class QS_RD_end_2 {
