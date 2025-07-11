@@ -737,6 +737,7 @@ class CfgFunctions {
 	};
     class TGC {
         class Lasers {
+            class findLaserInstigators {};
             class initLaserHandlers { postInit = 1; };
         };
         class Settings {

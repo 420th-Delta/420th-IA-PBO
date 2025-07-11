@@ -36,6 +36,16 @@ private _laser = "Laser Designators";
     },
     false
 ] call TGC_fnc_addSetting;
+[
+    "TGC_laserTarget_draw3D",
+    "CHECKBOX",
+    ["Visualize Laser Targets", "Render 3D icons for laser targets detected by your vehicle's sensors."],
+    [_category, _laser],
+    true,
+    false,
+    {},
+    false
+] call TGC_fnc_addSetting;
 
 if (!hasInterface) exitWith {};
 
@@ -47,4 +57,56 @@ addMissionEventHandler ["EntityCreated", {
 
     private _groups = allGroups select {local _x};
     {_x ignoreTarget _entity} forEach _groups;
+}];
+
+addMissionEventHandler ["Draw3D", {
+    if (!TGC_laserTarget_draw3D) exitWith {};
+
+    private _vehicle = objectParent focusOn;
+    if (isNull _vehicle) exitWith {};
+
+    assignedVehicleRole focusOn params [["_role", ""]];
+    if !(_role in ["driver", "turret"]) exitWith {};
+
+    private _laserTargets =
+        getSensorTargets _vehicle
+        select {_x # 1 isEqualTo "lasertarget"}
+        apply {_x # 0};
+    if (count _laserTargets < 1) exitWith {};
+
+    private _side = side group focusOn;
+    private _laserInstigators = [_side] call TGC_fnc_findLaserInstigators;
+    {
+        private _isTarget = cursorTarget isEqualTo _x;
+        private _distance = focusOn distanceSqr _x;
+        private _size = linearConversion [2500, 6250000, _distance, 1, 0.5, true];
+
+        _laserInstigators
+            get netId _x
+            params [["_vehicle", objNull], ["_instigator", objNull]];
+        if (_vehicle isEqualTo _instigator) then {_vehicle = objNull};
+
+        private _vehicleName = configOf _vehicle call BIS_fnc_displayName;
+        private _name = switch (true) do {
+            case (isPlayer _instigator): {name _instigator};
+            case (!isNull _instigator): {"AI"};
+            default {""};
+        };
+        private _text = switch (true) do {
+            case (_vehicleName != "" && {_name != ""}): {format ["%1 (%2)", _vehicleName, _name]};
+            case (_vehicleName != ""): {_vehicleName};
+            default {_name};
+        };
+
+        drawIcon3D [
+            "\a3\ui_f_curator\data\cfgcurator\laser_ca.paa",
+            [1, 0.2, 0.2, [0.5, 0.9] select _isTarget],
+            getPosATL _x,
+            _size,
+            _size,
+            0,
+            _text,
+            2
+        ];
+    } forEach _laserTargets;
 }];
