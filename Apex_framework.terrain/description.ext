@@ -434,10 +434,6 @@ class CfgFunctions {
 			class customBuildingPositions {file = "code\functions\fn_customBuildingPositions.sqf";};
 			class customInventory {file = "code\functions\fn_customInventory.sqf";};
 			class customVehicles {file = "code\functions\fn_customVehicles.sqf";};
-			class dbQuery {file = "code\functions\fn_dbQuery.sqf";};
-			class dbStrip {file = "code\functions\fn_dbStrip.sqf";};
-			class dbWhitelist {file = "code\functions\fn_dbWhitelist.sqf";};
-			class dbWhitelistRefresher {file = "code\functions\fn_dbWhitelistRefresher.sqf";};
 			class deltaVD {file = "code\functions\fn_deltaVD.sqf";};
 			class deployAssault {file = "code\functions\fn_deployAssault.sqf";};
 			class deployAsset {file = "code\functions\fn_deployAsset.sqf";};
@@ -743,6 +739,13 @@ class CfgFunctions {
 		};
 	};
     class TGC {
+        class Database {
+            file = "TGC\Functions\Database";
+            class dbQuery {};
+            class dbStrip {};
+            class dbWhitelist {};
+            class dbWhitelistRefresher {};
+        };
         class Drones {
             file = "TGC\Functions\Drones";
             class initDroneHandlers { postInit = 1; };
