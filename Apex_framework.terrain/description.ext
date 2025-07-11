@@ -737,11 +737,13 @@ class CfgFunctions {
 	};
     class TGC {
         class Lasers {
-            class findLaserInstigators {};
-            class initLaserHandlers { postInit = 1; };
+			file = "TGC\Functions\Lasers";
+            class findLaserInstigators { file = "TGC\Functions\Lasers\fn_findLaserInstigators.sqf"; };
+            class initLaserHandlers { postInit = 1; file = "TGC\Functions\Lasers\fn_initLaserHandlers.sqf"; };
         };
         class Settings {
-            class addSetting {};
+			file = "TGC\Functions\Settings";
+            class addSetting { file = "TGC\Functions\Setting\fn_addSetting.sqf"; };
         };
     };
 };
