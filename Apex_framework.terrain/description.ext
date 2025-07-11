@@ -737,12 +737,12 @@ class CfgFunctions {
 	};
     class TGC {
         class Lasers {
-			file = "TGC\Functions\Lasers";
+            file = "TGC\Functions\Lasers";
             class findLaserInstigators {};
             class initLaserHandlers { postInit = 1; };
         };
         class Setting {
-			file = "TGC\Functions\Setting";
+            file = "TGC\Functions\Setting";
             class addSetting {};
         };
     };
