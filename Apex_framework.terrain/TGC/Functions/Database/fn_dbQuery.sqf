@@ -30,7 +30,7 @@ ___________________________________________________________________________/*/
 params ["_function", ["_args", []], ["_wait", true]];
 
 private _mode = ["1", "2"] select _wait;
-private _query = [_function] + (_args apply {str _x call QS_fnc_dbStrip}) joinString ":";
+private _query = [_function] + (_args apply {str _x call TGC_fnc_dbStrip}) joinString ":";
 private _args = format ["%1:ina:%2", _mode, _query];
 if (QS_missionConfig_dbQueryDebug) then {diag_log format ["fn_dbQuery.sqf: Executing query %1", _query]};
 private _key = "extDB3" callExtension _args;

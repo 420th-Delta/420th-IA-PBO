@@ -14,7 +14,7 @@ Description:
 ___________________________________________________________________________/*/
 for "_i" from 0 to 1 step 0 do {
 	try {
-		private _whitelists = ["getWhitelists"] call QS_fnc_dbQuery;
+		private _whitelists = ["getWhitelists"] call TGC_fnc_dbQuery;
 		QS_whitelist_data = createHashMap;
 		{
 			_x params ["_id", "_role"];
