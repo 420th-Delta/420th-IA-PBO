@@ -530,6 +530,7 @@ QS_ui_releaseActions = [
 ['INIT'] call (missionNamespace getVariable 'QS_fnc_wreckSetMaterials');
 
 // Preload Arsenal
+diag_log "***** Preloading arsenal *****";
 [player] call (missionNamespace getVariable 'QS_fnc_clientArsenal');
 
 // Preload Dynamic Groups

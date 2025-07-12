@@ -1,39 +1,63 @@
 /*/
 File: fn_clientArsenal.sqf
-Author: 
+Author:
 
 	Quiksilver
 
 Last Modified:
 
-	21/09/2023 A3 2.14 by Quiksilver
+	4/11/2022 A3 2.10 by Quiksilver
 
 Description:
 
 	Setup Client Arsenal
 ____________________________________________________/*/
 
-params [
-	['_unit',player]
-];
-_unit setVariable ['bis_addVirtualWeaponCargo_cargo',[[],[],[],[]],FALSE];
-if ((missionNamespace getVariable ['QS_missionConfig_Arsenal',0]) isEqualTo 3) exitWith {
-	// Populate faces list
-	private _data = [];
-	{
-		{
-			if (
-				((getnumber (_x >> 'disabled')) isEqualTo 0) && 
-				{((gettext (_x >> 'head')) isNotEqualTo '')} && 
-				{((configname _x) != 'Default')}
-			) then {
-				_data pushBack (configName _x);
-			};
-		} foreach ('isclass _x' configclasses _x);
-	} foreach ('isclass _x' configclasses (configfile >> 'cfgfaces'));
-	(missionNamespace getVariable 'bis_fnc_arsenal_data') set [15,_data];
+params [['_unit',player],['_checkRunningScript',true]];
+
+// Below is a very primitive way of preventing concurrency
+// and is prone to race conditions:
+// 1. Multiple calls to QS_fnc_clientArsenal will be ignored,
+//    potentially missing out on updates if the script is almost done
+// 2. This check is not atomic and two scripts can still be spawned at once
+if (
+	_checkRunningScript
+	&& {!isNil 'QS_client_arsenalScript'
+	&& {!scriptDone QS_client_arsenalScript}}
+) exitWith {
+	waitUntil {scriptDone QS_client_arsenalScript};
 };
+// if (
+// 	!_checkRunningScript
+// 	&& {!isNil '_thisScript'
+// 	&& {!isNil 'QS_client_arsenalScript'
+// 	&& {_thisScript isNotEqualTo QS_client_arsenalScript}}}
+// ) exitWith {};
+if (_checkRunningScript) exitWith {
+	QS_client_arsenalScript = [_unit,false] spawn QS_fnc_clientArsenal;
+	waitUntil {scriptDone QS_client_arsenalScript};
+};
+
+_unit setVariable ['bis_addVirtualWeaponCargo_cargo',[[],[],[],[]],FALSE];
+
+if (QS_missionConfig_Arsenal isEqualTo 3) exitWith {};
 private _configRestrictions = getMissionConfigValue ['arsenalRestrictedItems',[]];
+
+// This script can take a long time depending on installed mods
+// so we'll record performance statistics per step
+private _startTime = diag_tickTime;
+private _lastStepTime = _startTime;
+private _logDurationThreshold = 1;
+private _logStatistics = [];
+private _getStepTime = {
+	private _time = diag_tickTime;
+	private _delta = _time - _lastStepTime;
+	_lastStepTime = _time;
+	_delta;
+};
+private _logStep = {
+	_logStatistics pushBack [_this,call _getStepTime];
+};
 
 /*/ To Do: Implement this instead of the below lists
 (call (missionNamespace getVariable 'QS_data_restrictedGear')) params [
@@ -110,7 +134,8 @@ private _QS_restrictedItems = [
 	'i_uavterminal',
 	'c_uavterminal',
 	'i_e_uavterminal'
-] + _configRestrictions;
+];
+_QS_restrictedItems append _configRestrictions;
 private _QS_restrictedWeapons = [
 	'apersminedispenser_mag'
 ];
@@ -206,7 +231,9 @@ private _QS_restrictedBackpacks = [
 	'i_ugv_02_demining_backpack_f',
 	'o_ugv_02_demining_backpack_f'
 ];
-if ((_unit getVariable ['QS_unit_side',WEST]) in [EAST,RESISTANCE]) then {
+
+private _unitSide = _unit getVariable ['QS_unit_side',WEST];
+if (_unitSide in [EAST,RESISTANCE]) then {
 	_QS_restrictedItems = _QS_restrictedItems -	[
 		'','u_i_c_soldier_bandit_4_f','u_i_c_soldier_bandit_1_f','u_i_c_soldier_bandit_2_f','u_i_c_soldier_bandit_5_f','u_i_c_soldier_bandit_3_f','u_o_t_soldier_f',
 		'u_o_combatuniform_ocamo','u_o_combatuniform_oucamo','u_o_fullghillie_ard','u_o_t_fullghillie_tna_f','u_o_fullghillie_lsh','u_o_fullghillie_sard','u_o_t_sniper_f',
@@ -215,178 +242,238 @@ if ((_unit getVariable ['QS_unit_side',WEST]) in [EAST,RESISTANCE]) then {
 		'u_i_c_soldier_para_1_f','u_o_pilotcoveralls','u_o_specopsuniform_ocamo','u_i_c_soldier_camo_f'
 	];
 };
-missionNamespace setVariable ['QS_arsenal_missionBlacklist',[[_QS_restrictedItems,_QS_restrictedWeapons,_QS_restrictedMagazines,_QS_restrictedBackpacks],(_QS_restrictedItems + _QS_restrictedWeapons + _QS_restrictedMagazines + _QS_restrictedBackpacks)],FALSE];
-_isBlacklisted = (missionNamespace getVariable ['QS_missionConfig_Arsenal',0]) isEqualTo 2;
-if ((_isBlacklisted) || {((missionNamespace getVariable ['QS_missionConfig_Arsenal',0]) isEqualTo 0)}) then {
+
+_combinedRestrictions = [];
+_combinedRestrictions append _QS_restrictedItems;
+_combinedRestrictions append _QS_restrictedWeapons;
+_combinedRestrictions append _QS_restrictedMagazines;
+_combinedRestrictions append _QS_restrictedBackpacks;
+QS_arsenal_missionBlacklist = [
+	[_QS_restrictedItems,_QS_restrictedWeapons,_QS_restrictedMagazines,_QS_restrictedBackpacks],
+	_combinedRestrictions
+];
+'Define restrictions' call _logStep;
+
+// Optimize membership testing for above restrictions
+_combinedRestrictionsMap = createHashMap;
+{_combinedRestrictionsMap set [_x,true]} forEach _combinedRestrictions;
+'Create restriction hashmap' call _logStep;
+
+_isBlacklisted = QS_missionConfig_Arsenal isEqualTo 2;
+if (_isBlacklisted || {QS_missionConfig_Arsenal isEqualTo 0}) then {
 	// If using blacklist, we first have to add everything, so we can remove the blacklisted items.
+
+	if (!isNil 'QS_client_arsenalCache') exitWith {
+		_unit setVariable ['bis_addVirtualWeaponCargo_cargo',+QS_client_arsenalCache,FALSE];
+		'Reuse cached arsenal data' call _logStep;
+	};
+
 	private _internalRestrictions = TRUE;		// Caution, leave TRUE unless you know what you're doing. Set FALSE to disable hard-coded restrictions (respawn backpacks, racing + vr uniforms, etc).
-	private _cfgItems = [];
-	private _cfgWeapons = [];
-	private _cfgMagazines = [];
-	private _cfgBackpacks = [];
-	_configArray = (
-		('((isclass _x) && ((((configName _x) isKindOf ["ItemCore",configFile >> "CfgWeapons"])) || (((configName _x) isKindOf ["DetectorCore",configFile >> "CfgWeapons"])) || (((configName _x) isKindOf ["NVGoggles",configFile >> "CfgWeapons"]))))' configclasses (configfile >> 'cfgweapons')) + 
-		('("isclass _x && getnumber (_x >> ""scope"") isEqualTo 2 && getnumber (_x >> ""isBackpack"") isEqualTo 1")' configclasses (configfile >> 'cfgvehicles')) + 
-		('isclass _x' configclasses (configfile >> 'cfgglasses'))
+
+	private _configArray = [];
+	_configArray append (
+		'
+		configName _x isKindOf ["ItemCore",configFile >> "CfgWeapons"]
+		|| {configName _x isKindOf ["DetectorCore",configFile >> "CfgWeapons"]
+		|| {configName _x isKindOf ["NVGoggles",configFile >> "CfgWeapons"]}}
+		' configClasses (configFile >> 'CfgWeapons')
 	);
-	private _weaponType = '';
-	private _weaponTypeCategory = '';
-	private _class = configNull;
-	private _className = '';
-	private _scope = -1;
-	private _isBase = FALSE;
-	private _weaponTypeSpecific = '';
-	private _weaponTypeID = -1;
-	if (!(_internalRestrictions)) then {
-		_QS_restrictedItems = [];
+	_configArray append (
+		'
+		getNumber (_x >> "scope") isEqualTo 2
+		&& {getNumber (_x >> "isBackpack") isEqualTo 1}
+		' configClasses (configFile >> 'CfgVehicles')
+	);
+	_configArray append (
+		'true' configClasses (configFile >> 'CfgGlasses')
+	);
+	format ['Filter item configs (total: %1)',count _configArray] call _logStep;
+
+	if !(_internalRestrictions) then {
+		_combinedRestrictionsMap = createHashMap;
 	};
+
+	// Collect item classes (slow!)
+	private _cfgItems = createHashMap;
 	{
-		_class = _x;
-		_className = configName _class;
-		_scope = if (isnumber (_class >> 'scopeArsenal')) then {getnumber (_class >> 'scopeArsenal')} else {getnumber (_class >> 'scope')};
-		_isBase = if (isarray (_class >> 'muzzles')) then {((_className call (missionNamespace getVariable 'QS_fnc_baseWeapon')) == _className)} else {TRUE};
-		if ((_scope isEqualTo 2) && {((gettext (_class >> 'model')) isNotEqualTo '')} && _isBase) then {
-			_weaponType = (_className call (missionNamespace getVariable 'BIS_fnc_itemType'));
-			_weaponTypeCategory = _weaponType # 0;
-			if (_weaponTypeCategory != 'VehicleWeapon') then {
-				if (!( (toLowerANSI _className) in _QS_restrictedItems)) then {
-					_cfgItems pushBackUnique _className;
-				};
-			};
-		};
-	} foreach _configArray;
-	_cfgWeapons = ("(isclass _x) && ((getnumber (_x >> 'scope')) isEqualTo 2) && (((getnumber (_x >> 'type')) < 5) || ((getnumber (_x >> 'type')) isEqualTo 4096))") configClasses (configFile >> 'cfgWeapons');
-	_cfgWeapons = _cfgWeapons apply { (configName _x) };
-	_cfgWeapons = _cfgWeapons select {((_x call (missionNamespace getVariable 'QS_fnc_baseWeapon')) == _x)};
-	_cfgWeapons = _cfgWeapons arrayIntersect _cfgWeapons;
-	if (!(_internalRestrictions)) then {
-		_QS_restrictedWeapons = [];
-	};
-	_cfgWeapons = _cfgWeapons select {(!((toLowerANSI _x) in _QS_restrictedWeapons))};
-	private _weaponClass = '';
-	private _mag = '';
-	private _cfgMag = configNull;
-	private _weapon = configNull;
-	private _muzzles = [];
-	private _muzzle = configNull;
-	private _magazines = [];
-	if (!(_internalRestrictions)) then {
-		_QS_restrictedMagazines = [];
-	};
-	{
-		_weaponClass = _x;
-		_weapon = configFile >> 'CfgWeapons' >> _weaponClass;
-		if ((toLowerANSI _weaponClass) in ['throw','put']) then {
-			_muzzles = getArray (_weapon >> 'muzzles');
-			{
-				_muzzle = _x;
-				_magazines = getArray (configFile >> 'CfgWeapons' >> _weaponClass >> _muzzle >> 'magazines');
-				{
-					if (isClass (configFile >> 'CfgMagazines' >> _x)) then {
-						if ((getNumber (configFile >> 'CfgMagazines' >> _x >> 'scope')) isEqualTo 2) then {
-							_cfgMagazines pushBackUnique _x;
-						};
-					};
-				} forEach _magazines;
-			} forEach _muzzles;
+		private _class = _x;
+		private _className = configName _class;
+
+		private _scope = if (isNumber (_class >> 'scopeArsenal')) then {
+			getNumber (_class >> 'scopeArsenal')
 		} else {
+			getNumber (_class >> 'scope')
+		};
+		if (_scope isNotEqualTo 2) then {continue};
+
+		if (getText (_class >> 'model') isEqualTo '') then {continue};
+
+		private _isBase = (
+			!(isArray (_class >> 'muzzles'))
+			|| {_className call QS_fnc_baseWeapon == _className}
+		);
+		if (!_isBase) then {continue};
+
+		private _weaponType = _className call BIS_fnc_itemType;
+		private _weaponTypeCategory = _weaponType # 0;
+		if (_weaponTypeCategory == 'VehicleWeapon') then {continue};
+
+		if (toLowerANSI _className in _combinedRestrictionsMap) then {continue};
+
+		_cfgItems set [_className,true];
+	} forEach _configArray;
+	_cfgItems = keys _cfgItems;
+	format ['Collect item classes (total: %1)',count _cfgItems] call _logStep;
+
+	// Collect weapon classes
+	private _cfgWeapons = (
+		'
+		getNumber (_x >> "scope") isEqualTo 2
+		&& {getNumber (_x >> "type") < 5}
+		|| getNumber (_x >> "type") isEqualTo 4096
+		' configClasses (configFile >> 'CfgWeapons')
+	);
+	_cfgWeapons = _cfgWeapons select {
+		private _name = configName _x;
+		(
+			!(toLowerANSI _name in _combinedRestrictionsMap)
+			&& {_name call QS_fnc_baseWeapon == _name}
+		)
+	};
+	_cfgWeapons = _cfgWeapons apply {configName _x};
+	format ['Collect weapon classes (total: %1)',count _cfgWeapons] call _logStep;
+
+	// Collect magazine classes
+	private _cfgMagazines = createHashMap;
+	{
+		private _weaponClass = _x;
+		private _weapon = configFile >> 'CfgWeapons' >> _weaponClass;
+		{
+			private _mag = _x;
+			if (toLowerANSI _x in _combinedRestrictionsMap) then {continue};
+			_cfgMagazines set [_x,true];
+		} forEach (getArray (_weapon >> 'magazines'));
+	} forEach _cfgWeapons;
+	{
+		private _weaponClass = _x;
+		private _weapon = configFile >> 'CfgWeapons' >> _weaponClass;
+		private _muzzles = getArray (_weapon >> 'muzzles');
+		{
+			private _muzzle = _x;
+			private _magazines = getArray (configFile >> 'CfgWeapons' >> _weaponClass >> _muzzle >> 'magazines');
 			{
-				_mag = _x;
-				if (!(_x in _cfgMagazines)) then {
-					if (!((toLowerANSI _x) in _QS_restrictedMagazines)) then {
-						_cfgMagazines pushBackUnique _x;
+				if (isClass (configFile >> 'CfgMagazines' >> _x)) then {
+					if ((getNumber (configFile >> 'CfgMagazines' >> _x >> 'scope')) isEqualTo 2) then {
+						_cfgMagazines set [_x,true];
 					};
 				};
-			} foreach (getarray (_weapon >> 'magazines'));
-		};
-	} foreach (_cfgWeapons + ['throw','put']);
-	_cfgBackpacks = ("isclass _x && getnumber (_x >> 'scope') >= 1 && getnumber (_x >> 'isBackpack') isEqualTo 1") configClasses (configFile >> 'cfgvehicles');
-	_cfgBackpacks = _cfgBackpacks apply { (configName _x) };
-	_cfgBackpacks = _cfgBackpacks select {((_x call (missionNamespace getVariable 'QS_fnc_baseBackpack')) == _x)};
-	_cfgBackpacks = _cfgBackpacks arrayIntersect _cfgBackpacks;
-	if (!(_internalRestrictions)) then {
-		_QS_restrictedBackpacks = [];
+			} forEach _magazines;
+		} forEach _muzzles;
+	} forEach ['Throw','Put'];
+	_cfgMagazines = keys _cfgMagazines;
+	format ['Collect magazine classes (total: %1)',count _cfgMagazines] call _logStep;
+
+	// Collect backpack classes
+	private _cfgBackpacks = (
+		'
+		getNumber (_x >> "scope") >= 1
+		&& {getNumber (_x >> "isBackpack") isEqualTo 1}
+		' configClasses (configFile >> 'CfgVehicles')
+	);
+	_cfgBackpacks = _cfgBackpacks select {
+		private _name = configName _x;
+		(
+			!(toLowerANSI _name in _combinedRestrictionsMap)
+			&& {_name call QS_fnc_baseBackpack == _name}
+		)
 	};
-	_cfgBackpacks = _cfgBackpacks select {(!((toLowerANSI _x) in _QS_restrictedBackpacks))};
-	_unit setVariable ['bis_addVirtualWeaponCargo_cargo',[_cfgItems,_cfgWeapons,_cfgMagazines,_cfgBackpacks],FALSE];	
+	_cfgBackpacks = _cfgBackpacks apply {configName _x};
+	format ['Collect backpack classes (total: %1)',count _cfgBackpacks] call _logStep;
+
+	QS_client_arsenalCache = [_cfgItems,_cfgWeapons,_cfgMagazines,_cfgBackpacks];
+	_unit setVariable ['bis_addVirtualWeaponCargo_cargo',+QS_client_arsenalCache,FALSE];
 };
-_data = [(_unit getVariable ['QS_unit_side',WEST]),(_unit getVariable ['QS_unit_role','rifleman'])] call (missionNamespace getVariable 'QS_data_arsenal');
-private _weapons = [];
-(_data # ([1,0] select _isBlacklisted)) params ['_itemsData','_magazines','_backpacks','_weapons'];
-if (_backpacks isNotEqualTo []) then {
-	_backpacks = _backpacks select {((_x call (missionNamespace getVariable 'QS_fnc_baseBackpack')) == _x)};
-};
-if (_weapons isNotEqualTo []) then {
-	_weapons = _weapons select {((_x call (missionNamespace getVariable 'QS_fnc_baseWeapon')) == _x)};
-};
+
+// Get blacklist/whitelist from arsenal.sqf
+private _unitRole = _unit getVariable ['QS_unit_role','rifleman'];
+[_unitSide,_unitRole] call QS_data_arsenal params ['_arsenalBlacklist','_arsenalWhitelist'];
+(
+	[_arsenalWhitelist,_arsenalBlacklist]
+	select _isBlacklisted
+	params ['_itemsData','_magazines','_backpacks','_weapons']
+);
+
+_backpacks = _backpacks select {_x call QS_fnc_baseBackpack == _x};
+_weapons = _weapons select {_x call QS_fnc_baseWeapon == _x};
+'Get blacklist/whitelist' call _logStep;
+
 private _items = [];
 private _goggles = _itemsData # 5;
 if (_goggles isNotEqualTo []) then {
 	_binGoggles = configFile >> 'CfgGlasses';
-	private _goggleClassname = '';
-	private _className = configNull;
 	for '_i' from 0 to ((count _binGoggles) - 1) step 1 do {
-		_className = _binGoggles select _i;
+		private _className = _binGoggles select _i;
 		if (isClass _className) then {
-			_goggleClassname = configName _className;
-			if ((toLowerANSI _goggleClassname) in _goggles) then {
-				_goggles set [(_goggles find (toLowerANSI _goggleClassname)),_goggleClassname];
+			private _goggleClassname = configName _className;
+			if (toLowerANSI _goggleClassname in _goggles) then {
+				_goggles set [_goggles find (toLowerANSI _goggleClassname),_goggleClassname];
 			};
 		};
 	};
 	_itemsData set [5,_goggles];
 };
-{
-	_items = _items + _x;
-} forEach _itemsData;
-if (_isBlacklisted) exitWith {
-	_cargo = _unit getvariable ['bis_addVirtualWeaponCargo_cargo',[[],[],[],[]]];
+_items append flatten _itemsData;
+'Merge blacklist/whitelist' call _logStep;
+
+if (_isBlacklisted) then {
+	_cargo = _unit getVariable ['bis_addVirtualWeaponCargo_cargo',[[],[],[],[]]];
 	_cargo params ['_cargoItems','_cargoWeapons','_cargoMagazines','_cargoBackpacks'];
-	private _class = '';
-	private _foundIndex = -1;
 	{
-		_class = _x;
-		_foundIndex = _cargoItems findIf {((toLowerANSI _x) isEqualTo (toLowerANSI _class))};
+		private _class = _x;
+		private _foundIndex = _cargoItems findIf {toLowerANSI _x isEqualTo toLowerANSI _class};
 		if (_foundIndex isNotEqualTo -1) then {
 			_cargoItems deleteAt _foundIndex;
 		};
 	} forEach _items;
-	if (_weapons isNotEqualTo []) then {
-		{
-			_class = configname (configfile >> 'cfgweapons' >> _x);
-			_foundIndex = _cargoWeapons findIf {((toLowerANSI _x) isEqualTo (toLowerANSI _class))};
-			if (_foundIndex isNotEqualTo -1) then {
-				_cargoWeapons deleteAt _foundIndex;
-			};
-		} forEach _weapons;
-	};
-	if (_magazines isNotEqualTo []) then {
-		{
-			_class = configname (configfile >> 'cfgweapons' >> _x);
-			_foundIndex = _cargoMagazines findIf {((toLowerANSI _x) isEqualTo (toLowerANSI _class))};
-			if (_foundIndex isNotEqualTo -1) then {
-				_cargoMagazines deleteAt _foundIndex;
-			};
-		} forEach _magazines;
-	};	
-	if (_backpacks isNotEqualTo []) then {
-		{
-			_class = _x;
-			_foundIndex = _cargoBackpacks findIf {((toLowerANSI _x) isEqualTo (toLowerANSI _class))};
-			if (_foundIndex isNotEqualTo -1) then {
-				_cargoBackpacks deleteAt _foundIndex;
-			};
-		} forEach _backpacks;
-	};
+	{
+		private _class = configName (configFile >> 'CfgWeapons' >> _x);
+		private _foundIndex = _cargoWeapons findIf {toLowerANSI _x isEqualTo toLowerANSI _class};
+		if (_foundIndex isNotEqualTo -1) then {
+			_cargoWeapons deleteAt _foundIndex;
+		};
+	} forEach _weapons;
+	{
+		private _class = configName (configFile >> 'CfgWeapons' >> _x);
+		private _foundIndex = _cargoMagazines findIf {toLowerANSI _x isEqualTo toLowerANSI _class};
+		if (_foundIndex isNotEqualTo -1) then {
+			_cargoMagazines deleteAt _foundIndex;
+		};
+	} forEach _magazines;
+	{
+		private _class = _x;
+		private _foundIndex = _cargoBackpacks findIf {toLowerANSI _x isEqualTo toLowerANSI _class};
+		if (_foundIndex isNotEqualTo -1) then {
+			_cargoBackpacks deleteAt _foundIndex;
+		};
+	} forEach _backpacks;
 	_unit setVariable ['bis_addVirtualWeaponCargo_cargo',[_cargoItems,_cargoWeapons,_cargoMagazines,_cargoBackpacks],FALSE];
+} else {
+	_items = _items select {!(toLowerANSI _x in _combinedRestrictionsMap)};
+	_magazines = _magazines select {!(toLowerANSI _x in _combinedRestrictionsMap)};
+	_backpacks = _backpacks select {!(toLowerANSI _x in _combinedRestrictionsMap)};
+	_weapons = _weapons select {!(toLowerANSI _x in _combinedRestrictionsMap)};
+	[_unit,_items,FALSE,FALSE] call BIS_fnc_addVirtualItemCargo;
+	[_unit,_magazines,FALSE,FALSE] call BIS_fnc_addVirtualMagazineCargo;
+	[_unit,_backpacks,FALSE,FALSE] call BIS_fnc_addVirtualBackpackCargo;
+	[_unit,_weapons,FALSE,FALSE] call BIS_fnc_addVirtualWeaponCargo;
 };
-{
-	if ((_x # 1) isNotEqualTo []) then {
-		[_unit,(_x # 1),FALSE,FALSE] call (missionNamespace getVariable (_x # 0));
-	};
-} forEach [
-	[(format ['BIS_fnc_%1VirtualItemCargo',(['add','remove'] select _isBlacklisted)]),(_items select {(!( (toLowerANSI _x) in _QS_restrictedItems))})],
-	[(format ['BIS_fnc_%1VirtualMagazineCargo',(['add','remove'] select _isBlacklisted)]),(_magazines select {(!( (toLowerANSI _x) in _QS_restrictedMagazines))})],
-	[(format ['BIS_fnc_%1VirtualBackpackCargo',(['add','remove'] select _isBlacklisted)]),(_backpacks select {(!( (toLowerANSI _x) in _QS_restrictedBackpacks))})],
-	[(format ['BIS_fnc_%1VirtualWeaponCargo',(['add','remove'] select _isBlacklisted)]),(_weapons select {(!( (toLowerANSI _x) in _QS_restrictedWeapons))})]
-];
+'Apply blacklist/whitelist' call _logStep;
+
+private _timeElapsed = diag_tickTime - _startTime;
+if (_timeElapsed > _logDurationThreshold) then {
+	diag_log format ['fn_clientArsenal.sqf took %1 seconds to execute',_timeElapsed];
+	{
+		_x params ['_message','_time'];
+		diag_log format ['%1: %2s',_message,_time];
+	} forEach _logStatistics;
+};
