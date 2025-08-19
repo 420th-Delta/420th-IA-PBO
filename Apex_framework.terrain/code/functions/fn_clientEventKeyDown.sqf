@@ -76,7 +76,7 @@ if (_key in (actionKeys 'PushToTalk')) then {
 			} else {
 				if (
 					(currentChannel isEqualTo 7) &&
-					{((['uavhacker','QS_trait_fighterPilot','QS_trait_pilot','QS_trait_CAS','QS_trait_HQ'] findIf { _player getUnitTrait _x }) isEqualTo -1)} &&
+					{((['uavhacker','QS_trait_fighterPilot','QS_trait_pilot','QS_trait_CAS','QS_trait_HQ','QS_trait_JTAC'] findIf { _player getUnitTrait _x }) isEqualTo -1)} &&
 					{(!((getPlayerUID _player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'))))}
 				) then {
 					setCurrentChannel 5;
