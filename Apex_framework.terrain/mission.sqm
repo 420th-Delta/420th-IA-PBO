@@ -5,25 +5,273 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=517;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=444;
+		nextID=572;
 	};
 	class LayerIndexProvider
 	{
-		nextID=60;
+		nextID=287;
 	};
 	class Camera
 	{
-		pos[]={14681.426,154.47954,16782.947};
-		dir[]={0.64101166,-0.52985162,-0.5553959};
-		up[]={0.40048227,0.84806722,-0.34699276};
-		aside[]={-0.65486562,3.5692938e-007,-0.75581574};
+		pos[]={14952.24,343.42453,16585.887};
+		dir[]={-0.42423201,-0.81761938,0.38927072};
+		up[]={-0.60243434,0.57575893,0.55278802};
+		aside[]={0.6760962,1.6472768e-08,0.73681676};
 	};
 };
 binarizationWanted=0;
-sourceName="Apex_framework_420th";
+sourceName="Apex_framework_420th_20250621";
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Characters_F",
+	"A3_Soft_F_Kart_Kart_01",
+	"A3_Air_F_Jets_Plane_Fighter_04",
+	"A3_Air_F_EPC_Plane_CAS_01",
+	"A3_Air_F_Jets_Plane_Fighter_01",
+	"A3_Air_F_EPC_Plane_CAS_02",
+	"A3_Air_F_Jets_Plane_Fighter_02",
+	"A3_Air_F_Beta_Heli_Attack_02",
+	"A3_Air_F_Heli_Light_02",
+	"A3_Air_F_Enoch_Heli_Light_03",
+	"A3_Air_F_Heli_Light_01",
+	"A3_Air_F_Heli_Heli_Transport_04",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Structures_F_Ind_AirPort",
+	"A3_Structures_F_Households_Addons",
+	"A3_Weapons_F_Ammoboxes",
+	"A3_Structures_F_Civ_Lamps",
+	"A3_Air_F_Exp_VTOL_02",
+	"A3_Air_F_Exp_VTOL_01",
+	"A3_Armor_F_Exp_APC_Tracked_01",
+	"A3_Armor_F_Tank_LT_01",
+	"A3_Armor_F_EPB_APC_Tracked_03",
+	"A3_Armor_F_EPB_MBT_03",
+	"A3_Armor_F_Tank_MBT_04",
+	"A3_Modules_F",
+	"A3_Supplies_F_Heli_CargoNets",
+	"A3_Props_F_Orange_Humanitarian_Supplies",
+	"A3_Structures_F_Kart_Civ_SportsGrounds",
+	"A3_Structures_F_Argo_Decals_Horizontal",
+	"A3_Air_F_Beta_Heli_Transport_01",
+	"A3_Air_F_Beta_Heli_Attack_01",
+	"A3_Armor_F_Exp_MBT_01",
+	"A3_Soft_F_Orange_Van_02",
+	"A3_Soft_F_Orange_Truck_02",
+	"A3_Soft_F_Orange_Offroad_02",
+	"A3_Soft_F_Exp_Truck_01",
+	"A3_Air_F_Gamma_Plane_Fighter_03",
+	"A3_Soft_F_Gamma_Truck_01"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=27;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Soft_F_Kart";
+			name="Arma 3 Karts - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Air_F_Jets";
+			name="Arma 3 Jets - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Air_F_Beta";
+			name="Arma 3 Beta - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Air_F";
+			name="Arma 3 Alpha - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Air_F_Enoch";
+			name="Arma 3 Enoch - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Air_F_Heli";
+			name="Arma 3 Helicopters - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Structures_F_Ind";
+			name="Arma 3 - Industrial Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="A3_Structures_F_Households";
+			name="Arma 3 - Houses";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Air_F_Exp";
+			name="Arma 3 Apex - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item15
+		{
+			className="A3_Armor_F_Exp";
+			name="Arma 3 Apex - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item16
+		{
+			className="A3_Armor_F_Tank";
+			name="Arma 3 Tank - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item17
+		{
+			className="A3_Armor_F_EPB";
+			name="Arma 3 Adapt Episode - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item18
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item19
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item20
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item21
+		{
+			className="A3_Structures_F_Kart";
+			name="Arma 3 Karts - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item22
+		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item23
+		{
+			className="A3_Soft_F_Orange";
+			name="Arma 3 Orange - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item25
+		{
+			className="A3_Air_F_Gamma";
+			name="Arma 3 - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"Kart",
+	"Jets",
+	"Heli",
+	"Expansion",
+	"Tank",
+	"Orange",
+	"Argo"
+};
 randomSeed=2038443;
 class ScenarioData
 {
@@ -34,10 +282,10 @@ class ScenarioData
 	{
 		gameType="Coop";
 	};
-	wreckLimit=1;
-	wreckRemovalMaxTime=60.000004;
 	corpseRemovalMinTime=5;
 	corpseRemovalMaxTime=900;
+	wreckLimit=1;
+	wreckRemovalMaxTime=60.000004;
 };
 class CustomAttributes
 {
@@ -103,11 +351,11 @@ class Mission
 	};
 	class Entities
 	{
-		items=138;
+		items=216;
 		class Item0
 		{
 			dataType="Marker";
-			position[]={14693.144,17.91,16690.063};
+			position[]={14693.144,17.91,16690.062};
 			name="QS_marker_base_marker";
 			text="Base";
 			type="respawn_unknown";
@@ -1026,7 +1274,7 @@ class Mission
 					};
 					id=161;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1063,7 +1311,7 @@ class Mission
 			{
 			};
 			id=160;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item35
 		{
@@ -1388,7 +1636,7 @@ class Mission
 					};
 					id=173;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1425,7 +1673,7 @@ class Mission
 			{
 			};
 			id=172;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item41
 		{
@@ -1630,7 +1878,7 @@ class Mission
 					};
 					id=181;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1667,7 +1915,7 @@ class Mission
 			{
 			};
 			id=180;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item45
 		{
@@ -1692,7 +1940,7 @@ class Mission
 					};
 					id=183;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1729,7 +1977,7 @@ class Mission
 			{
 			};
 			id=182;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item46
 		{
@@ -1754,7 +2002,7 @@ class Mission
 					};
 					id=185;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1791,7 +2039,7 @@ class Mission
 			{
 			};
 			id=184;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item47
 		{
@@ -1816,7 +2064,7 @@ class Mission
 					};
 					id=187;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1853,7 +2101,7 @@ class Mission
 			{
 			};
 			id=186;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item48
 		{
@@ -1938,7 +2186,7 @@ class Mission
 					};
 					id=191;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1975,7 +2223,7 @@ class Mission
 			{
 			};
 			id=190;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item50
 		{
@@ -2000,7 +2248,7 @@ class Mission
 					};
 					id=193;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2037,7 +2285,7 @@ class Mission
 			{
 			};
 			id=192;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item51
 		{
@@ -2122,7 +2370,7 @@ class Mission
 					};
 					id=197;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2159,7 +2407,7 @@ class Mission
 			{
 			};
 			id=196;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item53
 		{
@@ -2184,7 +2432,7 @@ class Mission
 					};
 					id=199;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2221,7 +2469,7 @@ class Mission
 			{
 			};
 			id=198;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item54
 		{
@@ -2246,7 +2494,7 @@ class Mission
 					};
 					id=201;
 					type="B_Soldier_F";
-					atlOffset=2.2888184e-005;
+					atlOffset=2.2888184e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2283,7 +2531,7 @@ class Mission
 			{
 			};
 			id=200;
-			atlOffset=2.2888184e-005;
+			atlOffset=2.2888184e-05;
 		};
 		class Item55
 		{
@@ -2308,7 +2556,7 @@ class Mission
 					};
 					id=203;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2345,7 +2593,7 @@ class Mission
 			{
 			};
 			id=202;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item56
 		{
@@ -2370,7 +2618,7 @@ class Mission
 					};
 					id=205;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2407,7 +2655,7 @@ class Mission
 			{
 			};
 			id=204;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item57
 		{
@@ -2421,7 +2669,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8446.1563,106.00233,25122.777};
+						position[]={8446.1562,106.00233,25122.777};
 					};
 					side="West";
 					flags=7;
@@ -2432,7 +2680,7 @@ class Mission
 					};
 					id=207;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2469,7 +2717,7 @@ class Mission
 			{
 			};
 			id=206;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item58
 		{
@@ -2494,7 +2742,7 @@ class Mission
 					};
 					id=209;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2531,7 +2779,7 @@ class Mission
 			{
 			};
 			id=208;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item59
 		{
@@ -2556,7 +2804,7 @@ class Mission
 					};
 					id=211;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2593,7 +2841,7 @@ class Mission
 			{
 			};
 			id=210;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item60
 		{
@@ -2618,7 +2866,7 @@ class Mission
 					};
 					id=213;
 					type="B_Soldier_F";
-					atlOffset=2.2888184e-005;
+					atlOffset=2.2888184e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2655,7 +2903,7 @@ class Mission
 			{
 			};
 			id=212;
-			atlOffset=2.2888184e-005;
+			atlOffset=2.2888184e-05;
 		};
 		class Item61
 		{
@@ -2680,7 +2928,7 @@ class Mission
 					};
 					id=215;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2717,7 +2965,7 @@ class Mission
 			{
 			};
 			id=214;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item62
 		{
@@ -2742,7 +2990,7 @@ class Mission
 					};
 					id=217;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2779,7 +3027,7 @@ class Mission
 			{
 			};
 			id=216;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item63
 		{
@@ -2804,7 +3052,7 @@ class Mission
 					};
 					id=219;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2841,7 +3089,7 @@ class Mission
 			{
 			};
 			id=218;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item64
 		{
@@ -2926,7 +3174,7 @@ class Mission
 					};
 					id=223;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2963,7 +3211,7 @@ class Mission
 			{
 			};
 			id=222;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item66
 		{
@@ -3048,7 +3296,7 @@ class Mission
 					};
 					id=227;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3085,7 +3333,7 @@ class Mission
 			{
 			};
 			id=226;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item68
 		{
@@ -3159,7 +3407,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8453.2988,105.37357,25117.813};
+						position[]={8453.2988,105.37357,25117.812};
 					};
 					side="West";
 					flags=7;
@@ -3170,7 +3418,7 @@ class Mission
 					};
 					id=231;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3207,7 +3455,7 @@ class Mission
 			{
 			};
 			id=230;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item70
 		{
@@ -3292,7 +3540,7 @@ class Mission
 					};
 					id=235;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3329,7 +3577,7 @@ class Mission
 			{
 			};
 			id=234;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item72
 		{
@@ -3534,7 +3782,7 @@ class Mission
 					};
 					id=243;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3571,7 +3819,7 @@ class Mission
 			{
 			};
 			id=242;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item76
 		{
@@ -3776,7 +4024,7 @@ class Mission
 					};
 					id=251;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3813,7 +4061,7 @@ class Mission
 			{
 			};
 			id=250;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item80
 		{
@@ -3838,7 +4086,7 @@ class Mission
 					};
 					id=253;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3875,7 +4123,7 @@ class Mission
 			{
 			};
 			id=252;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item81
 		{
@@ -4080,7 +4328,7 @@ class Mission
 					};
 					id=261;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4117,7 +4365,7 @@ class Mission
 			{
 			};
 			id=260;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item85
 		{
@@ -4142,7 +4390,7 @@ class Mission
 					};
 					id=263;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4179,7 +4427,7 @@ class Mission
 			{
 			};
 			id=262;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item86
 		{
@@ -4204,7 +4452,7 @@ class Mission
 					};
 					id=265;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4241,7 +4489,7 @@ class Mission
 			{
 			};
 			id=264;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item87
 		{
@@ -4266,7 +4514,7 @@ class Mission
 					};
 					id=267;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4303,7 +4551,7 @@ class Mission
 			{
 			};
 			id=266;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item88
 		{
@@ -4328,7 +4576,7 @@ class Mission
 					};
 					id=269;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4365,7 +4613,7 @@ class Mission
 			{
 			};
 			id=268;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item89
 		{
@@ -4450,7 +4698,7 @@ class Mission
 					};
 					id=273;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4487,7 +4735,7 @@ class Mission
 			{
 			};
 			id=272;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item91
 		{
@@ -4512,7 +4760,7 @@ class Mission
 					};
 					id=275;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4549,7 +4797,7 @@ class Mission
 			{
 			};
 			id=274;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item92
 		{
@@ -4574,7 +4822,7 @@ class Mission
 					};
 					id=277;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4611,7 +4859,7 @@ class Mission
 			{
 			};
 			id=276;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item93
 		{
@@ -4996,7 +5244,7 @@ class Mission
 					};
 					id=291;
 					type="B_Soldier_F";
-					atlOffset=1.5258789e-005;
+					atlOffset=1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5033,7 +5281,7 @@ class Mission
 			{
 			};
 			id=290;
-			atlOffset=1.5258789e-005;
+			atlOffset=1.5258789e-05;
 		};
 		class Item100
 		{
@@ -5118,7 +5366,7 @@ class Mission
 					};
 					id=295;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5155,7 +5403,7 @@ class Mission
 			{
 			};
 			id=294;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item102
 		{
@@ -5240,7 +5488,7 @@ class Mission
 					};
 					id=299;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5277,7 +5525,7 @@ class Mission
 			{
 			};
 			id=298;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item104
 		{
@@ -5317,7 +5565,7 @@ class Mission
 			isPlayable=1;
 			id=302;
 			type="HeadlessClient_F";
-			atlOffset=-1.5258789e-005;
+			atlOffset=-1.5258789e-05;
 		};
 		class Item107
 		{
@@ -5351,7 +5599,7 @@ class Mission
 			name="420TH CUSTOM";
 			class Entities
 			{
-				items=10;
+				items=18;
 				class Item0
 				{
 					dataType="Object";
@@ -5369,7 +5617,7 @@ class Mission
 					};
 					id=307;
 					type="C_Kart_01_F";
-					atlOffset=-1.9073486e-006;
+					atlOffset=-1.9073486e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5405,7 +5653,7 @@ class Mission
 					};
 					id=308;
 					type="C_Kart_01_Blu_F";
-					atlOffset=-1.9073486e-005;
+					atlOffset=-1.9073486e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5441,7 +5689,7 @@ class Mission
 					};
 					id=309;
 					type="C_Kart_01_Red_F";
-					atlOffset=1.9073486e-006;
+					atlOffset=1.9073486e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5477,7 +5725,7 @@ class Mission
 					};
 					id=310;
 					type="C_Kart_01_Vrana_F";
-					atlOffset=-1.9073486e-005;
+					atlOffset=-1.9073486e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5681,18 +5929,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14997.685,21.038103,16636.66};
-								angles[]={0,5.4532485,0};
+								position[]={14997.685,21.038284,16636.66};
+								angles[]={0,5.4532461,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=314;
 							type="B_Plane_CAS_01_dynamicLoadout_F";
-							atlOffset=0.64881897;
+							atlOffset=0.64900017;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5716,18 +5964,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14973.292,20.814951,16611.559};
-								angles[]={0,5.4895978,0};
+								position[]={14973.292,20.815041,16611.559};
+								angles[]={0,5.4896016,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=315;
 							type="B_Plane_CAS_01_dynamicLoadout_F";
-							atlOffset=0.64790916;
+							atlOffset=0.64799881;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5751,19 +5999,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14948.9,21.121632,16586.479};
-								angles[]={0,5.4589562,0};
+								position[]={14948.9,21.12122,16586.479};
+								angles[]={0,5.4589534,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="DarkGreyCamo";
 								disableSimulation=1;
 							};
 							id=316;
 							type="B_Plane_Fighter_01_F";
-							atlOffset=0.65041161;
+							atlOffset=0.64999962;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5857,19 +6105,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14924.51,21.249929,16561.377};
+								position[]={14924.51,21.250269,16561.377};
 								angles[]={0,5.4796009,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="DarkGreyCamo";
 								disableSimulation=1;
 							};
 							id=317;
 							type="B_Plane_Fighter_01_F";
-							atlOffset=0.64966011;
+							atlOffset=0.64999962;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5963,18 +6211,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14802.548,21.553545,16435.908};
+								position[]={14802.548,21.553974,16435.908};
 								angles[]={0,5.4857268,0};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=318;
 							type="O_Plane_CAS_02_dynamicLoadout_F";
-							atlOffset=0.64457321;
+							atlOffset=0.64500237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6004,7 +6252,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=319;
@@ -6039,7 +6287,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="CamoGreyHex";
 								disableSimulation=1;
 							};
@@ -6125,7 +6373,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},25,25,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="CamoGreyHex";
 								disableSimulation=1;
 							};
@@ -6202,7 +6450,7 @@ class Mission
 						};
 					};
 					id=311;
-					atlOffset=0.5196743;
+					atlOffset=0.51970673;
 				};
 				class Item5
 				{
@@ -6210,60 +6458,26 @@ class Mission
 					name="Helicopters";
 					class Entities
 					{
-						items=8;
+						items=7;
 						class Item0
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14740.803,19.831936,16716.988};
+								position[]={14758.267,21.180338,16734.865};
 								angles[]={0,5.4857616,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
-								disableSimulation=1;
-							};
-							id=323;
-							type="B_Heli_Attack_01_dynamicLoadout_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={14758.267,21.130339,16734.865};
-								angles[]={0,5.4857616,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="Black";
 								disableSimulation=1;
 							};
 							id=324;
 							type="O_Heli_Attack_02_dynamicLoadout_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6332,24 +6546,25 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item2
+						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14723.34,20.079647,16698.988};
+								position[]={14723.34,20.129646,16698.988};
 								angles[]={0,5.4857616,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="Blackcustom";
 								disableSimulation=1;
 							};
 							id=325;
 							type="O_Heli_Light_02_dynamicLoadout_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6418,23 +6633,60 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item3
+						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14705.877,19.441074,16681.211};
+								position[]={14705.877,19.491074,16681.211};
 								angles[]={0,5.4857616,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=326;
 							type="I_E_Heli_light_03_dynamicLoadout_F";
+							atlOffset=0.049999237;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14688.413,19.739143,16663.322};
+								angles[]={0,5.4857616,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=327;
+							type="B_Heli_Light_01_dynamicLoadout_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6458,18 +6710,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14688.413,19.689144,16663.322};
-								angles[]={0,5.4857616,0};
+								position[]={14744.098,19.739143,16788.701};
+								angles[]={0,5.4302773,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
-							id=327;
-							type="B_Heli_Light_01_dynamicLoadout_F";
+							id=379;
+							type="B_Heli_Light_01_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6493,18 +6746,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14744.098,19.689144,16788.701};
-								angles[]={0,5.4302773,0};
+								position[]={14734.438,19.739143,16779.174};
+								angles[]={0,5.4541187,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
-							id=379;
+							id=380;
 							type="B_Heli_Light_01_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6528,53 +6782,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14734.438,19.689144,16779.174};
-								angles[]={0,5.4541187,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="0 = [this,10,false,{},15,50,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
-								disableSimulation=1;
-							};
-							id=380;
-							type="B_Heli_Light_01_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item7
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={14755.484,21.019579,16769.451};
+								position[]={14755,21.069578,16769.008};
 								angles[]={0,5.4838767,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,15,false,{},15,100,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=381;
 							type="O_Heli_Transport_04_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6595,6 +6815,7 @@ class Mission
 						};
 					};
 					id=322;
+					atlOffset=0.049999237;
 				};
 				class Item6
 				{
@@ -6602,7 +6823,7 @@ class Mission
 					name="Objects";
 					class Entities
 					{
-						items=19;
+						items=22;
 						class Item0
 						{
 							dataType="Object";
@@ -7144,25 +7365,25 @@ class Mission
 							name="CAS Spawn";
 							class Entities
 							{
-								items=23;
+								items=24;
 								class Item0
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={14892.513,20.362,16543.129};
-										angles[]={0,5.4969082,0};
+										position[]={14892.513,20.36171,16543.129};
+										angles[]={0,5.4969149,0};
 									};
 									side="Empty";
 									flags=1;
 									class Attributes
 									{
-										init="0 = [this,5,false,{},1,1,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+										init="this setvariable [""QS_missionObject_protected"",true];";
 										disableSimulation=1;
 									};
 									id=345;
 									type="Land_i_Addon_03_V1_F";
-									atlOffset=1.3512917;
+									atlOffset=1.3510017;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7186,20 +7407,19 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={14886.967,20.362,16548.664};
-										angles[]={0,2.3553147,0};
+										position[]={14886.967,20.362101,16548.664};
+										angles[]={0,2.3553216,0};
 									};
 									side="Empty";
 									flags=1;
 									class Attributes
 									{
-										ammo=0.80074573;
-										init="0 = [this,5,false,{},1,1,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+										init="this setvariable [""QS_missionObject_protected"",true];";
 										disableSimulation=1;
 									};
 									id=346;
 									type="Land_i_Addon_03_V1_F";
-									atlOffset=1.4648991;
+									atlOffset=1.4650002;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7229,8 +7449,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="0 = [this,5,false,{},1,1,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
-										createAsSimpleObject=1;
+										init="this setvariable [""QS_missionObject_protected"",true];";
 										disableSimulation=1;
 									};
 									id=347;
@@ -7342,18 +7561,17 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={14881.449,20.826139,16546.834};
-										angles[]={0,2.3615,0};
+										position[]={14881.45,21.026146,16546.834};
+										angles[]={0,2.3615003,0};
 									};
 									side="Empty";
 									flags=5;
 									class Attributes
 									{
-										init="0 = [this,5,false,{},1,1,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+										init="this setvariable [""QS_missionObject_protected"",true];";
 									};
 									id=352;
 									type="Land_LampStreet_small_F";
-									atlOffset=-0.20000076;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7377,18 +7595,17 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={14888.799,20.82209,16554.201};
+										position[]={14888.799,21.022091,16554.201};
 										angles[]={0,2.3615003,0};
 									};
 									side="Empty";
 									flags=5;
 									class Attributes
 									{
-										init="0 = [this,5,false,{},1,1,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+										init="this setvariable [""QS_missionObject_protected"",true];";
 									};
 									id=353;
 									type="Land_LampStreet_small_F";
-									atlOffset=-0.20000076;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -7964,9 +8181,43 @@ class Mission
 										nAttributes=1;
 									};
 								};
+								class Item23
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={15046.275,21.012091,17004.227};
+										angles[]={0,2.322165,0};
+									};
+									side="Empty";
+									flags=5;
+									class Attributes
+									{
+										init="this setvariable [""QS_missionObject_protected"",true];";
+									};
+									id=563;
+									type="Land_LampStreet_small_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=0;
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
 							};
 							id=344;
-							atlOffset=0.39696312;
+							atlOffset=0.18848228;
 						};
 						class Item16
 						{
@@ -8073,9 +8324,115 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item19
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14884.849,17.91,16690.193};
+								angles[]={0,0.78063798,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,5,false,{},1,1,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=517;
+							type="Land_HelipadCircle_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item20
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14898.16,17.906906,16677.68};
+								angles[]={6.2818937,0.78063798,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,5,false,{},1,1,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=518;
+							type="Land_HelipadCircle_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15050.631,24.054188,16988.027};
+								angles[]={0,4.2743778,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								init="0 = [this,1,false,{},1,1,-1,false,-1,1,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=562;
+							type="Land_Hangar_F";
+							atlOffset=0.68073082;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=328;
-					atlOffset=0.059160233;
+					atlOffset=0.70314407;
 				};
 				class Item7
 				{
@@ -8089,14 +8446,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14921.154,21.104469,16724.424};
+								position[]={14921.154,21.154469,16724.424};
 								angles[]={0,3.9027481,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
@@ -8104,6 +8461,7 @@ class Mission
 							};
 							id=371;
 							type="O_T_VTOL_02_infantry_dynamicLoadout_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8127,14 +8485,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14935.623,21.091209,16710.674};
+								position[]={14935.623,21.141209,16710.674};
 								angles[]={0,3.9027481,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
@@ -8142,6 +8500,7 @@ class Mission
 							};
 							id=372;
 							type="O_T_VTOL_02_vehicle_dynamicLoadout_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8165,14 +8524,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14950.833,24.493694,16742.865};
+								position[]={14950.833,24.543694,16742.865};
 								angles[]={0.0013439035,0.76822412,6.2765183};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,10,false,{},15,50,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
@@ -8180,6 +8539,7 @@ class Mission
 							};
 							id=373;
 							type="B_T_VTOL_01_armed_F";
+							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8200,7 +8560,7 @@ class Mission
 						};
 					};
 					id=370;
-					atlOffset=-0.053115845;
+					atlOffset=-0.0031166077;
 				};
 				class Item8
 				{
@@ -8214,7 +8574,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="0 = [this,5,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						init="0 = [this,10,false,{},50,100,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 						disableSimulation=1;
 					};
 					id=377;
@@ -8242,18 +8602,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14521.605,20.542719,16767.367};
-						angles[]={0,0.78895861,0};
+						position[]={14499.31,20.991148,16722.162};
+						angles[]={6.2605233,5.5209045,6.2285743};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						init="0 = [this,15,false,{},15,100,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 						disableSimulation=1;
 					};
 					id=382;
 					type="B_T_APC_Tracked_01_rcws_F";
+					atlOffset=-0.012914658;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8272,9 +8633,252 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item10
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14501.564,20.061108,16764.342};
+						angles[]={0.0093286335,2.3627253,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+					};
+					id=547;
+					type="I_LT_01_AT_F";
+					atlOffset=-0.00015258789;
+				};
+				class Item11
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14505.367,20.047684,16768.262};
+						angles[]={0.0053265258,2.362726,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						receiveRemoteTargets=1;
+						reportOwnPosition=1;
+					};
+					id=546;
+					type="I_LT_01_AA_F";
+					atlOffset=-6.6757202e-05;
+				};
+				class Item12
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14497.588,20.026722,16760.172};
+						angles[]={0,2.3627262,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						reportRemoteTargets=1;
+						receiveRemoteTargets=1;
+						reportOwnPosition=1;
+					};
+					id=548;
+					type="I_LT_01_scout_F";
+					atlOffset=-2.0980835e-05;
+				};
+				class Item13
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14493.051,20.026695,16755.754};
+						angles[]={0,2.3627262,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+					};
+					id=549;
+					type="I_LT_01_cannon_F";
+					atlOffset=-4.7683716e-05;
+				};
+				class Item14
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14488.438,20.420795,16750.266};
+						angles[]={0,2.3387411,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+					};
+					id=535;
+					type="I_APC_tracked_03_cannon_F";
+				};
+				class Item15
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14492.829,21.695587,16715.553};
+						angles[]={6.2232571,5.5207682,6.183517};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						reportRemoteTargets=1;
+						receiveRemoteTargets=1;
+					};
+					id=526;
+					type="B_T_APC_Tracked_01_AA_F";
+					atlOffset=-0.020223618;
+				};
+				class Item16
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14475.637,20.67684,16735.229};
+						angles[]={0,2.3387411,0.059928458};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+					};
+					id=531;
+					type="I_MBT_03_cannon_F";
+					atlOffset=-0.0048789978;
+				};
+				class Item17
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14481.931,20.683422,16741.836};
+						angles[]={0,2.3387411,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						textures="Grey";
+						reportRemoteTargets=1;
+						receiveRemoteTargets=1;
+						reportOwnPosition=1;
+					};
+					id=528;
+					type="O_MBT_04_command_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="VehicleCustomization";
+							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=2;
+										class Item0
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Grey";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=4;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showCamonetHull";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+													class Item2
+													{
+														class data
+														{
+															singleType="STRING";
+															value="showCamonetTurret";
+														};
+													};
+													class Item3
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			id=306;
-			atlOffset=0.072557449;
+			atlOffset=-0.019201279;
 		};
 		class Item110
 		{
@@ -8299,7 +8903,7 @@ class Mission
 					};
 					id=389;
 					type="B_Soldier_F";
-					atlOffset=-1.5258789e-005;
+					atlOffset=-1.5258789e-05;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8336,7 +8940,7 @@ class Mission
 			{
 			};
 			id=388;
-			atlOffset=-1.5258789e-005;
+			atlOffset=-1.5258789e-05;
 		};
 		class Item111
 		{
@@ -8361,7 +8965,7 @@ class Mission
 					};
 					id=391;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8398,7 +9002,7 @@ class Mission
 			{
 			};
 			id=390;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item112
 		{
@@ -8483,7 +9087,7 @@ class Mission
 					};
 					id=395;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8520,7 +9124,7 @@ class Mission
 			{
 			};
 			id=394;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item114
 		{
@@ -8545,7 +9149,7 @@ class Mission
 					};
 					id=397;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8582,7 +9186,7 @@ class Mission
 			{
 			};
 			id=396;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item115
 		{
@@ -8596,7 +9200,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8427.7451,109.27951,25128.313};
+						position[]={8427.7451,109.27951,25128.312};
 					};
 					side="West";
 					flags=7;
@@ -8607,7 +9211,7 @@ class Mission
 					};
 					id=399;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8644,7 +9248,7 @@ class Mission
 			{
 			};
 			id=398;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item116
 		{
@@ -8778,7 +9382,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8422.6885,110.78201,25106.063};
+						position[]={8422.6885,110.78201,25106.062};
 					};
 					side="West";
 					flags=7;
@@ -8849,7 +9453,7 @@ class Mission
 					};
 					id=407;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8886,7 +9490,7 @@ class Mission
 			{
 			};
 			id=406;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item120
 		{
@@ -8911,7 +9515,7 @@ class Mission
 					};
 					id=409;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8948,7 +9552,7 @@ class Mission
 			{
 			};
 			id=408;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item121
 		{
@@ -9153,7 +9757,7 @@ class Mission
 					};
 					id=417;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9190,7 +9794,7 @@ class Mission
 			{
 			};
 			id=416;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item125
 		{
@@ -9275,7 +9879,7 @@ class Mission
 					};
 					id=421;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9312,7 +9916,7 @@ class Mission
 			{
 			};
 			id=420;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item127
 		{
@@ -9337,7 +9941,7 @@ class Mission
 					};
 					id=423;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9374,7 +9978,7 @@ class Mission
 			{
 			};
 			id=422;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item128
 		{
@@ -9519,7 +10123,7 @@ class Mission
 					};
 					id=429;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9556,7 +10160,7 @@ class Mission
 			{
 			};
 			id=428;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item131
 		{
@@ -9641,7 +10245,7 @@ class Mission
 					};
 					id=433;
 					type="B_Soldier_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9678,7 +10282,7 @@ class Mission
 			{
 			};
 			id=432;
-			atlOffset=7.6293945e-006;
+			atlOffset=7.6293945e-06;
 		};
 		class Item133
 		{
@@ -9703,7 +10307,7 @@ class Mission
 					};
 					id=435;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9740,7 +10344,7 @@ class Mission
 			{
 			};
 			id=434;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
 		};
 		class Item134
 		{
@@ -9945,7 +10549,7 @@ class Mission
 					};
 					id=443;
 					type="B_Soldier_F";
-					atlOffset=-7.6293945e-006;
+					atlOffset=-7.6293945e-06;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9982,7 +10586,1607 @@ class Mission
 			{
 			};
 			id=442;
-			atlOffset=-7.6293945e-006;
+			atlOffset=-7.6293945e-06;
+		};
+		class Item138
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14895.137,18.11138,16542.004};
+				angles[]={0.022654373,5.4838595,0.025324726};
+			};
+			init="this setvariable [""QS_missionObject_protected"",true];";
+			areaSize[]={180,0,80};
+			areaIsRectangle=1;
+			flags=1;
+			id=445;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item139
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14684,18.735302,16528};
+				angles[]={0,0.77653188,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=451;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""arifle_MXC_F"",""arifle_MXM_F"",""arifle_MX_F"",""arifle_MX_GL_F"",""arifle_MX_SW_F"",""arifle_SDAR_F"",""hgun_P07_F"",""hgun_Pistol_heavy_01_F"",""launch_NLAW_F"",""launch_Titan_F"",""launch_Titan_short_F"",""SMG_01_F"",""srifle_EBR_F"",""srifle_LRR_camo_F"",""srifle_LRR_F""],[4,2,8,4,4,2,2,2,2,2,2,2,2,2,2]],[[""100Rnd_65x39_caseless_mag_Tracer"",""11Rnd_45ACP_Mag"",""16Rnd_9x21_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""20Rnd_556x45_UW_mag"",""20Rnd_762x51_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_556x45_Stanag_red"",""30Rnd_65x39_caseless_mag"",""3Rnd_HE_Grenade_shell"",""7Rnd_408_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""B_IR_Grenade"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""HandGrenade"",""Laserbatteries"",""MiniGrenade"",""NLAW_F"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""SmokeShell"",""SmokeShellBlue"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AA"",""Titan_AP"",""Titan_AT"",""UGL_FlareGreen_F"",""UGL_FlareWhite_F""],[16,14,14,15,2,2,2,2,2,2,2,6,24,14,6,52,3,12,5,5,5,5,8,5,5,24,5,24,8,5,5,2,2,2,2,2,2,2,6,6,6,2,2]],[[""Binocular"",""Laserdesignator"",""Rangefinder"",""acc_flashlight"",""acc_pointer_IR"",""FirstAidKit"",""ItemGPS"",""Medikit"",""MineDetector"",""muzzle_snds_acp"",""muzzle_snds_B"",""muzzle_snds_H"",""muzzle_snds_H_SW"",""muzzle_snds_L"",""optic_Aco"",""optic_Aco_smg"",""optic_DMS"",""optic_Hamr"",""optic_Holosight"",""optic_LRPS"",""optic_MRD"",""optic_NVS"",""optic_SOS"",""optic_tws"",""optic_tws_mg"",""ToolKit""],[1,1,1,5,5,10,5,1,1,5,5,5,1,5,2,2,2,2,2,2,2,2,2,2,2,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item140
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14681,18.735302,16531};
+				angles[]={0,0.77653188,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=453;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""arifle_MXC_F"",""arifle_MXM_F"",""arifle_MX_F"",""arifle_MX_GL_F"",""arifle_MX_SW_F"",""arifle_SDAR_F"",""hgun_P07_F"",""hgun_Pistol_heavy_01_F"",""launch_NLAW_F"",""launch_Titan_F"",""launch_Titan_short_F"",""SMG_01_F"",""srifle_EBR_F"",""srifle_LRR_camo_F"",""srifle_LRR_F""],[4,2,8,4,4,2,2,2,2,2,2,2,2,2,2]],[[""100Rnd_65x39_caseless_mag_Tracer"",""11Rnd_45ACP_Mag"",""16Rnd_9x21_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""20Rnd_556x45_UW_mag"",""20Rnd_762x51_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_556x45_Stanag_red"",""30Rnd_65x39_caseless_mag"",""3Rnd_HE_Grenade_shell"",""7Rnd_408_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""B_IR_Grenade"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""HandGrenade"",""Laserbatteries"",""MiniGrenade"",""NLAW_F"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""SmokeShell"",""SmokeShellBlue"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AA"",""Titan_AP"",""Titan_AT"",""UGL_FlareGreen_F"",""UGL_FlareWhite_F""],[16,14,14,15,2,2,2,2,2,2,2,6,24,14,6,52,3,12,5,5,5,5,8,5,5,24,5,24,8,5,5,2,2,2,2,2,2,2,6,6,6,2,2]],[[""Binocular"",""Laserdesignator"",""Rangefinder"",""acc_flashlight"",""acc_pointer_IR"",""FirstAidKit"",""ItemGPS"",""Medikit"",""MineDetector"",""muzzle_snds_acp"",""muzzle_snds_B"",""muzzle_snds_H"",""muzzle_snds_H_SW"",""muzzle_snds_L"",""optic_Aco"",""optic_Aco_smg"",""optic_DMS"",""optic_Hamr"",""optic_Holosight"",""optic_LRPS"",""optic_MRD"",""optic_NVS"",""optic_SOS"",""optic_tws"",""optic_tws_mg"",""ToolKit""],[1,1,1,5,5,10,5,1,1,5,5,5,1,5,2,2,2,2,2,2,2,2,2,2,2,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item141
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14689,18.802422,16533};
+				angles[]={0,0.7742455,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=454;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item142
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14686,18.802422,16536};
+				angles[]={0,0.7742455,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=455;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item143
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14687,18.735302,16525};
+				angles[]={0,0.77653188,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=456;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""arifle_MXC_F"",""arifle_MXM_F"",""arifle_MX_F"",""arifle_MX_GL_F"",""arifle_MX_SW_F"",""arifle_SDAR_F"",""hgun_P07_F"",""hgun_Pistol_heavy_01_F"",""launch_NLAW_F"",""launch_Titan_F"",""launch_Titan_short_F"",""SMG_01_F"",""srifle_EBR_F"",""srifle_LRR_camo_F"",""srifle_LRR_F""],[4,2,8,4,4,2,2,2,2,2,2,2,2,2,2]],[[""100Rnd_65x39_caseless_mag_Tracer"",""11Rnd_45ACP_Mag"",""16Rnd_9x21_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""20Rnd_556x45_UW_mag"",""20Rnd_762x51_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_556x45_Stanag_red"",""30Rnd_65x39_caseless_mag"",""3Rnd_HE_Grenade_shell"",""7Rnd_408_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""B_IR_Grenade"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""HandGrenade"",""Laserbatteries"",""MiniGrenade"",""NLAW_F"",""SatchelCharge_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""SmokeShell"",""SmokeShellBlue"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AA"",""Titan_AP"",""Titan_AT"",""UGL_FlareGreen_F"",""UGL_FlareWhite_F""],[16,14,14,15,2,2,2,2,2,2,2,6,24,14,6,52,3,12,5,5,5,5,8,5,5,24,5,24,8,5,5,2,2,2,2,2,2,2,6,6,6,2,2]],[[""Binocular"",""Laserdesignator"",""Rangefinder"",""acc_flashlight"",""acc_pointer_IR"",""FirstAidKit"",""ItemGPS"",""Medikit"",""MineDetector"",""muzzle_snds_acp"",""muzzle_snds_B"",""muzzle_snds_H"",""muzzle_snds_H_SW"",""muzzle_snds_L"",""optic_Aco"",""optic_Aco_smg"",""optic_DMS"",""optic_Hamr"",""optic_Holosight"",""optic_LRPS"",""optic_MRD"",""optic_NVS"",""optic_SOS"",""optic_tws"",""optic_tws_mg"",""ToolKit""],[1,1,1,5,5,10,5,1,1,5,5,5,1,5,2,2,2,2,2,2,2,2,2,2,2,1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item144
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14692,18.802422,16530};
+				angles[]={0,0.7742455,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=457;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item145
+		{
+			dataType="Layer";
+			name="Team Name Tags";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Layer";
+					name="Team Name Tags";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={982.00378,3269.9031,1223.2434};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="SLT_fnc_RE_Server = {   " \n " params[""_arguments"",""_code""];   " \n " _varName = (""SLT""+str (round random 10000));   " \n "   " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;""));   " \n " TempArgs = _arguments;   " \n "   " \n " call compile (_varName +"" = [TempArgs,TempCode];   " \n " publicVariable '""+_varName+""';   " \n "   " \n " [[], {   " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1);   " \n " }] remoteExec ['spawn',2];"");   " \n "};   " \n "   " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Name Tags"";};   " \n "   " \n "SLT_fnc_enableScript = {   " \n " {   " \n "  [] spawn   " \n "  {   " \n "   if(!hasInterface) exitWith {};   " \n "   if (!isNil ""TeamNameTagEvent"") exitWith {};   " \n "   if(isMultiplayer) then {waitUntil{getClientState isEqualTo ""BRIEFING READ""};};   " \n "   sleep 1;   " \n "   disableMapIndicators [true,false,false,false];   " \n "      " \n "   TNTMaxDistanceUnitMarker3D = 5000;   " \n "   TNTMaxDistanceUnitMarkerText3D = 7.5;   " \n "      " \n "   TeamNameTagEvent = addMissionEventHandler [""Draw3D"", {   " \n "    private _vehicleList = [];   " \n "    {   " \n "     if(((side group _x) isEqualTo (side group player)) && (_x != player)) then   " \n "     {   " \n "      _position = _x modelToWorldVisual (_x selectionPosition ""head_axis"");   " \n "      _position set[2,(_position select 2)+0.5];   " \n "      _distance = (player) distance (_position);   " \n "      _driver = if (driver vehicle _x isEqualTo objNull) then {effectiveCommander vehicle _x} else {driver vehicle _x};   " \n "      _textSize = 0.0325;   " \n "      _text = name _x;   " \n "      _imageSize = [0.5,0.5];   " \n "      " \n "      _dif = (TNTMaxDistanceUnitMarker3D-_distance);   " \n "      _alpha = (_dif/TNTMaxDistanceUnitMarker3D);   " \n "      if(vehicle _x == cursorTarget) then {_alpha = 1;};   " \n "   " \n "      _color = switch (side group player) do   " \n "      {   " \n "       case west: {[0,1,1,_alpha]};   " \n "       case east: {[1,0,0,_alpha]};   " \n "       case independent: {[0,1,0,_alpha]};   " \n "       case civilian: {[1,0,1,_alpha]};   " \n "       default {[1,1,1,_alpha]};   " \n "      };   " \n "         " \n "      if((group player) isEqualTo (group _x)) then    " \n "      {   " \n "       _color = switch (side group _x) do   " \n "       {   " \n "        case west: {[0,1,1,_alpha]};   " \n "        case east: {[1,0,0,_alpha]};   " \n "        case independent: {[0,1,0,_alpha]};   " \n "        case civilian: {[1,0,1,_alpha]};   " \n "        default {[1,1,1,_alpha]};  " \n "       };   " \n "      };   " \n "      " \n "      _rankPath = switch (rank _x) do    " \n "      {   " \n "       case ""COLONEL"": {""\a3\ui_f\data\GUI\cfg\Ranks\colonel_pr.paa""};   " \n "       case ""MAJOR"": {""\a3\ui_f\data\GUI\cfg\Ranks\major_pr.paa""};   " \n "       case ""CAPTAIN"": {""\a3\ui_f\data\GUI\cfg\Ranks\captain_pr.paa""};   " \n "       case ""LIEUTENANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\lieutenant_pr.paa""};   " \n "       case ""SERGEANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\sergeant_pr.paa""};   " \n "       case ""CORPORAL"": {""\a3\ui_f\data\GUI\cfg\Ranks\corporal_pr.paa""};   " \n "       case ""PRIVATE"": {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};   " \n "       default {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};   " \n "      };   " \n "   " \n "      if((rank _x) isEqualTo ""COLONEL"") then {_imageSize = [0.75,0.75]; _color = [1,1,1,1];};   " \n "   " \n "      comment ""Dead"";   " \n "      _deadIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\d100_ca.paa"";   " \n "      _deadColor = [0.25,0.25,0.25,0.75];    " \n "   " \n "      comment ""Incap"";   " \n "      _incapIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\u100_ca.paa"";   " \n "      _incapColor = [0.75,0.15,0.15,1];   " \n "   " \n "      comment ""Mic"";   " \n "      _micIcon = ""\a3\ui_f\data\IGUI\RscIngameUI\RscDisplayVoiceChat\microphone_ca.paa"";   " \n "   " \n "      if (lifeState _driver isEqualTo ""INCAPACITATED"" && damage _driver > 0.4) then    " \n "      {   " \n "       _color = _incapColor;   " \n "       _rankPath = _incapIcon;   " \n "      };   " \n "   " \n "      if (!alive _driver) then    " \n "      {   " \n "       _color = _deadColor;   " \n "       _rankPath = _deadIcon;   " \n "      };   " \n "   " \n "      if !(getPlayerChannel _driver isEqualTo -1) then    " \n "      {   " \n "       _rankPath = _micIcon;   " \n "      };   " \n "   " \n "      if (vehicle _x != _x) then   " \n "      {   " \n "       if !((vehicle _x) in _vehicleList) then    " \n "       {   " \n "        _vehicleList pushback vehicle _x;   " \n "   " \n "        if (vehicle _x isEqualTo vehicle player) exitWith {};   " \n "   " \n "        _position = (vehicle _x) modelToWorldVisual [0,0,2];   " \n "   " \n "        _className = (typeOf vehicle _x);   " \n "        _file = getText (configfile >> ""CfgVehicles"" >> _className >> ""icon"");   " \n "        _rankPath = _file;   " \n "   " \n "        if(_driver isEqualTo objNull) then {_driver = _x;};   " \n "   " \n "        _vehName = getText (configfile >> ""CfgVehicles"" >> _className >> ""displayName"");   " \n "        _text = _vehName;   " \n "   " \n "        _count = count crew vehicle _x;   " \n "        if(_count > 1) then    " \n "        {   " \n "         _text = ((name _driver) + "" + "" + (str (_count-1)) + "" more"");   " \n "        }   " \n "        else   " \n "        {   " \n "         _text = (name _driver);   " \n "        };   " \n "   " \n "        _imageSize = [0.65,0.65];   " \n "   " \n "        if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};   " \n "   " \n "        if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then   " \n "        {   " \n "         drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];   " \n "        };   " \n "       };   " \n "      };   " \n "         " \n "      if !((vehicle _x) in _vehicleList) then    " \n "      {   " \n "       if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};   " \n "   " \n "       if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then   " \n "       {   " \n "        drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];   " \n "       };   " \n "      };   " \n "     };   " \n "    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers});   " \n "   }];   " \n "  };   " \n " } remoteExec [""BIS_fnc_call"",0,""TeamNameTag""];   " \n "};   " \n "   " \n "SLT_fnc_disableScript = {   " \n " {    " \n "  removeMissionEventHandler ['Draw3D', TeamNameTagEvent];   " \n "  TeamNameTagEvent = nil;   " \n " } remoteExec ['bis_fnc_call', 0];   " \n "   " \n " {} remoteExec ['BIS_fnc_call',0,'TeamNameTag'];   " \n "};   " \n "   " \n "SLT_fnc_init = {   " \n " params[[""_useToggleOptions"",true]];   " \n "   " \n " with uiNamespace do {   " \n "     " \n "  createDialog ""RscDisplayEmpty"";   " \n "  private _display = findDisplay -1;   " \n "  {_x ctrlShow false;} foreach allControls _display;   " \n "   " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1];   " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH];   " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66];   " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>"");   " \n "  _ctrlHeader ctrlCommit 0;   " \n "   " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH];   " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5];   " \n "  _ctrlBorder ctrlCommit 0;   " \n "   " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH];   " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75];   " \n "  _ctrlBackground ctrlCommit 0;   " \n "   " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTEnableButton ctrlSetText ""ENABLE"";   " \n "  SLTEnableButton ctrlCommit 0;   " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTDisableButton ctrlSetText ""DISABLE"";   " \n "  SLTDisableButton ctrlCommit 0;   " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  if (!_useToggleOptions) then    " \n "  {   " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?"";   " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!"";   " \n "   SLTEnableButton ctrlCommit 0;   " \n "   " \n "   SLTDisableButton ctrlSetText ""CANCEL"";   " \n "   SLTDisableButton ctrlCommit 0;   " \n "  };   " \n " };   " \n " deleteVehicle this;   " \n "};   " \n "   " \n "if (time < 1) then    " \n "{   " \n " [] spawn SLT_fnc_enableScript;   " \n "}   " \n "else    " \n "{   " \n " [true] call SLT_fnc_init;   " \n "};";
+							};
+							id=459;
+							type="Land_HelipadEmpty_F";
+							atlOffset=3455.873;
+						};
+					};
+					id=458;
+					atlOffset=3455.873;
+				};
+			};
+			id=460;
+			atlOffset=3455.873;
+		};
+		class Item146
+		{
+			dataType="Layer";
+			name="Orange";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14898.093,18.967525,16542.289};
+						angles[]={0,2.2386515,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[this, Orange] call BIS_fnc_attachToRelative; this setObjectScale 33;";
+					};
+					id=467;
+					type="Land_Orange_01_F";
+					atlOffset=0.74699974;
+				};
+			};
+			id=469;
+			atlOffset=0.74699974;
+		};
+		class Item147
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14700.1,18.230318,16767.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=473;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item148
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14698.7,18.230318,16766.1};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=474;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item149
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14697.3,18.230318,16764.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=475;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item150
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14695.9,18.230318,16763.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=476;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item151
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14694.5,18.230318,16761.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=477;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item152
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14693.1,18.230318,16760.4};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=478;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item153
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14691.7,18.230318,16759};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=479;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item154
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14690.3,18.230318,16757.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=480;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item155
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14688.9,18.230318,16756.199};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=481;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item156
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14687.5,18.230318,16754.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=482;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item157
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14686.1,18.230318,16753.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=483;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item158
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14684.7,18.230318,16751.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=484;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item159
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14683.3,18.230318,16750.4};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=485;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item160
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14681.8,18.230318,16749};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=486;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item161
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14680.4,18.230318,16747.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=487;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item162
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14679,18.230318,16746.199};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=488;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item163
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14677.6,18.230318,16744.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=489;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item164
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14676.2,18.230318,16743.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=490;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item165
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14674.8,18.230318,16741.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=491;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item166
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14673.4,18.230318,16740.4};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=492;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item167
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14672,18.230318,16739};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=493;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item168
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14670.6,18.230318,16737.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=494;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item169
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14669.2,18.230318,16736.199};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=495;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item170
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14667.8,18.230318,16734.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=496;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item171
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14666.4,18.230318,16733.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=497;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item172
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14665,18.230318,16731.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=498;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item173
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14663.6,18.230318,16730.5};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=499;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item174
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14662.2,18.230318,16729};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=500;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item175
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14660.8,18.230318,16727.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=501;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item176
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14659.4,18.230318,16726.199};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=502;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item177
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14658,18.230318,16724.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=503;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item178
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14656.6,18.230318,16723.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=504;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item179
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14655.2,18.230318,16721.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=505;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item180
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14653.8,18.230318,16720.5};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=506;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item181
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14652.4,18.230318,16719};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=507;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item182
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14651,18.230318,16717.6};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=508;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item183
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14649.6,18.230318,16716.199};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=509;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item184
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14648.2,18.230318,16714.699};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=510;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item185
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14646.8,18.230318,16713.301};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=511;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item186
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14645.4,18.230318,16711.9};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=512;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item187
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14644,18.230318,16710.5};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=513;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item188
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14642.6,18.230318,16709};
+				angles[]={0,5.4885192,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=514;
+			type="PlasticBarrier_02_yellow_F";
+		};
+		class Item189
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14678.8,17.91,16759.5};
+				angles[]={0,3.913028,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=515;
+			type="Land_PedestrianCrossing_01_8m_10str_F";
+		};
+		class Item190
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14673.404,17.91,16753.953};
+				angles[]={0,0.77143556,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=516;
+			type="Land_PedestrianCrossing_01_8m_10str_F";
+		};
+		class Item191
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14884.74,20.049259,16689.971};
+				angles[]={0,0.71247828,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=523;
+			type="B_Heli_Transport_01_pylons_F";
+		};
+		class Item192
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14898.167,20.046282,16677.766};
+				angles[]={6.2818937,0.71247828,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=524;
+			type="B_Heli_Transport_01_pylons_F";
+			atlOffset=-1.9073486e-06;
+		};
+		class Item193
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14740.928,19.831936,16717.025};
+				angles[]={0,5.4818172,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=525;
+			type="B_Heli_Attack_01_pylons_dynamicLoadout_F";
+		};
+		class Item194
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14509.195,17.91,16751.422};
+				angles[]={0,0.78958696,0};
+			};
+			init="this setvariable [""QS_missionObject_protected"",true];";
+			areaSize[]={19,0,30};
+			areaIsRectangle=1;
+			flags=1;
+			id=527;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item195
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14705.465,20.993311,16511.873};
+				angles[]={0,0.71106917,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},30,200,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=529;
+			type="B_T_MBT_01_arty_F";
+		};
+		class Item196
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14525.962,19.699785,16747.889};
+				angles[]={0,5.5008435,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=532;
+			type="C_IDAP_Van_02_medevac_F";
+		};
+		class Item197
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14509.256,20.291758,16731.352};
+				angles[]={0,5.4905858,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=533;
+			type="C_IDAP_Truck_02_F";
+		};
+		class Item198
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14513.394,20.291758,16735.57};
+				angles[]={0,5.5124011,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=534;
+			type="C_IDAP_Truck_02_transport_F";
+		};
+		class Item199
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14529.401,19.479595,16752.244};
+				angles[]={0,5.4674788,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=536;
+			type="C_IDAP_Offroad_02_unarmed_F";
+		};
+		class Item200
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14521.929,19.566139,16743.77};
+				angles[]={0,5.4824324,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=537;
+			type="C_IDAP_Van_02_vehicle_F";
+		};
+		class Item201
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14505.343,20.291704,16727.271};
+				angles[]={0,5.4999275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=538;
+			type="C_IDAP_Truck_02_water_F";
+		};
+		class Item202
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14518.125,19.64196,16739.795};
+				angles[]={0,5.5077181,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=539;
+			type="C_IDAP_Van_02_transport_F";
+		};
+		class Item203
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14660.965,20.003897,16512};
+				angles[]={0.053282689,3.9095376,6.2698536};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=551;
+			type="B_T_Truck_01_Repair_F";
+			atlOffset=-0.0034713745;
+		};
+		class Item204
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14656.155,19.494793,16516.209};
+				angles[]={0.013332055,3.9095376,6.2698536};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=552;
+			type="B_T_Truck_01_fuel_F";
+		};
+		class Item205
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14665.416,20.119081,16507.564};
+				angles[]={0.053284902,3.9182642,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=554;
+			type="B_T_Truck_01_medical_F";
+			atlOffset=-0.00037574768;
+		};
+		class Item206
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14651.956,19.624111,16520.533};
+				angles[]={0.013332055,3.9095376,6.2299027};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=556;
+			type="B_T_Truck_01_ammo_F";
+			atlOffset=-0.0029087067;
+		};
+		class Item207
+		{
+			dataType="Layer";
+			name="Team Map Intel";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={952.80225,3269.7842,1185.1941};
+						angles[]={0,5.4620252,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="SLT_fnc_RE_Server = { " \n " params[""_arguments"",""_code""]; " \n " _varName = (""SLT""+str (round random 10000)); " \n " " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;"")); " \n " TempArgs = _arguments; " \n " " \n " call compile (_varName +"" = [TempArgs,TempCode]; " \n " publicVariable '""+_varName+""'; " \n " " \n " [[], { " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1); " \n " }] remoteExec ['spawn',2];""); " \n "}; " \n " " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Map Intel"";}; " \n " " \n "SLT_fnc_enableScript = { " \n " { " \n "  [] spawn { " \n "    " \n "   if (isMultiplayer) then {waitUntil {sleep 0.1; getClientState == ""BRIEFING READ""};}; " \n "   waitUntil {sleep 0.1; !((findDisplay 12 displayCtrl 51) isEqualTo controlNull)}; " \n "    " \n "   if !(isNil ""RKAGRevealedGroups"") exitWith {}; " \n " " \n "   comment ""Parameters""; " \n "   RKAGOnlyShowMarkersOnMap = true; " \n "   RKAGIncludePlayerGroups = false; " \n "   RKAGHideFriendlyForces = true; " \n "   RKAGMinGroupSize = 2; " \n "   RKAGLastKnownLocationMarkerTime = 180; " \n "   RKAGBulletMarkerSpeed = 7.5; " \n "   RKAGBulletMarkerSize = [1,4]; " \n "   RKAGBulletMarkerColor = ""ColorWhite""; " \n "   RKAGBulletMarkerLifetime = 1; " \n "   RKAGBulletIncludePlayers = true; " \n "   RKAGShowGroups = true; " \n " " \n "   setGroupIconsVisible [true,true]; " \n "   setGroupIconsSelectable true; " \n "   disableMapIndicators [RKAGHideFriendlyForces,true,false,false]; " \n "   uiNamespace setVariable [""_map"",findDisplay 12 displayCtrl 51];  " \n " " \n "   RKAG_fnc_createMapTooltip = { " \n "    with uiNamespace do { " \n "     _display = (finddisplay 12); " \n " " \n "     RKAGMapTooltipGroup = _display ctrlCreate [""RscControlsGroup"", 2300]; " \n "     RKAGMapTooltipGroup ctrlSetPosition [0, 0, 0.4625, 0.34]; " \n "     RKAGMapTooltipGroup ctrlCommit 0;  " \n " " \n "     RKAGMapInfantryTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1100,RKAGMapTooltipGroup]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Infantry Intel</t>""); " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75]; " \n "     RKAGMapInfantryTooltipHeader ctrlCommit 0; " \n " " \n "     RKAGMapInfantryTooltipBody = _display ctrlCreate [""RscStructuredText"", 1101,RKAGMapTooltipGroup]; " \n "     RKAGMapInfantryTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1]; " \n "     RKAGMapInfantryTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75]; " \n "     RKAGMapInfantryTooltipBody ctrlCommit 0; " \n " " \n "     RKAGMapVehicleTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1102,RKAGMapTooltipGroup]; " \n "     RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04]; " \n "     RKAGMapVehicleTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Vehicle Intel</t>""); " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75]; " \n "     RKAGMapVehicleTooltipHeader ctrlCommit 0; " \n " " \n "     RKAGMapVehicleTooltipBody = _display ctrlCreate [""RscStructuredText"", 1103,RKAGMapTooltipGroup]; " \n "     RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1]; " \n "     RKAGMapVehicleTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75]; " \n "     RKAGMapVehicleTooltipBody ctrlCommit 0; " \n "    }; " \n " " \n "    addMissionEventHandler [""EachFrame"", { " \n "     with uiNamespace do  " \n "     { " \n "      _mousePos = getMousePosition; " \n "      RKAGMapTooltipGroup ctrlSetPosition [(getMousePosition select 0),(getMousePosition select 1)+0.05,0.4625, 0.34]; " \n "      RKAGMapTooltipGroup ctrlCommit 0; " \n "     }; " \n "    }]; " \n "   }; " \n " " \n "   RKAG_fnc_createMapHideMarkersCheckbox = { " \n "    with uiNamespace do { " \n "     private _display = finddisplay 12; " \n "     private _RscCheckbox_2800 = _display ctrlCreate [""RscCheckbox"", 2800]; " \n "     _RscCheckbox_2800 ctrlSetPosition [0.965937 * safezoneW + safezoneX, 0.948 * safezoneH + safezoneY, 0.018125 * safezoneW, 0.0336666 * safezoneH]; " \n "     _RscCheckbox_2800 ctrlSetTooltip ""Show Unit Markers: ON""; " \n "     _RscCheckbox_2800 cbSetChecked true; " \n "     _RscCheckbox_2800 ctrlSetBackgroundColor [0,0.5,0,1]; " \n "     _RscCheckbox_2800 ctrlCommit 0; " \n "     _RscCheckbox_2800 ctrlAddEventHandler [""CheckedChanged"",{ " \n "      params [""_control"", ""_checked""]; " \n " " \n "      if (_checked == 1) then  " \n "      { " \n "       setGroupIconsVisible [true,true]; " \n "       setGroupIconsSelectable true; " \n "       disableMapIndicators [RKAGHideFriendlyForces,true,false,false]; " \n "       RKAGShowGroups = true; " \n "       _control ctrlSetTooltip ""Show Unit Markers: ON""; " \n "      } " \n "      else  " \n "      { " \n "       setGroupIconsVisible [false,false]; " \n "       setGroupIconsSelectable false; " \n "       RKAGShowGroups = false; " \n "       _control ctrlSetTooltip ""Show Unit Markers: OFF""; " \n "      }; " \n "     }]; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_getGroupNATOMarkerType = { " \n "    params[""_group""]; " \n "    private _side = sideUnknown; " \n "    private _mkr = """"; " \n " " \n "    private _prefix = """"; " \n "    _prefix = switch (side _group) do  " \n "    { " \n "     case west: {""b_""}; " \n "     case east: {""o_""}; " \n "     case independent: {""n_""}; " \n "     default {""""}; " \n "    }; " \n " " \n "    private [""_grp"",""_vehlist"",""_infantry"",""_cars"",""_apcs"",""_tanks"",""_aa"",""_helis"",""_planes"",""_boats"",""_veh"",""_type""]; " \n " " \n "    _grp = _group; " \n " " \n "    _vehlist = []; " \n "    _infantry = 0; " \n "    _cars = 0; " \n "    _apcs = 0; " \n "    _tanks = 0; " \n "    _aa = 0; " \n "    _helis = 0; " \n "    _planes = 0; " \n "    _uavs = 0; " \n "    _boats = 0; " \n "    _artys = 0; " \n "    _mortars = 0; " \n "    _support_reammo = 0; " \n "    _support_repair = 0; " \n "    _support_refuel = 0; " \n "    _support_medic = 0; " \n "    _support = 0; " \n "    { " \n "     if (!canstand vehicle _x && alive vehicle _x && !(vehicle _x in _vehlist)) then { " \n "      _veh = vehicle _x; " \n "      _vehlist = _vehlist + [_veh]; " \n " " \n "      if (_veh iskindof ""car"") then {_cars = _cars + 1}; " \n "      if (_veh iskindof ""tank"") then {_tanks = _tanks + 1;}; " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""artilleryScanner"") > 0) then{_artys = _artys + 1;}; " \n "      if (_veh iskindof ""Wheeled_APC_F"" || _veh iskindof ""APC_Tracked_01_base_F"" " \n "      || _veh iskindof ""APC_Tracked_02_base_F"" || _veh iskindof ""APC_Tracked_03_base_F"") then {_apcs = _apcs + 1}; " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""radarType"") > 0) then {_aa = _aa + 1}; " \n "      if (_veh iskindof ""helicopter"") then {_helis = _helis + 1}; " \n "      if (_veh iskindof ""plane"") then {_planes = _planes + 1;}; " \n "      if (_veh in allUnitsUAV) then {_uavs = _uavs + 1;}; " \n "      if (_veh iskindof ""staticcanon"") then {_artys = _artys + 1}; " \n "      if (_veh iskindof ""staticmortar"") then {_mortars = _mortars + 1}; " \n "      if (_veh iskindof ""ship"") then {_boats = _boats + 1}; " \n "      _canHeal = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""attendant"") > 0; " \n "      _canReammo = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportAmmo"") > 0; " \n "      _canRefuel = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportFuel"") > 0; " \n "      _canRepair = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportRepair"") > 0; " \n "      if (_canHeal) then {_support_medic = _support_medic + 1}; " \n "      if (_canReammo) then {_support_reammo = _support_reammo + 1}; " \n "      if (_canRefuel) then {_support_refuel = _support_refuel + 1}; " \n "      if (_canRepair) then {_support_repair = _support_repair + 1}; " \n "     }; " \n "     if ((vehicle _x isEqualTo _x)) then {_infantry = (_infantry + 1)}; " \n "    } foreach units _grp; " \n " " \n "    _type = ""unknown""; " \n "    if (_infantry >= 1) then {_type = ""inf""}; " \n "    if (_cars >= 1) then {_type = ""motor_inf""}; " \n "    if (_tanks >= 1) then {_type = ""armor""}; " \n "    if (_apcs >= 1) then {_type = ""mech_inf""}; " \n "    if (_aa >= 1) then {_type = ""antiair""}; " \n "    if (_artys >= 1) then {_type = ""art""}; " \n "    if (_mortars >= 1) then {_type = ""mortar""}; " \n "    if ((_support_reammo + _support_refuel) >= 1) then {_type = ""support""}; " \n "    if (_support_repair >= 1) then {_type = ""maint""}; " \n "    if (_support_medic >= 1) then {_type = ""med""}; " \n "    if ((_support_medic + _support_reammo + _support_refuel + _support_repair) > 1) then {_type = ""support""}; " \n "    if (_boats >= 1) then {_type = ""naval""}; " \n "    if (_helis >= 1) then {_type = ""air""}; " \n "    if (_planes >= 1) then {_type = ""plane""}; " \n "    if (_uavs >= 1) then {_type = ""uav""}; " \n "     " \n "    _mkr = (_prefix+_type); " \n "    _mkr " \n "   }; " \n " " \n "   RKAG_fnc_spawnRevealGroup = { " \n "    params[""_group""]; " \n " " \n "    clearGroupIcons (_group); " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "    private _id = (_group) addGroupIcon [_mkrType, [0,0]]; " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true]; " \n " " \n "    while {!(_group isEqualTo grpNull) && (_group in RKAGRevealedGroups)} do  " \n "    { " \n "     _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "     _group setGroupIcon [_id, _mkrType]; " \n " " \n "     comment ""Check if any units are alive""; " \n "     private _i = units _group findIf {alive _x}; " \n "     if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],"""",1,true];}; " \n " " \n "     sleep 1; " \n "    }; " \n " " \n "    comment ""Show last location""; " \n "    private _j = units _group findIf {alive _x}; " \n "    if (!(_group isEqualTo grpNull) && (_j > -1) && (side _group != side player)) then {[_group] spawn RKAG_fnc_spawnLastKnownPositionMarker;}; " \n " " \n "    clearGroupIcons (_group); " \n "   }; " \n " " \n "   RKAG_fnc_hideGroup = { " \n "    params[""_group""]; " \n "    RKAGRevealedGroups = (RKAGRevealedGroups-[_group]); " \n "   }; " \n " " \n "   RKAG_fnc_hideMapTooltip = { " \n "    with uiNamespace do  " \n "    { " \n "     RKAGMapTooltipGroup ctrlShow false; " \n "     RKAGMapInfantryTooltipHeader ctrlShow false; " \n "     RKAGMapInfantryTooltipBody ctrlShow false; " \n "     RKAGMapVehicleTooltipHeader ctrlShow false; " \n "     RKAGMapVehicleTooltipBody ctrlShow false; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_showMapTooltip = { " \n "    params[""_group"",""_vehicleCount"",""_footCount""]; " \n " " \n "    with uiNamespace do  " \n "    { " \n "     private _sideColor = ([side _group, false] call BIS_fnc_sideColor); " \n "     _sideColor set[3,0.75]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor (_sideColor); " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor (_sideColor); " \n "     RKAGMapTooltipGroup ctrlShow true; " \n " " \n "     private _footText = """"; " \n "     private _vehicleText = """"; " \n "     private _vehs = []; " \n "     { " \n "      private _unit = _x; " \n " " \n "      if (!alive _unit) then {continue}; " \n " " \n "      if (_footCount > 0 && (vehicle _unit isEqualTo _unit)) then  " \n "      { " \n "       _iconName = getText (configFile >> ""CfgVehicles"" >> typeOf _unit >> ""icon""); " \n "       _iconPath = getText(configfile >> ""CfgVehicleIcons"" >> _iconName); " \n "       _footText=(_footText+""<img image='""+_iconPath+""' shadow='0' size='1.2' valign='middle'></img>""); " \n "      }; " \n "     " \n "      if (_vehicleCount > 0 && !(vehicle _unit isEqualTo _unit) && !(vehicle _unit in _vehs)) then " \n "      { " \n "       _vehs pushBack vehicle _unit; " \n "        " \n " " \n "       _vehicleText=(_vehicleText+""<img image='""+(getText (configfile >> 'CfgVehicles' >> typeOf vehicle _unit >> 'picture'))+""' shadow='0' size='1.33' valign='middle'></img>""); " \n "      }; " \n "     } foreach units _group; " \n " " \n "     if !(_footText isEqualTo """") then  " \n "     { " \n "      RKAGMapInfantryTooltipHeader ctrlShow true; " \n "      RKAGMapInfantryTooltipBody ctrlShow true; " \n "      RKAGMapInfantryTooltipBody ctrlSetStructuredText parseText (""<t size='0.1'>&#160;</t><br/>""+_footText); " \n "      RKAGMapInfantryTooltipBody ctrlCommit 0; " \n "     } " \n "     else  " \n "     { " \n "      RKAGMapInfantryTooltipHeader ctrlShow false; " \n "      RKAGMapInfantryTooltipBody ctrlShow false; " \n "     }; " \n " " \n "     if !(_vehicleText isEqualTo """") then  " \n "     { " \n "      RKAGMapVehicleTooltipHeader ctrlShow true; " \n "      RKAGMapVehicleTooltipBody ctrlShow true; " \n "      RKAGMapVehicleTooltipBody ctrlSetStructuredText parseText (""<t size='0.5'>&#160;</t><br/>""+_vehicleText); " \n "      RKAGMapVehicleTooltipBody ctrlCommit 0; " \n " " \n "      if (_footText isEqualTo """") then  " \n "      { " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04]; " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1]; " \n "       RKAGMapVehicleTooltipHeader ctrlcommit 0.05; " \n "       RKAGMapVehicleTooltipBody ctrlcommit 0.05; " \n "      } " \n "      else  " \n "      { " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04]; " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1]; " \n "       RKAGMapVehicleTooltipHeader ctrlCommit 0.05; " \n "       RKAGMapVehicleTooltipBody ctrlCommit 0.05; " \n " " \n "      }; " \n "     } " \n "     else  " \n "     {  " \n "      RKAGMapVehicleTooltipHeader ctrlShow false; " \n "      RKAGMapVehicleTooltipBody ctrlShow false; " \n "     }; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_spawnLastKnownPositionMarker = { " \n "    params[""_group""]; " \n "     " \n "    private _mkr = createMarkerLocal [""marker_""+str(count allMapMarkers),getPos leader _group]; " \n "    _mkr setMarkerTypeLocal ""mil_unknown""; " \n " " \n "    _colorName = switch (side _group) do  " \n "    { " \n "     case west: {""colorBLUFOR""}; " \n "     case east: {""colorOPFOR""}; " \n "     case independent: {""colorIndependent""}; " \n "     case civilian: {""colorCivilian""}; " \n "     default {""ColorUNKNOWN""}; " \n "    }; " \n "    _mkr setMarkerColorLocal _colorName; " \n "    _mkr setMarkerSizeLocal [0.5,0.5]; " \n " " \n "    _time = 0; " \n "    _maxTime = RKAGLastKnownLocationMarkerTime; " \n "    while {!(_group isEqualTo grpNull) && !(_group in RKAGRevealedGroups)} do  " \n "    { " \n "     uisleep 1; " \n "     _time=_time+1; " \n "     if (_time >= _maxTime) exitWith {}; " \n "    }; " \n "    deleteMarkerLocal _mkr; " \n "   }; " \n " " \n "   RKAG_fnc_spawnFireEffect = { " \n "    params[""_unit""]; " \n " " \n "    private _group = group _unit; " \n "    _group spawn  " \n "    { " \n "     _this setGroupIconParams [[1,1,0.9,0.75],"""",1,true]; " \n "     uisleep 0.05; " \n "     _this setGroupIconParams [([side _this, false] call BIS_fnc_sideColor),"""",1,true]; " \n "    }; " \n " " \n "    _unit spawn  " \n "    {  " \n "     comment ""Calculate vector forward for turret or man and convert to direction angle""; " \n "     private _forwardVectorFlat = [0,0,0]; " \n "     private _angle = 0; " \n "      " \n "     _forwardVectorFlat = (vehicle _this weaponDirection ((weaponState [vehicle _this,(vehicle _this unitTurret _this)]) select 0)); " \n "     if (_forwardVectorFlat isEqualTo [0,0,0]) then {_forwardVectorFlat = _this weaponDirection currentWeapon _this;}; " \n "     _forwardVectorFlat set[2,0]; " \n "     _forwardVectorFlat = vectorNormalized _forwardVectorFlat; " \n " " \n "     _angle = acos ([0,1,0] vectorDotProduct _forwardVectorFlat); " \n "     if ((_forwardVectorFlat select 0) < 0) then {_angle = _angle * -1}; " \n " " \n "     private _bulletMkr = createMarkerLocal [""marker_""+str(round random 1000000),getPosWorldVisual _this]; " \n "     _bulletMkr setMarkerShapeLocal ""RECTANGLE""; " \n "     _bulletMkr setMarkerBrushLocal ""SolidFull""; " \n "     _bulletMkr setMarkerColorLocal RKAGBulletMarkerColor; " \n "     _bulletMkr setMarkerSizeLocal RKAGBulletMarkerSize; " \n "     _bulletMkr setMarkerDirLocal _angle; " \n "     private _frameEvent = addMissionEventHandler [""EachFrame"",{ " \n "      private _unit = _thisArgs select 0; " \n "      private _bulletMkr = _thisArgs select 1; " \n "      private _forwardVector = _thisArgs select 2; " \n "      private _currentPos = getMarkerPos _bulletMkr; " \n "      _bulletMkr setMarkerPosLocal (_currentPos vectorAdd (_forwardVector vectorMultiply RKAGBulletMarkerSpeed)); " \n "     },[_this,_bulletMkr,_forwardVectorFlat]]; " \n " " \n "     uisleep RKAGBulletMarkerLifetime; " \n " " \n "     removeMissionEventHandler [""EachFrame"",_frameEvent]; " \n "     deleteMarkerLocal _bulletMkr; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_tryInitUnit = { " \n "    params[""_unit""]; " \n "     " \n "    private _initValue = _unit getVariable ""RKAGInit""; " \n "    if (isNil ""_initValue"") then  " \n "    { " \n "     _unit addEventHandler [""FiredMan"",{ " \n "      params[""_unit""]; " \n "      [_unit] spawn RKAG_fnc_spawnFireEffect; " \n "     }]; " \n "     _unit setVariable [""RKAGInit"",true]; " \n "    }; " \n "   }; " \n " " \n "   onGroupIconOverEnter " \n "   { " \n "    private _group = _this select 1; " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "    private _text = (getText(configfile >> ""CfgMarkers"" >> _mkrType >> ""name"")); " \n "    private _vehCount = 0; " \n "    private _footCount = 0; " \n "    private _vehName = ''; " \n "    private _vehs = []; " \n " " \n "    comment ""Determine marker name based on vehicle count and type""; " \n "    { " \n "     if (!(vehicle _x isEqualTo _x) && !(vehicle _x in _vehs)) then  " \n "     { " \n "      _vehCount = (_vehCount+1); " \n "      _vehs pushBack vehicle _x; " \n "      if (_vehName isEqualTo '') then {_vehName = [configFile >> ""CfgVehicles"" >> typeOf vehicle _x] call BIS_fnc_displayName;}; " \n "     }; " \n "     if (vehicle _x isEqualTo _x) then {_footCount = (_footCount+1);}; " \n "    } foreach units _group; " \n "    if (_vehCount == 1) then {_text = _vehName;}; " \n " " \n "    comment ""Check if any units alive""; " \n "    _i = units _group findIf {alive _x}; " \n "    if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],_text+"" (DEAD)"",1.25,true];} " \n "    else {_group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),_text,1.25,true];}; " \n " " \n "    comment ""Show map tooltip""; " \n "    if (visibleMap) then {[_group,_vehCount,_footCount] call RKAG_fnc_showMapTooltip;}; " \n "   }; " \n " " \n "   onGroupIconOverLeave " \n "   { " \n "    private _group = _this select 1; " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true]; " \n "    call RKAG_fnc_hideMapTooltip; " \n "   }; " \n " " \n "   RKAGRevealedGroups = []; " \n " " \n "   call RKAG_fnc_createMapTooltip; " \n "   call RKAG_fnc_hideMapTooltip; " \n "   call RKAG_fnc_createMapHideMarkersCheckbox; " \n " " \n "   addMissionEventHandler  " \n "   [ ""Map"",{  " \n "    params [""_isOpened"",""_isForced""];  " \n "     " \n "    if (RKAGOnlyShowMarkersOnMap && !_isOpened) then  " \n "    { " \n "     setGroupIconsVisible [false,false]; " \n "     setGroupIconsSelectable false; " \n "    }; " \n " " \n "    if (RKAGOnlyShowMarkersOnMap && _isOpened && RKAGShowGroups) then  " \n "    { " \n "     setGroupIconsVisible [true,true]; " \n "     setGroupIconsSelectable true; " \n "    }; " \n " " \n "    if (!_isOpened) then {call RKAG_fnc_hideMapTooltip;}; " \n "   }]; " \n " " \n "   if (RKAGOnlyShowMarkersOnMap) then  " \n "   { " \n "    setGroupIconsVisible [false,false]; " \n "    setGroupIconsSelectable false; " \n "   }; " \n " " \n "   while {!isNil ""RKAGRevealedGroups""} do  " \n "   { " \n "    if (alive player) then  " \n "    { " \n "     { " \n "      private _group = _x; " \n "      _inVehicle = !(vehicle (units _group select 0) isEqualTo (units _group select 0)); " \n "      if (isNil ""_inVehicle"") then {_inVehicle = false;}; " \n "       " \n "      private _i = -1; " \n "      if (RKAGIncludePlayerGroups) then {_i = -1;} " \n "      else {_i = units _group findIf {_x in allPlayers};}; " \n "       " \n "      if (_i > -1 || (side _group isEqualTo side player && (count units _group <= 1) && !_inVehicle) || side _group isEqualTo civilian) then {continue}; " \n " " \n "      private _spottedAnyGroupMember = false; " \n "      { " \n "       _spottedAnyGroupMember = ((side player) knowsAbout vehicle _x == 4); " \n "       [_x] call RKAG_fnc_tryInitUnit; " \n "      } forEach units _group; " \n " " \n "      if (_spottedAnyGroupMember) then  " \n "      { " \n "       if (_group in RKAGRevealedGroups) exitWith {}; " \n "       if (count units _group < RKAGMinGroupSize && ((vehicle (units _group select 0)) isEqualTo (units _group select 0))) exitWith {}; " \n "       RKAGRevealedGroups pushBack _group; " \n "       [_group] spawn RKAG_fnc_spawnRevealGroup; " \n "      } " \n "      else  " \n "      { " \n "       [_group] call RKAG_fnc_hideGroup; " \n "      }; " \n "     } foreach allGroups; " \n " " \n "     comment ""Try Init Players""; " \n "     if (RKAGBulletIncludePlayers) then {  " \n "      { " \n "       if !(side _x isEqualTo side player) then {continue}; " \n "       [_x] call RKAG_fnc_tryInitUnit; " \n "      } foreach allPlayers; " \n "     }; " \n "    }; " \n "    RKAGRevealedGroups = (RKAGRevealedGroups - [grpNull]); " \n "    {deleteGroup _x;} foreach allGroups; " \n "    uisleep 1; " \n "   }; " \n "  }; " \n " } remoteExec [""BIS_fnc_call"",0,""JIP_ID_ShowRKAGMilitaryMarkers""]; " \n "}; " \n " " \n "SLT_fnc_disableScript = { " \n "}; " \n " " \n "SLT_fnc_init = { " \n " params[[""_useToggleOptions"",true]]; " \n " " \n " with uiNamespace do { " \n "   " \n "  createDialog ""RscDisplayEmpty""; " \n "  private _display = findDisplay -1; " \n "  {_x ctrlShow false;} foreach allControls _display; " \n " " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1]; " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH]; " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66]; " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>""); " \n "  _ctrlHeader ctrlCommit 0; " \n " " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH]; " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5]; " \n "  _ctrlBorder ctrlCommit 0; " \n " " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH]; " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75]; " \n "  _ctrlBackground ctrlCommit 0; " \n " " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTEnableButton ctrlSetText ""ENABLE""; " \n "  SLTEnableButton ctrlCommit 0; " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTDisableButton ctrlSetText ""DISABLE""; " \n "  SLTDisableButton ctrlCommit 0; " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  if (!_useToggleOptions) then  " \n "  { " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?""; " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!""; " \n "   SLTEnableButton ctrlCommit 0; " \n " " \n "   SLTDisableButton ctrlSetText ""CANCEL""; " \n "   SLTDisableButton ctrlCommit 0; " \n "  }; " \n " }; " \n " deleteVehicle this; " \n "}; " \n " " \n "if (time < 1) then  " \n "{ " \n " call SLT_fnc_enableScript; " \n "} " \n "else  " \n "{ " \n " [false] call SLT_fnc_init; " \n "};";
+					};
+					id=557;
+					type="Land_HelipadEmpty_F";
+					atlOffset=3455.7542;
+				};
+			};
+			id=558;
+			atlOffset=3455.7542;
+		};
+		class Item208
+		{
+			dataType="Layer";
+			name="Team Map Icons";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={927.96747,3269.7947,1150.4956};
+						angles[]={0,5.5066876,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="SLT_fnc_RE_Server = { " \n " params[""_arguments"",""_code""]; " \n " _varName = (""SLT""+str (round random 10000)); " \n " " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;"")); " \n " TempArgs = _arguments; " \n " " \n " call compile (_varName +"" = [TempArgs,TempCode]; " \n " publicVariable '""+_varName+""'; " \n " " \n " [[], { " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1); " \n " }] remoteExec ['spawn',2];""); " \n "}; " \n " " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Map Icons"";}; " \n " " \n "SLT_fnc_enableScript = { " \n " { " \n "  [] spawn  " \n "  { " \n "   if(!hasInterface) exitWith {}; " \n "   if (!isNil ""TeamMapEvent"") exitWith {}; " \n "   if(isMultiplayer) then {waitUntil{getClientState isEqualTo ""BRIEFING READ""};}; " \n "   sleep 1; " \n "   waitUntil {sleep 0.1; !((findDisplay 12 displayCtrl 51) isEqualTo controlNull)}; " \n "   disableMapIndicators [true,false,false,false]; " \n " " \n "   with uiNamespace do  " \n "   { " \n "    TMIMaxCursorRangeUnitMarker = 0.02; " \n "    TMIMinMapZoomUnitMarker = 0.0010; " \n " " \n "    comment ""[location,direction,isOnFoot,lifetime]""; " \n "    TMIAllMapTrails = []; " \n "    TMITrailLifetime = 30; " \n "    TMITrailDistance = 10; " \n "    TMIMaxAlpha = 0.5; " \n "    TMITrailSize = 1; " \n " " \n "    TMI_fnc_mapTrailTick = { " \n " " \n "     comment ""Add new trails""; " \n "     private _unit = player; " \n " " \n "     private _lastTrailLocation = _unit getVariable ""TMILastTrailLocation""; " \n " " \n "     if (isNil ""_lastTrailLocation"") then  " \n "     { " \n "      _unit setVariable [""TMILastTrailLocation"",(_unit modelToWorldVisual [0,0,0])]; " \n "      _lastTrailLocation = (_unit modelToWorldVisual [0,0,0]); " \n "     }; " \n " " \n "     private _currentLocation = (_unit modelToWorldVisual [0,0,0]); " \n "     private _dist = _lastTrailLocation distance2D _currentLocation; " \n " " \n "     if (_dist >= TMITrailDistance) then  " \n "     { " \n "      TMIAllMapTrails pushBack [_lastTrailLocation,getdir _unit,vehicle _unit isEqualTo _unit,TMITrailLifetime]; " \n "      _unit setVariable [""TMILastTrailLocation"",_currentLocation]; " \n "     }; " \n " " \n "     private _updatedTrails = TMIAllMapTrails; " \n "     { " \n "      private _location = _x select 0; " \n "      private _direction = _x select 1; " \n "      private _isOnFoot = _x select 2; " \n "      private _timeLeft = _x select 3; " \n " " \n "      comment ""Update trails data""; " \n "      _updatedTrails set [_forEachIndex,[_location,_direction,_isOnFoot,_timeleft-diag_deltaTime]]; " \n "      if (_timeLeft <= 0) then {_updatedTrails deleteAt _forEachIndex;}; " \n "     } foreach TMIAllMapTrails; " \n " " \n "     TMIAllMapTrails = _updatedTrails; " \n "    }; " \n " " \n "    TMI_fnc_mapTrailDraw = { " \n "     { " \n "      private _location = _x select 0; " \n "      private _direction = _x select 1; " \n "      private _isOnFoot = _x select 2; " \n "      private _timeLeft = _x select 3; " \n "      private _alpha = linearConversion [0, 1, (_timeLeft/TMITrailLifetime), 0, TMIMaxAlpha, true]; " \n "      private _color = [1,1,1,_alpha]; " \n "      private _scale = 6.4 * worldSize / 8192 * ctrlMapScale (findDisplay 12 displayCtrl 51); " \n "      private _size = (TMITrailSize) / _scale; " \n "      private _iconFile = if (_isOnFoot)  " \n "      then {""\a3\ui_f\data\igui\cfg\simpletasks\types\walk_ca.paa""}  " \n "      else {""\a3\ui_f_curator\data\cfgcurator\entity_selected_ca.paa""}; " \n " " \n "      (findDisplay 12 displayCtrl 51) drawIcon " \n "      [ " \n "       _iconFile, " \n "       _color, " \n "       _location, " \n "       _size, " \n "       _size, " \n "       _direction-10, " \n "       """", " \n "       0 " \n "      ]; " \n "     } foreach TMIAllMapTrails; " \n "    }; " \n "   }; " \n " " \n "   TeamMapMissionEvent = addMissionEventHandler [""EachFrame"",{ " \n "    with uiNamespace do {call TMI_fnc_mapTrailTick;}; " \n "   }]; " \n "    " \n "   TeamMapEvent = (findDisplay 12 displayCtrl 51) ctrlAddEventHandler [""Draw"",  " \n "   { " \n "    _vehicleList = []; " \n "    {  " \n "     if((side group _x) isEqualTo (side group player)) then " \n "     { " \n "      _pos = _x modelToWorldVisual [0,0,0]; " \n "      _driver = if (driver vehicle _x isEqualTo objNull) then {effectiveCommander vehicle _x} else {driver vehicle _x}; " \n "      _dir = getDir _x; " \n "      _text = (name _x); " \n "      _textSize = 0.05; " \n "      _font = ""RobotoCondensedBold""; " \n "      _distance = player distance _x; " \n "      _iconFile = ""\A3\ui_f\data\Map\VehicleIcons\iconManVirtual_ca.paa""; " \n "      _iconSize = 21; " \n "      _vehicleIconSize = 21; " \n " " \n "      comment ""Dead""; " \n "      _deadIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\d100_ca.paa""; " \n "      _deadColor = [0.25,0.25,0.25,0.75];  " \n " " \n "      comment ""Incap""; " \n "      _incapIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\u100_ca.paa""; " \n "      _incapColor = [0.75,0.15,0.15,1]; " \n " " \n "      comment ""Mic""; " \n "      _micIcon = ""\a3\ui_f\data\IGUI\RscIngameUI\RscDisplayVoiceChat\microphone_ca.paa""; " \n "       " \n "      _alpha = 1; " \n "      _color = switch (side group _x) do " \n "      { " \n "       case west: {[0,0.3,0.6,_alpha]}; " \n "       case east: {[0.5,0,0,_alpha]}; " \n "       case independent: {[0,0.5,0,_alpha]}; " \n "       case civilian: {[0.4,0,0.5,_alpha]}; " \n "       default {[1,1,1,_alpha]}; " \n "      }; " \n "       " \n "      if((group player) isEqualTo (group _driver)) then  " \n "      { " \n "       _color = switch (side group _x) do " \n "       { " \n "        case west: {[0,0.45,1,_alpha]}; " \n "        case east: {[0.8,0.35,0,_alpha]}; " \n "        case independent: {[0.34,0.75,0,_alpha]}; " \n "        case civilian: {[0.7,0,0.75,_alpha]}; " \n "        default {[1,1,1,_alpha]}; " \n "       }; " \n "      }; " \n " " \n "      if (lifeState _driver isEqualTo ""INCAPACITATED"" && damage _driver > 0.4) then  " \n "      { " \n "       _color = _incapColor; " \n "       _iconFile = _incapIcon; " \n "       _dir = 0; " \n "       _iconSize = 25; " \n "      }; " \n " " \n "      if (!alive _driver) then  " \n "      { " \n "       _color = _deadColor; " \n "       _iconFile = _deadIcon; " \n "       _dir = 0; " \n "       _iconSize = 25; " \n "      }; " \n " " \n "      if !(getPlayerChannel _driver isEqualTo -1) then  " \n "      { " \n "       _iconFile = _micIcon; " \n "       _dir = 0; " \n "      }; " \n "       " \n "      _pos2D = (_this select 0) ctrlMapWorldToScreen _pos; " \n "      _posCursor2D = getMousePosition; " \n "      _dist = _pos2D distance2D _posCursor2D; " \n "      _scale = ctrlMapScale (_this select 0); " \n "    " \n "      if (vehicle _x == _x) then  " \n "      { " \n "       if((_scale > (uiNamespace getVariable ""TMIMinMapZoomUnitMarker"")) && (_dist > (uiNamespace getVariable ""TMIMaxCursorRangeUnitMarker""))) then {_text = """";}; " \n "    " \n "       _this select 0 drawIcon " \n "       [ " \n "        _iconFile, " \n "        _color, " \n "        _pos, " \n "        _iconSize, " \n "        _iconSize, " \n "        _dir, " \n "        _text, " \n "        2, " \n "        _textSize, " \n "        _font, " \n "        ""left"" " \n "       ]; " \n "    " \n "       _this select 0 drawIcon " \n "       [ " \n "        _iconFile, " \n "        _color, " \n "        _pos, " \n "        _iconSize, " \n "        _iconSize, " \n "        _dir, " \n "        _text, " \n "        1, " \n "        _textSize, " \n "        _font, " \n "        ""left"" " \n "       ]; " \n "      } " \n "      else   " \n "      { " \n "       if !((vehicle _x) in _vehicleList) then  " \n "       { " \n "        _vehicleList pushback vehicle _x; " \n "    " \n "        _dir = getDir vehicle _x; " \n "    " \n "        _className = (typeOf vehicle _x); " \n "        _iconFile = getText (configfile >> ""CfgVehicles"" >> _className >> ""icon""); " \n "    " \n "        _vehName = getText (configfile >> ""CfgVehicles"" >> _className >> ""displayName""); " \n "        _text = _vehName; " \n "    " \n "        _text2 = """"; " \n "        _count = count crew vehicle _x; " \n "        if(_count > 1) then  " \n "        { " \n "         _text2 = ((name _driver) + "" + "" + (str (_count-1)) + "" more""); " \n "        } " \n "        else " \n "        { " \n "         _text2 = (name _driver); " \n "        }; " \n " " \n "        if((_scale > (uiNamespace getVariable ""TMIMinMapZoomUnitMarker"")) && (_dist > (uiNamespace getVariable ""TMIMaxCursorRangeUnitMarker""))) then {_text = """"; _text2 = """";}; " \n "         " \n "        _this select 0 drawIcon " \n "        [ " \n "         _iconFile, " \n "         _color, " \n "         _pos, " \n "         _vehicleIconSize, " \n "         _vehicleIconSize, " \n "         _dir, " \n "         _text, " \n "         2, " \n "         _textSize, " \n "         _font, " \n "         ""left"" " \n "        ]; " \n " " \n "        _this select 0 drawIcon " \n "        [ " \n "         _iconFile, " \n "         _color, " \n "         _pos, " \n "         _vehicleIconSize, " \n "         _vehicleIconSize, " \n "         _dir, " \n "         _text, " \n "         1, " \n "         _textSize, " \n "         _font, " \n "         ""left"" " \n "        ]; " \n "    " \n "        _this select 0 drawIcon " \n "        [ " \n "         _iconFile, " \n "         _color, " \n "         _pos, " \n "         _vehicleIconSize, " \n "         _vehicleIconSize, " \n "         _dir, " \n "         _text2, " \n "         1, " \n "         _textSize, " \n "         _font, " \n "         ""right"" " \n "        ]; " \n "    " \n "        _this select 0 drawIcon " \n "        [ " \n "         _iconFile, " \n "         _color, " \n "         _pos, " \n "         _vehicleIconSize, " \n "         _vehicleIconSize, " \n "         _dir, " \n "         _text2, " \n "         2, " \n "         _textSize, " \n "         _font, " \n "         ""right"" " \n "        ]; " \n "       }; " \n "      }; " \n "    " \n "      if(_x == player) then  " \n "      { " \n "       _color set[3,0.5]; " \n "       _draw = { " \n "        _this select 0 drawIcon " \n "        [ " \n "         ""\a3\ui_f\data\Map\groupIcons\selector_selected_ca.paa"", " \n "         _color, " \n "         _pos, " \n "         32, " \n "         32, " \n "         _dir, " \n "         """", " \n "         0, " \n "         0.05, " \n "         _font, " \n "         ""left"" " \n "        ]; " \n "       }; " \n "       [_this select 0] call _draw; " \n "       [_this select 0] call _draw; " \n "      }; " \n "     }; " \n "    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers}); " \n "     " \n "    with uiNamespace do {call TMI_fnc_mapTrailDraw;}; " \n "   }]; " \n "  }; " \n " } remoteExec [""BIS_fnc_call"",0,""TeamMapIcons""]; " \n "}; " \n " " \n "SLT_fnc_disableScript = { " \n " {} remoteExec ['BIS_fnc_call',0,'TeamMapIcons']; " \n " { " \n "  (findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ['Draw',TeamMapEvent]; " \n "  removeMissionEventHandler ['EachFrame',TeamMapMissionEvent]; " \n "  TeamMapEvent = nil; " \n "  TeamMapMissionEvent = nil; " \n " } remoteExec ['BIS_fnc_call',0]; " \n "}; " \n " " \n "SLT_fnc_init = { " \n " params[[""_useToggleOptions"",true]]; " \n " " \n " with uiNamespace do { " \n "   " \n "  createDialog ""RscDisplayEmpty""; " \n "  private _display = findDisplay -1; " \n "  {_x ctrlShow false;} foreach allControls _display; " \n " " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1]; " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH]; " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66]; " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>""); " \n "  _ctrlHeader ctrlCommit 0; " \n " " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH]; " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5]; " \n "  _ctrlBorder ctrlCommit 0; " \n " " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH]; " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75]; " \n "  _ctrlBackground ctrlCommit 0; " \n " " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTEnableButton ctrlSetText ""ENABLE""; " \n "  SLTEnableButton ctrlCommit 0; " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTDisableButton ctrlSetText ""DISABLE""; " \n "  SLTDisableButton ctrlCommit 0; " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  if (!_useToggleOptions) then  " \n "  { " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?""; " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!""; " \n "   SLTEnableButton ctrlCommit 0; " \n " " \n "   SLTDisableButton ctrlSetText ""CANCEL""; " \n "   SLTDisableButton ctrlCommit 0; " \n "  }; " \n " }; " \n " deleteVehicle this; " \n "}; " \n " " \n "if (time < 1) then  " \n "{ " \n " [] spawn SLT_fnc_enableScript; " \n "} " \n "else  " \n "{ " \n " [true] call SLT_fnc_init; " \n "};";
+					};
+					id=559;
+					type="Land_HelipadEmpty_F";
+					atlOffset=3455.7646;
+				};
+			};
+			id=560;
+			atlOffset=3455.7646;
+		};
+		class Item209
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15052.246,21.093798,16989.266};
+				angles[]={0,1.0965031,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=564;
+			type="I_Plane_Fighter_03_dynamicLoadout_F";
+			atlOffset=0.76099968;
+		};
+		class Item210
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14472.063,19.364727,16722.395};
+				angles[]={0,0.77838194,0};
+			};
+			init="this setvariable [""QS_missionObject_protected"",true];";
+			areaSize[]={50,0,30};
+			areaIsRectangle=1;
+			flags=1;
+			id=565;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=1.0639992;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item211
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14657.226,18.973999,16848.342};
+				angles[]={0,0.77838194,0};
+			};
+			init="this setvariable [""QS_missionObject_protected"",true];";
+			areaSize[]={15,0,20};
+			areaIsRectangle=1;
+			flags=1;
+			id=566;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=1.0639992;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item212
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14642.968,20.223476,16846.643};
+				angles[]={0,3.9188213,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=567;
+			type="B_Truck_01_Repair_F";
+		};
+		class Item213
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14650.43,19.826004,16838.885};
+				angles[]={0,3.9139833,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=568;
+			type="B_Truck_01_fuel_F";
+		};
+		class Item214
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14646.777,19.835587,16842.703};
+				angles[]={0,3.9386666,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=569;
+			type="B_Truck_01_ammo_F";
+		};
+		class Item215
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14654.645,20.223476,16835.111};
+				angles[]={0,3.9177146,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=571;
+			type="B_Truck_01_box_F";
 		};
 	};
 };
