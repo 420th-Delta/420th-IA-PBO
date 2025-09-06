@@ -15,14 +15,14 @@ _____________________________________________/*/
 
 if (worldName isEqualTo 'Altis') exitWith {
 	[
-		[objNull,60,false,{},"B_Sharpshooter_F",[14682.6,16818.3,0.00143814],305.396,false,0,-1,TRUE],
+		[objNull,60,false,{},"B_Sharpshooter_F",[14682.6,16818.3,0.00143814],305.396,false,0,-1,FALSE],
 		[objNull,60,false,{},"B_medic_F",[14680.8,16816.4,0.00143814],323.169,false,0,-1,FALSE],
-		[objNull,60,false,{},"B_HeavyGunner_F",[14683.6,16820.3,0.00143814],261.772,false,0,-1,TRUE],
-		[objNull,60,false,{},"B_medic_F",[14679,16814.8,0.00143814],323.169,false,0,-1,TRUE],
+		[objNull,60,false,{},"B_HeavyGunner_F",[14683.6,16820.3,0.00143814],261.772,false,0,-1,FALSE],
+		[objNull,60,false,{},"B_medic_F",[14679,16814.8,0.00143814],323.169,false,0,-1,FALSE],
 		[objNull,60,false,{},"B_engineer_F",[14677,16813.4,0.00143814],0,false,0,-1,FALSE],
-		[objNull,60,false,{},"B_engineer_F",[14674.9,16812.2,0.00143814],0,false,0,-1,TRUE],
+		[objNull,60,false,{},"B_engineer_F",[14674.9,16812.2,0.00143814],0,false,0,-1,FALSE],
 		[objNull,300,false,{},"B_helicrew_F",[14748.2,16850.6,0.00141335],242.182,false,0,-1,FALSE],
-		[objNull,300,false,{},"B_helicrew_F",[14745.9,16852.8,-4.57764e-005],186.769,false,0,-1,TRUE]
+		[objNull,300,false,{},"B_helicrew_F",[14745.9,16852.8,-4.57764e-005],186.769,false,0,-1,FALSE]
 	]
 };
 if (worldName isEqualTo 'Tanoa') exitWith {
