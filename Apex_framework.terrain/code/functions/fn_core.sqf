@@ -877,7 +877,7 @@ if (_QS_helmetCam) then {
 
 _QS_module_recruitableAI = TRUE && ((missionNamespace getVariable ['QS_missionConfig_recruitableAI',1]) isEqualTo 1);
 if (_QS_module_recruitableAI) then {
-	_QS_module_recruitableAI_delay = 15;
+	_QS_module_recruitableAI_delay = 3;
 	_QS_module_recruitableAI_checkDelay = time + _QS_module_recruitableAI_delay;
 	if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0) then {
 		_QS_module_recruitableAI_data = call (compileScript ['code\config\QS_data_recruitableAI.sqf']);
@@ -4770,7 +4770,9 @@ for '_x' from 0 to 1 step 0 do {
 								};				
 							
 							};
-							if (_fps >= 12) then {
+							// Reworking when Recruitable AI can spawn
+							/*
+							if (_fps >= 10) then {
 								if (_allPlayersCount <= 45) then {
 									if ((_unitPos nearEntities ['All',0.3]) isEqualTo []) then {
 										if ((!(_popThreshold)) || {((_popThreshold) && (_allPlayersCount < 45))}) then {
@@ -4808,6 +4810,40 @@ for '_x' from 0 to 1 step 0 do {
 									};
 								};
 							};
+							*/
+							if (_allPlayersCount > 0) then {
+									if (_randomize) then {
+										_t = selectRandom _QS_module_recruitableAI_unitTypes;
+									};
+									if (_respawnTickets isNotEqualTo -1) then {
+										if (_respawnTickets isEqualTo 0) then {
+											_QS_module_recruitableAI_array set [_forEachIndex,_false];
+											_QS_module_recruitableAI_array deleteAt _forEachIndex;
+											_exit = _true;
+										} else {
+											_respawnTickets = _respawnTickets - 1;
+										};
+									};
+									if (_exit) exitWith {};
+									_unit = (createGroup [_QS_module_recruitableAI_side,_true]) createUnit [QS_core_units_map getOrDefault [toLowerANSI _t,_t],[0,0,0],[],15,'NONE'];
+									_unit setDir _unitDir;
+									(group _unit) setFormDir _unitDir;
+									_unit setPosASL _unitPos;
+									_unit enableDynamicSimulation _true;
+									[_unit,'A3CG'] call _fn_setUnitInsignia;
+									[_unit] call _configCode;
+									_unit setVariable ['QS_HComm_unit',_false,_true];
+									(group _unit) setVariable ['QS_HComm_grp',_false,_true];
+									if ((waypoints (group _unit)) isNotEqualTo []) then {
+										for '_x' from 0 to ((count (waypoints (group _unit))) - 1) step 1 do {
+											if ((waypoints (group _unit)) isEqualTo []) exitWith {};
+											deleteWaypoint ((waypoints (group _unit)) # 0);
+										};
+									};
+									_QS_module_recruitableAI_array set [_forEachIndex,[_unit,_delay,_randomize,_configCode,_t,_unitPos,_unitDir,_false,0,_respawnTickets,_popThreshold]];
+									[_unit] call _fn_serverUnitConfigure;
+								};
+								// End Recruitable AI Changes
 						};
 					} else {
 						if ((_unit distance2D _unitPos) > 1) then {

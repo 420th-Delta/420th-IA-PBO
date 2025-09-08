@@ -894,9 +894,13 @@ _QS_playerGroup = group player;
 _QS_clientDynamicGroups_testGrp = grpNull;
 private _isLeader = FALSE;
 private _squadName = '';
+// Stop Changing Group Name To Unit Name
+/*
 if ((squadParams player) isNotEqualTo []) then {
 	_squadName = ((squadParams player) # 0) # 5;
 };
+*/
+
 private _radioBags = qs_core_classnames_radiobags;
 /*/============= CLIENT A-T MANAGER/*/
 _QS_clientATManager = TRUE;
@@ -915,7 +919,7 @@ _iAmPilot = FALSE;
 _pilotAtBase = TRUE;
 _difficultyEnabledRTD = difficultyEnabledRTD;
 _QS_pilotBabysitter = TRUE;
-_QS_maxTimeOnGround = 600;
+_QS_maxTimeOnGround = 360;
 _QS_warningTimeOnGround = 180;
 _QS_currentTimeOnGround = 0;
 _QS_secondsCounter = time + 1;
@@ -923,8 +927,14 @@ _QS_afkTimer = 900;
 if (_iAmPilot) then {
 	_QS_afkTimer = 600;
 };
+
+// Different AFK timer value for fighter pilot
+if (_QS_player getUnitTrait 'QS_trait_fighterPilot') then {
+	_QS_afkTimer = 360;
+};
+
 _kicked = FALSE;
-_QS_afkTimer_playerThreshold = 40;
+_QS_afkTimer_playerThreshold = 20;
 _QS_afkTimer_playerPos = _QS_posWorldPlayer;
 private _crvs = ['crv'] call (missionNamespace getVariable 'QS_data_listVehicles');
 private _craterDecals = ['crater_decals_1'] call QS_data_listOther;
