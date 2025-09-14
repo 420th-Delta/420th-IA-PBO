@@ -859,7 +859,7 @@ enableRadio TRUE;
 	(_x # 0) enableChannel (_x # 1);
 } count [
 	[0,[FALSE,FALSE]],
-	[1,[TRUE,FALSE]],
+	[1,[TRUE,_isAdmin]],
 	[2,[TRUE,TRUE]],
 	[3,[TRUE,TRUE]],
 	[4,[TRUE,TRUE]],
