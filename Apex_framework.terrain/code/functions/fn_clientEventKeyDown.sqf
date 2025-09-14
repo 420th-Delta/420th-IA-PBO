@@ -64,10 +64,17 @@ if (
 if (_key in (actionKeys 'PushToTalk')) then {
 	if (currentChannel isNotEqualTo 5) then {
 		if ((_player getSlotItemName 611) isNotEqualTo '') then {
-			if (currentChannel in [0,1,6]) then {
+			private _isAdmin = (getPlayerUID _player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'));
+			if (currentChannel isEqualTo 6 && {!_isAdmin}) exitWith {
+				setCurrentChannel 5;
+				50 cutText [localize 'STR_QS_420th_staff_only_channel','PLAIN DOWN'];
+				_c = TRUE;
+			};
+
+			if (currentChannel in [0,1]) then {
 				if (
 					(!(_player getUnitTrait 'QS_trait_HQ')) &&
-					{(!((getPlayerUID _player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'))))}
+					{!_isAdmin}
 				) then {
 					setCurrentChannel 5;
 					50 cutText [localize 'STR_QS_Text_032','PLAIN DOWN'];
@@ -77,7 +84,7 @@ if (_key in (actionKeys 'PushToTalk')) then {
 				if (
 					(currentChannel isEqualTo 7) &&
 					{((['uavhacker','QS_trait_fighterPilot','QS_trait_pilot','QS_trait_CAS','QS_trait_HQ','QS_trait_JTAC'] findIf { _player getUnitTrait _x }) isEqualTo -1)} &&
-					{(!((getPlayerUID _player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'))))}
+					{!_isAdmin}
 				) then {
 					setCurrentChannel 5;
 					50 cutText [localize 'STR_QS_Text_035','PLAIN DOWN'];
