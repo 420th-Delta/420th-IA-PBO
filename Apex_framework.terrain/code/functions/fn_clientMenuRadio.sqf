@@ -32,7 +32,7 @@ if (_type isEqualTo 'onLoad') then {
 	(_display displayCtrl 1816) ctrlSetText (if (1 in (missionNamespace getVariable 'QS_radioChannels')) then [{localize 'STR_QS_Menu_057'},{localize 'STR_QS_Menu_058'}]);
 	(_display displayCtrl 1827) cbSetChecked (1 in (missionNamespace getVariable 'QS_client_radioChannels'));
 	(_display displayCtrl 1827) ctrlSetTooltip '';
-	(_display displayCtrl 1827) ctrlEnable FALSE;
+	(_display displayCtrl 1827) ctrlEnable FALSE; // Repurposed for staff channel, do not enable this checkbox!
 	/*/
 	if (6 in (missionNamespace getVariable 'QS_radioChannels')) then {
 		(_display displayCtrl 1827) ctrlEnable TRUE;
@@ -135,7 +135,7 @@ if (_type in [
 	_ctrl = _this # 1;
 	_state = _this # 2;
 	_display = ctrlParent _ctrl;
-	/*/6 - SIDE/*/
+	/*/6 - STAFF/*/
 	if (_type isEqualTo 'Check_1') then {
 		if (_state isEqualTo 1) then {
 			if (1 in (missionNamespace getVariable 'QS_radioChannels')) then {
