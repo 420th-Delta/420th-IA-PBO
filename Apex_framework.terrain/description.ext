@@ -753,6 +753,10 @@ class CfgFunctions {
             file = "TGC\Functions\Setting";
             class addSetting {};
         };
+        class Staff {
+            file = "TGC\Functions\Staff";
+            class isStaff {};
+        };
     };
 };
 class CfgDebriefing {
