@@ -755,7 +755,9 @@ class CfgFunctions {
         };
         class Staff {
             file = "TGC\Functions\Staff";
+            class initStaffKeybinds { postInit = 1; };
             class isStaff {};
+			class staffGUI {};
         };
     };
 };
