@@ -1,9 +1,9 @@
 /*
 File: fn_clientRadio.sqf
 Author:
-	
+
 	Quiksilver
-	
+
 Last Modified:
 
 	29/06/2016 A3 1.62 by Quiksilver
@@ -34,9 +34,7 @@ if (_type isEqualTo 0) then {
 } else {
 	if (_type isEqualTo 1) then {
 		if (!(_channel in (missionNamespace getVariable 'QS_client_radioChannels'))) then {
-			if (_channel isNotEqualTo 1) then {
-				_channel radioChannelAdd [player];
-			};
+			_channel radioChannelAdd [player];
 			diag_log format ['***** RADIO ***** Added to channel %1',_channel];
 			missionNamespace setVariable [
 				'QS_client_radioChannels',
@@ -49,9 +47,7 @@ if (_type isEqualTo 0) then {
 			/*/Respawn Event/*/
 			if ((missionNamespace getVariable 'QS_client_radioChannels') isNotEqualTo []) then {
 				{
-					if (_x isNotEqualTo 1) then {
-						_x radioChannelAdd [player];
-					};
+					_x radioChannelAdd [player];
 				} forEach (missionNamespace getVariable 'QS_client_radioChannels');
 			};
 		} else {
@@ -62,9 +58,7 @@ if (_type isEqualTo 0) then {
 				};
 				if ((missionNamespace getVariable 'QS_client_radioChannels') isNotEqualTo []) then {
 					{
-						if (_x isNotEqualTo 1) then {
-							_x radioChannelRemove [player];
-						};
+						_x radioChannelRemove [player];
 					} forEach (missionNamespace getVariable 'QS_client_radioChannels');
 				};
 			};
