@@ -19,14 +19,6 @@ with uiNamespace do {
 
     private _primaryColor = ["GUI", "BCG_RGB"] call BIS_fnc_displayColorGet;
     private _scaleToGroup = {_this vectorMultiply [_width, _height, _width, _height]};
-    private _createText = {
-        text _this setAttributes [
-            "align", "center",
-            "font", "RobotoCondensed",
-            "size", "1",
-            "valign", "middle"
-        ]
-    };
 
     private _group = _display ctrlCreate ["RscControlsGroup", -1];
     _group ctrlSetPosition [safeZoneX + 0.3 * safeZoneW, safeZoneY + 0.3 * safeZoneH, 0.4 * safeZoneW, 0.4 * safeZoneH];
