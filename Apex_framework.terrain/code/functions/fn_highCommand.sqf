@@ -28,7 +28,8 @@ if (!(_commanderCanLeaveBase)) then {
 	50 cutText [localize 'STR_QS_Text_210','PLAIN',1];
 };
 disableRemoteSensors FALSE;
-1 enableChannel [TRUE,TRUE];
+[1,[TRUE,TRUE]] call TGC_fnc_enableChannel;
+[] call TGC_fnc_refreshChannels;
 (group player) setGroupIDGlobal ['Command'];
 if (!(_commanderCanUseWeapons)) then {
 	player action ['SwitchWeapon',player,player,100];
@@ -467,7 +468,8 @@ for '_x' from 0 to 1 step 0 do {
 		setGroupIconsVisible [FALSE,FALSE];
 		setGroupIconsSelectable FALSE;
 		disableRemoteSensors TRUE;
-		1 enableChannel [TRUE,FALSE];
+		[1,[TRUE,FALSE]] call TGC_fnc_enableChannel;
+		[] call TGC_fnc_refreshChannels;
 		(group player) setGroupIDGlobal [(format ['%1',profileName])];
 	};
 };
