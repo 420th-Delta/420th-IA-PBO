@@ -120,6 +120,7 @@ with uiNamespace do {
         _text ctrlSetTooltip "Toggle Text";
         _text ctrlCommit 0;
         _text ctrlAddEventHandler ["CheckedChanged", {with uiNamespace do {
+            playSoundUI ["click"];
             TGC_staffChannelsGUI_changeRequested = true;
         }}];
 
@@ -128,6 +129,7 @@ with uiNamespace do {
         _von ctrlSetTooltip "Toggle Voice";
         _von ctrlCommit 0;
         _von ctrlAddEventHandler ["CheckedChanged", {with uiNamespace do {
+            playSoundUI ["click"];
             TGC_staffChannelsGUI_changeRequested = true;
         }}];
 
