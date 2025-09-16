@@ -754,6 +754,13 @@ class CfgFunctions {
 		};
 	};
     class TGC {
+        class Channels {
+            file = "TGC\Functions\Channels";
+            class enableChannel {};
+            class getChannelMask {};
+            class refreshChannels {};
+            class setChannelMasks {};
+        };
         class Database {
             file = "TGC\Functions\Database";
             class dbQuery {};
@@ -779,7 +786,8 @@ class CfgFunctions {
             file = "TGC\Functions\Staff";
             class initStaffKeybinds { postInit = 1; };
             class isStaff {};
-			class staffGUI {};
+            class staffChannelsGUI {};
+            class staffGUI {};
         };
     };
 };

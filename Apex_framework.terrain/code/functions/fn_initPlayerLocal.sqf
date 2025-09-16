@@ -855,7 +855,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 
 enableRadio TRUE;
 {
-	(_x # 0) enableChannel (_x # 1);
+	_x call TGC_fnc_enableChannel;
 } count [
 	[0,[FALSE,FALSE]],
 	[1,[TRUE,FALSE]],
@@ -864,6 +864,7 @@ enableRadio TRUE;
 	[4,[TRUE,TRUE]],
 	[5,[TRUE,TRUE]]
 ];
+[] call TGC_fnc_refreshChannels;
 if (currentChannel isEqualTo 4) then {
 	setCurrentChannel 5;
 };
