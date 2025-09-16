@@ -23,8 +23,8 @@ with uiNamespace do {
         private _masks = [
             [2, localize "str_channel_command"],
             [3, localize "str_channel_group"],
-            [7, radioChannelInfo 7 # 1],
-            [13, radioChannelInfo 13 # 1]
+            [7, radioChannelInfo 2 # 1],
+            [13, radioChannelInfo 8 # 1]
         ];
 
         {
