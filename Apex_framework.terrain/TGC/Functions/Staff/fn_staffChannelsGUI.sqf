@@ -91,13 +91,13 @@ with uiNamespace do {
     _title ctrlCommit 0;
 
     private _textHeader = _display ctrlCreate ["RscText", -1, _group];
-    _textHeader ctrlSetPosition ([0.55, 0.1, 0.1, 0.05] call _scaleToGroup);
+    _textHeader ctrlSetPosition ([0.58, 0.11, 0.15, 0.05] call _scaleToGroup);
     _textHeader ctrlSetText "Text?";
     _textHeader ctrlEnable false;
     _textHeader ctrlCommit 0;
 
     private _vonHeader = _display ctrlCreate ["RscText", -1, _group];
-    _vonHeader ctrlSetPosition ([0.75, 0.1, 0.1, 0.05] call _scaleToGroup);
+    _vonHeader ctrlSetPosition ([0.78, 0.11, 0.15, 0.05] call _scaleToGroup);
     _vonHeader ctrlSetText "Voice?";
     _vonHeader ctrlEnable false;
     _vonHeader ctrlCommit 0;
@@ -107,7 +107,7 @@ with uiNamespace do {
     {
         _x params ["", "_name"];
 
-        private _posY = 0.2 + _forEachIndex * 0.1;
+        private _posY = 0.18 + _forEachIndex * 0.08;
 
         private _label = _display ctrlCreate ["RscText", -1, _group];
         _label ctrlSetPosition ([0.1, _posY, 0.4, 0.05] call _scaleToGroup);
