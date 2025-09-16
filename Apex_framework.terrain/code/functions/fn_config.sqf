@@ -825,7 +825,7 @@ missionNamespace setVariable ['QS_RD_markers',_markers,FALSE];
 _markers = nil;
 /*/===== RADIO (defined also in pbo description.ext and server.cfg)/*/
 {
-	(_x # 0) enableChannel (_x # 1);
+	_x call TGC_fnc_enableChannel;
 } count [
 	[0,[FALSE,FALSE]],
 	[1,[TRUE,FALSE]],
@@ -834,6 +834,7 @@ _markers = nil;
 	[4,[TRUE,TRUE]],
 	[5,[TRUE,TRUE]]
 ];
+[] call TGC_fnc_refreshChannels;
 ['Initialize',[FALSE,50,FALSE,'']] call (missionNamespace getVariable 'BIS_fnc_dynamicGroups');
 call (missionNamespace getVariable 'AR_Advanced_Rappelling_Install');
 

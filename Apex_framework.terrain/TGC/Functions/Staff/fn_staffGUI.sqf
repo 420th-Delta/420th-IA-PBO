@@ -38,22 +38,20 @@ with uiNamespace do {
     _title ctrlEnable false;
     _title ctrlCommit 0;
 
-    private _example = _display ctrlCreate ["RscButtonMenu", -1, _group];
-    _example ctrlSetPosition ([0.03, 0.1, 0.2, 0.08] call _scaleToGroup);
-    _example ctrlSetStructuredText composeText [
+    private _channels = _display ctrlCreate ["RscButtonMenu", -1, _group];
+    _channels ctrlSetPosition ([0.03, 0.1, 0.2, 0.08] call _scaleToGroup);
+    _channels ctrlSetStructuredText composeText [
         parseText "<t size='0.25'>&#160;</t><br/>",
-        parseText "<img image='\a3\ui_f\data\igui\cfg\actions\heal_ca.paa' size='1'/>",
-        text "Example Button" setAttributes [
+        text "Manage Channels" setAttributes [
             "align", "center",
-            "font", "RobotoCondensed",
-            "size", "1"
+            "font", "RobotoCondensed"
         ]
     ];
-    _example ctrlCommit 0;
-    _example ctrlAddEventHandler ["ButtonClick", {with uiNamespace do {
-        playSoundUI ["a3\3den\data\sound\cfgsound\notificationdefault.wss"];
-        systemChat "Hello world!";
-    }}];
+    _channels ctrlCommit 0;
+    _channels ctrlAddEventHandler ["ButtonClick", {
+        closeDialog 1;
+        0 spawn {isNil TGC_fnc_staffChannelsGUI};
+    }];
 
     private _close = _display ctrlCreate ["RscButtonMenu", 2];
     _close ctrlSetPosition [_groupX, _groupY + _height, 0.2, 0.04];
