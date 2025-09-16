@@ -66,7 +66,7 @@ player enableAIFeature ['RADIOPROTOCOL',FALSE];
 showSubtitles FALSE;
 enableRadio TRUE;
 {
-	(_x # 0) enableChannel (_x # 1);
+	_x call TGC_fnc_enableChannel;
 } count [
 	[0,[FALSE,FALSE]],
 	[1,[TRUE,FALSE]],
@@ -75,6 +75,7 @@ enableRadio TRUE;
 	[4,[TRUE,TRUE]],
 	[5,[TRUE,TRUE]]
 ];
+[] call TGC_fnc_refreshChannels;
 for '_i' from 0 to 499 step 1 do {
 	if (ppEffectEnabled _i) then {
 		_i ppEffectEnable FALSE;
