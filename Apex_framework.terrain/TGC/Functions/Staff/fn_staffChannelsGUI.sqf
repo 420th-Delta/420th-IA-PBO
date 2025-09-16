@@ -141,6 +141,10 @@ with uiNamespace do {
     _close ctrlSetText toUpper localize "$str_disp_cancel";
     _close ctrlCommit 0;
 
+    _display displayAddEventHandler ["Unload", {with uiNamespace do {
+        call TGC_fnc_refreshChannels;
+    }}];
+
     call TGC_fnc_refreshChannels;
     _display spawn {
         disableSerialization;
