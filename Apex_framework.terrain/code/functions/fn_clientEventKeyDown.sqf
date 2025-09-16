@@ -152,6 +152,7 @@ if (_key in (actionKeys 'AutoHover')) then {
 if (
 	((actionKeys 'User11') isEqualTo []) &&
 	{(
+		!_ctrl &&
 		_shift &&
 		{(_key isEqualTo 60)} &&
 		{((lifeState _player) in ['HEALTHY','INJURED'])}
