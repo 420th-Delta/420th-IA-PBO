@@ -671,6 +671,8 @@ player addRating (0 - (rating player));
 	['AUTOCOMBAT',FALSE],
 	['MOVE',TRUE]
 ];
+// Disabling the auto join group on connect feature until we can figure out the issue with players not appearing in group management.
+/*
 if (isNil {(group player) getVariable 'BIS_dg_reg'}) then {
 	_allGroups = (groups ((side _x) isEqualTo (player getVariable ['QS_unit_side',WEST]))) select {
 		(
@@ -705,7 +707,7 @@ if (_squadParams isNotEqualTo []) then {
 			if (_exit3) exitWith {};
 		};
 	} forEach allPlayers;
-};
+};*/
 _worldName = worldName;
 if (_worldName isEqualTo 'Stratis') then {
 	private _terrainLocation = nearestLocation [[3764.32,7944.11,0.0131321],'nameLocal'];
