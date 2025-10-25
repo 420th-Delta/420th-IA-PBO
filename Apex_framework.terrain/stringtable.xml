@@ -2723,6 +2723,75 @@ _____________________________________________________________-->
          <Key ID="STR_QS_Text_483">
             <Original>Auto</Original>
 		</Key>
+         <Key ID="STR_QS_Text_484">
+            <Original>Medical Supplies</Original>
+		</Key>
+         <Key ID="STR_QS_Text_485">
+            <Original>Parajump</Original>
+		</Key>
+         <Key ID="STR_QS_Text_486">
+            <Original>Vehicle Spawn Point</Original>
+		</Key>
+         <Key ID="STR_QS_Text_487">
+            <Original>Position obstructed by: %1</Original>
+		</Key>
+         <Key ID="STR_QS_Text_488">
+            <Original>Global vehicle cap exceeded (%1)</Original>
+		</Key>
+       <Key ID="STR_QS_Text_489">
+            <Original>Enemy nearby - Vehicle Spawner unavailable</Original>
+		</Key>
+       <Key ID="STR_QS_Text_490">
+            <Original>Firebase</Original>
+		</Key>
+       <Key ID="STR_QS_Text_491">
+            <Original>Fire Support Base</Original>
+		</Key>
+       <Key ID="STR_QS_Text_492">
+            <Original>Vehicle Spawner in use - Please try again</Original>
+		</Key>
+        <Key ID="STR_QS_Text_493">
+            <Original>Over budget ( %1 / %2 )</Original>
+		</Key>
+        <Key ID="STR_QS_Text_494">
+            <Original>Hold [%1] to request Support</Original>
+		</Key>
+        <Key ID="STR_QS_Text_495">
+            <Original>Player Spawn Point</Original>
+		</Key>
+        <Key ID="STR_QS_Text_496">
+            <Original>Winch damaged</Original>
+		</Key>
+        <Key ID="STR_QS_Text_497">
+            <Original>No sling points</Original>
+		</Key>
+        <Key ID="STR_QS_Text_498">
+            <Original>Too far away</Original>
+		</Key>
+        <Key ID="STR_QS_Text_499">
+            <Original>Too heavy</Original>
+		</Key>
+        <Key ID="STR_QS_Text_500">
+            <Original>No emotes available</Original>
+		</Key>
+        <Key ID="STR_QS_Text_501">
+            <Original>Emotes cooldown (%1)</Original>
+		</Key>
+        <Key ID="STR_QS_Text_502">
+            <Original>Emotes ON</Original>
+		</Key>
+        <Key ID="STR_QS_Text_503">
+            <Original>Emotes OFF</Original>
+		</Key>
+        <Key ID="STR_QS_Text_504">
+            <Original>Disabled by server</Original>
+		</Key>
+        <Key ID="STR_QS_Text_505">
+            <Original>Hide</Original>
+		</Key>
+        <Key ID="STR_QS_Text_506">
+            <Original>Show</Original>
+		</Key>
     </Container>
     <Container name="QS_xml_hints">
         <Key ID="STR_QS_Hints_000">
@@ -8009,6 +8078,21 @@ _____________________________________________________________-->
         </Key>
        <Key ID="STR_QS_Menu_229">
             <Original>invalid fire support request</Original>
+        </Key>
+       <Key ID="STR_QS_Menu_230">
+            <Original>Parajump</Original>
+        </Key>
+       <Key ID="STR_QS_Menu_231">
+            <Original>Load Cargo</Original>
+        </Key>
+       <Key ID="STR_QS_Menu_232">
+            <Original>Load into (vicinity)</Original>
+        </Key>
+        <Key ID="STR_QS_Menu_233">
+            <Original>Loading in progress</Original>
+        </Key>
+        <Key ID="STR_QS_Menu_234">
+            <Original>Emotes (beta)</Original>
         </Key>
     </Container>
     <Container name="QS_xml_roles">

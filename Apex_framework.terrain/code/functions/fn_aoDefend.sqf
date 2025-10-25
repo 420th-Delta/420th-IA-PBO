@@ -81,7 +81,7 @@ _serverTime = serverTime;
 _tickTimeNow = diag_tickTime;
 _QS_worldName = worldName;
 _QS_worldSize = worldSize;
-_duration = serverTime + 1200 + (random 600);
+_duration = serverTime + 1200 + (random 450);
 _durationAlmostOver = _duration - 30 - (random 60);
 //[_taskID,TRUE,_duration] call (missionNamespace getVariable 'QS_fnc_taskSetTimer');			//----- Task timer reduces suspense and tension, better to not know how long remaining? Uncomment to show timer UI
 [_taskID,['Defend','Defend 1','Defend 2']] call (missionNamespace getVariable 'QS_fnc_taskSetCustomData');
@@ -140,12 +140,12 @@ _uav = objNull;
 _uavFlyInHeight = 600 + (random 1400);
 _QS_infantry = TRUE;
 _infantryInitialSpawnDelay = time + 0;
-private _infantryLimit_0 = 44;
-private _infantryLimit_1 = 54;
-private _infantryLimit_2 = 62;
-private _infantryLimit_3 = 68;
-private _infantryLimit_4 = 74;
-private _infantryLimit_5 = 80;
+private _infantryLimit_0 = 54;
+private _infantryLimit_1 = 64;
+private _infantryLimit_2 = 72;
+private _infantryLimit_3 = 78;
+private _infantryLimit_4 = 84;
+private _infantryLimit_5 = 90;
 if (_allPlayersCount > 0) then {_infantryMaxSpawned = _infantryLimit_0;};
 if (_allPlayersCount > 10) then {_infantryMaxSpawned = _infantryLimit_1;};
 if (_allPlayersCount > 20) then {_infantryMaxSpawned = _infantryLimit_2;};
@@ -156,19 +156,19 @@ _infantryArray = [];
 _infantryCheckDelay = _tickTimeNow + 10;
 _infantrySpawnDelay = time + 10;
 
-_infantrySpawnDistanceFixed = 800;
-_infantrySpawnDistanceRandom = 1000;
-_infantrySpawnDistanceFromPlayer = 400;
+_infantrySpawnDistanceFixed = 200; //distance from HQ
+_infantrySpawnDistanceRandom = 350; //added random distance max
+_infantrySpawnDistanceFromPlayer = 25; //bubble around players that stuff can't spawn
 
 if (worldName isEqualTo 'Tanoa') then {
-	_infantrySpawnDistanceFixed = 700;
-	_infantrySpawnDistanceRandom = 800;
-	_infantrySpawnDistanceFromPlayer = 350;
+	_infantrySpawnDistanceFixed = 200;
+	_infantrySpawnDistanceRandom = 350;
+	_infantrySpawnDistanceFromPlayer = 25;
 };
 if (worldName isEqualTo 'Stratis') then {
-	_infantrySpawnDistanceFixed = 400;
-	_infantrySpawnDistanceRandom = 500;
-	_infantrySpawnDistanceFromPlayer = 250;
+	_infantrySpawnDistanceFixed = 200;
+	_infantrySpawnDistanceRandom = 350;
+	_infantrySpawnDistanceFromPlayer = 25;
 };
 _infTypes = ['defend_grptypes_1'] call QS_data_listUnits;
 if (worldName isEqualTo 'Stratis') then {
@@ -179,10 +179,10 @@ _QS_armor = TRUE;
 _armorInitialSpawnDelay = time + 60 + (random 60);
 if (_allPlayersCount > 0) then {_armorMaxSpawned = 0;};
 if (_allPlayersCount > 10) then {_armorMaxSpawned = 1;};
-if (_allPlayersCount > 20) then {_armorMaxSpawned = 1;};
-if (_allPlayersCount > 30) then {if ((random 1) > 0.333) then {_armorMaxSpawned = 2;} else {_armorMaxSpawned = 1;};};
+if (_allPlayersCount > 20) then {_armorMaxSpawned = 2;};
+if (_allPlayersCount > 30) then {if ((random 1) > 0.333) then {_armorMaxSpawned = 3;} else {_armorMaxSpawned = 2;};};
 if (_allPlayersCount > 40) then {_armorMaxSpawned = 2;};
-if (_allPlayersCount > 50) then {if ((random 1) > 0.666) then {_armorMaxSpawned = 3;} else {_armorMaxSpawned = 2;};};
+if (_allPlayersCount > 50) then {if ((random 1) > 0.666) then {_armorMaxSpawned = 4;} else {_armorMaxSpawned = 3;};};
 if (_armorMaxSpawned < 2) then {
 	if ((missionNamespace getVariable ['QS_AI_targetsKnowledge_threat_armor',0]) > 1) then {
 		_armorMaxSpawned = _armorMaxSpawned max 2;
@@ -198,14 +198,14 @@ if (worldName in ['Stratis']) then {
 };
 _armorType = '';
 _QS_groundTransport = FALSE;
-if ((random 1) > 0.333) then {_QS_groundTransport = TRUE;};
+if ((random 1) > 0.033) then {_QS_groundTransport = TRUE;};
 _groundTransportInitialSpawnDelay = time + 180 + (random 240);
 if (_allPlayersCount > 0) then {_groundTransportMaxSpawned = 1;};
-if (_allPlayersCount > 10) then {_groundTransportMaxSpawned = 1;};
-if (_allPlayersCount > 20) then {_groundTransportMaxSpawned = 2;};
-if (_allPlayersCount > 30) then {_groundTransportMaxSpawned = 2;};
-if (_allPlayersCount > 40) then {_groundTransportMaxSpawned = 3;};
-if (_allPlayersCount > 50) then {_groundTransportMaxSpawned = 3;};
+if (_allPlayersCount > 10) then {_groundTransportMaxSpawned = 2;};
+if (_allPlayersCount > 20) then {_groundTransportMaxSpawned = 3;};
+if (_allPlayersCount > 30) then {_groundTransportMaxSpawned = 4;};
+if (_allPlayersCount > 40) then {_groundTransportMaxSpawned = 4;};
+if (_allPlayersCount > 50) then {_groundTransportMaxSpawned = 4;};
 _groundTransportSpawned = 0;
 _groundTransportArray = [];
 _groundTransportCheckDelay = time + 5;
@@ -221,23 +221,23 @@ _index = 0;
 _grp = grpNull;
 _QS_airSuperiority = TRUE && (!(worldName in ['Stratis']));
 if (_allPlayersCount > 0) then {_jetsToSpawn = 0;};
-if (_allPlayersCount > 10) then {_jetsToSpawn = 0;};
+if (_allPlayersCount > 10) then {_jetsToSpawn = 1;};
 if (_allPlayersCount > 20) then {_jetsToSpawn = 1;};
-if (_allPlayersCount > 30) then {_jetsToSpawn = selectRandom [1,1,2];};
+if (_allPlayersCount > 30) then {_jetsToSpawn = selectRandom [2,1,1];};
 if (_allPlayersCount > 40) then {_jetsToSpawn = 2;};
-if (_allPlayersCount > 50) then {_jetsToSpawn = 2;};
+if (_allPlayersCount > 50) then {_jetsToSpawn = 3;};
 _jetType = selectRandomWeighted (['defend_jettypes_1'] call QS_data_listVehicles);
 _jetArray = [];
-_jetInitialDelay = time + (30 + (random 60));
+_jetInitialDelay = time + (30 + (random 120));
 _jet = objNull;
 _helicopters = TRUE;
 _helicoptersToSpawn = 1;
 if (_allPlayersCount > 0) then {_helicoptersToSpawn = 0;};
 if (_allPlayersCount > 10) then {_helicoptersToSpawn = 1;};
-if (_allPlayersCount > 20) then {_helicoptersToSpawn = 1;};
-if (_allPlayersCount > 30) then {_helicoptersToSpawn = 1;};
-if (_allPlayersCount > 40) then {_helicoptersToSpawn = 2;};
-if (_allPlayersCount > 50) then {_helicoptersToSpawn = 2;};
+if (_allPlayersCount > 20) then {_helicoptersToSpawn = 2;};
+if (_allPlayersCount > 30) then {_helicoptersToSpawn = 3;};
+if (_allPlayersCount > 40) then {_helicoptersToSpawn = 3;};
+if (_allPlayersCount > 50) then {_helicoptersToSpawn = 3;};
 if (_allPlayersCount > 20) then {
 	if (worldName in ['Tanoa','Enoch','Stratis']) then {
 		_helicopterTypes = ['defend_helitypes_1'] call QS_data_listVehicles;
@@ -253,7 +253,7 @@ _heliParaGrp = grpNull;
 _helicopterInitialDelay = _groundTransportInitialSpawnDelay;
 _helicopter = objNull;
 _heliParaCheckDelay = time + 3;
-if ((random 1) > 0.666) then {
+if ((random 1) > 0.033) then {
 	_paratroopers = TRUE;
 } else {
 	_paratroopers = FALSE;
@@ -269,20 +269,20 @@ if (!(_paratroopers)) then {
 		_infantryMaxSpawned = round (_infantryMaxSpawned * 1.25);
 	};
 };
-if (_allPlayersCount > 0) then {_paratroopersToSpawn = 2;};
+if (_allPlayersCount > 0) then {_paratroopersToSpawn = 4;};
 if (_allPlayersCount > 10) then {_paratroopersToSpawn = 4;};
-if (_allPlayersCount > 20) then {_paratroopersToSpawn = 6;};
+if (_allPlayersCount > 20) then {_paratroopersToSpawn = 8;};
 if (_allPlayersCount > 30) then {_paratroopersToSpawn = 8;};
-if (_allPlayersCount > 40) then {_paratroopersToSpawn = 10;};
-if (_allPlayersCount > 50) then {_paratroopersToSpawn = 10;};
+if (_allPlayersCount > 40) then {_paratroopersToSpawn = 12;};
+if (_allPlayersCount > 50) then {_paratroopersToSpawn = 12;};
 _paratrooperTypes = ['defend_paratypes_1'] call QS_data_listUnits;
 _paratrooperType = '';
 _paratrooperArray = [];
-_paratrooperInitialDelay = time + 240 + (random 240);
-_paratrooper2InitialDelay = _paratrooperInitialDelay + 180 + (random 240);
+_paratrooperInitialDelay = time + 10 + (random 60);
+_paratrooper2InitialDelay = _paratrooperInitialDelay + 30 + (random 120);
 _paratrooper = objNull;
 _vPara = FALSE;
-if ((random 1) > 0.666) then {
+if ((random 1) > 0.006) then {
 	_vPara = TRUE;
 };
 _vParaTypes = ['defend_paravtypes_1'] call QS_data_listVehicles;
@@ -291,17 +291,17 @@ _vParaV = objNull;
 _vParaInitialDelay = _paratrooper2InitialDelay + 10 + (random 20);
 _vParaHeightMin = 100;
 _vParaHeightRandom = 150;
-_vParaDelay = time + 3;
+_vParaDelay = time + 4;
 _vParaArray = [];
 _vParaToSpawn = 0;
-if (_allPlayersCount > 0) then {_vParaToSpawn = 1;};
-if (_allPlayersCount > 10) then {_vParaToSpawn = 1;};
-if (_allPlayersCount > 20) then {_vParaToSpawn = 2;};
-if (_allPlayersCount > 30) then {_vParaToSpawn = 2;};
-if (_allPlayersCount > 40) then {if ((random 1) > 0.666) then {_vParaToSpawn = 3;} else {_vParaToSpawn = 2;};};
-if (_allPlayersCount > 50) then {_vParaToSpawn = 3;};
+if (_allPlayersCount > 0) then {_vParaToSpawn = 4;};
+if (_allPlayersCount > 10) then {_vParaToSpawn = 4;};
+if (_allPlayersCount > 20) then {_vParaToSpawn = 8;};
+if (_allPlayersCount > 30) then {_vParaToSpawn = 16;};
+if (_allPlayersCount > 40) then {if ((random 1) > 0.666) then {_vParaToSpawn = 24;} else {_vParaToSpawn = 16;};};
+if (_allPlayersCount > 50) then {_vParaToSpawn = 24;};
 _QS_flyBy = FALSE;
-if ((random 1) > 0.333) then {
+if ((random 1) > 0.033) then {
 	_QS_flyBy = TRUE;
 };
 _QS_flyByDelay = _jetInitialDelay - 15;
@@ -323,7 +323,7 @@ if ((random 1) > 0.666) then {
 missionNamespace setVariable ['QS_defend_terminate',FALSE,FALSE];
 sleep 2;
 if (_allPlayersCount > 20) then {
-	if ((random 1) > 0.666) then {
+	if ((random 1) > 0.366) then {
 		if (isClass (missionConfigFile >> 'CfgSounds' >> 'Bells')) then {
 			['playSound','Bells'] remoteExec ['QS_fnc_remoteExecCmd',-2,FALSE];
 		};

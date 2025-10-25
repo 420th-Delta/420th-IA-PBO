@@ -14,20 +14,28 @@ Description:
 ______________________________________________________*/
 
 _playerJetCount = count (allPlayers select {((toLowerANSI (typeOf (vehicle _x))) in QS_core_classNames_planeTypesCAS_lower)});
-if (((count allPlayers) < 10) && (_playerJetCount isEqualTo 0)) exitWith {};
+if ((count allPlayers) < 20)  exitWith {};
+if (_playerJetCount isEqualTo 0) exitWith {};
 private _jetSelect = selectRandomWeighted [
+// 	'O_Plane_Fighter_02_Stealth_F',([0,0.1] select (_playerJetCount > 1)),
+// 	'I_Plane_Fighter_03_AA_F',0.1,
+// 	'I_Plane_Fighter_03_Cluster_F',0.1,
 	'O_Plane_CAS_02_dynamicLoadout_F',0.3,
-	'O_Plane_Fighter_02_F',([0,0.1] select (_playerJetCount > 0)),
-	'O_Plane_Fighter_02_Stealth_F',([0,0.1] select (_playerJetCount > 1)),
-	'I_Plane_Fighter_03_AA_F',0.1,
-	'I_Plane_Fighter_03_dynamicLoadout_F',0.3,
-	'I_Plane_Fighter_04_F',([0.3,0.5] select (_playerJetCount > 0)),
-	'I_Plane_Fighter_03_Cluster_F',0.1
+	'O_Plane_Fighter_02_F',([0,0.1] select (_playerJetCount > 1)),
+	'I_Plane_Fighter_03_CAS_F',0.5,
+	'I_Plane_Fighter_04_F',([0.3,0.2] select (_playerJetCount > 1))
 ];
 if ((call (missionNamespace getVariable 'QS_fnc_getActiveDLC')) isNotEqualTo '') then {
 	_jetSelect = selectRandom QS_core_classNames_planeTypesEnemy_lower;
 };
-_spawnPos = [(random worldSize),(random worldSize),1000];
+//_spawnPos = [(random worldSize),(random worldSize),1000];
+// Spawn position was too often on or near airbase. Spawn position will now be in a random corner of the map with distance to map edge adjustable using _offset.
+_offset = 1000; 
+_spawnPosOptions = selectRandom [[_offset,_offset],[_offset,(worldSize-_offset)],[(worldSize-_offset),(worldSize-_offset)],[(worldSize-_offset),_offset]];
+_spawnPos = _spawnPosOptions;
+
+
+
 _QS_AOpos = missionNamespace getVariable 'QS_AOpos';
 private _new = FALSE;
 if (isNull (missionNamespace getVariable 'QS_enemyCasGroup')) then {

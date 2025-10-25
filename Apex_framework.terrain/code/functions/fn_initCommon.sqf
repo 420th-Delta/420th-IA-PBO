@@ -78,6 +78,7 @@ uiNamespace setVariable ['rscmissionstatus_buttonclick',compileFinal {TRUE}];
 	['QS_sc_composition_large_2','code\config\scCompositions\large\QS_sc_composition_large_2.sqf'],
 	['QS_sc_composition_large_3','code\config\scCompositions\large\QS_sc_composition_large_3.sqf'],
 	['QS_sc_composition_hq_1','code\config\hqCompositions\sc\QS_hqComposition_1.sqf'],
+	['QS_data_emotes_1','code\config\QS_data_emotes.sqf'],
 	['QS_data_supplyDepot_1','code\config\QS_data_supplyDepot_1.sqf'],
 	['QS_data_radioTower_1','code\config\QS_data_radioTower_1.sqf'],
 	['QS_data_siteIDAPSupply_1','code\config\QS_data_siteIDAPSupply_1.sqf'],

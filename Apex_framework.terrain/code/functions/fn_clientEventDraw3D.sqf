@@ -369,7 +369,7 @@ if (isNull (objectParent _player)) then {
 					{((lifeState _player) in ['HEALTHY','INJURED'])} &&
 					{(!(['reload',gestureState _player] call QS_fnc_inString))}
 				) then {
-					_player playAction 'HandSignalRadio';
+				//	_player playAction 'HandSignalRadio';
 				};
 				if ((uiNamespace getVariable ['QS_ui_timeLastRadioIn',_time]) < (_time - 3)) then {
 					uiNamespace setVariable ['QS_ui_timeLastRadioIn',_time];
@@ -410,6 +410,83 @@ if (isNull (objectParent _player)) then {
 	};
 };
 if (visibleMap) exitWith {};
+if (
+	(localNamespace getVariable ['QS_emotes_enabled',TRUE]) &&
+	(localNamespace getVariable ['QS_missionConfig_emotes',TRUE])
+) then {
+	_focusOn = focusOn;
+	private _emotesUnits = localNamespace getVariable ['QS_emotes_nearUnits',[]];
+	if (_time > (localNamespace getVariable ['QS_emotes_nearUnits_delay',-1])) then {
+		_emotesUnits = allPlayers inAreaArray [_focusOn,51,51];
+		localNamespace setVariable ['QS_emotes_nearUnits',_emotesUnits];
+		localNamespace setVariable ['QS_emotes_nearUnits_delay',_time + 3];
+	};
+	{
+		_unit = _x;
+		if ((_unit getVariable ['QS_unit_emoteShow',[FALSE,-1,-1]]) # 0) then {
+			_emoteIndex = _unit getVariable ['QS_unit_emote',-1];
+			if (_emoteIndex isNotEqualTo -1) then {
+				if ((worldToScreen (_unit modelToWorldVisual [0,0,0])) isNotEqualTo []) then {
+					_objectParent = objectParent _unit;
+					_iconPos = if (isNull _objectParent) then {
+						((_unit modelToWorldVisual (selectionPosition [_unit,'head',11,TRUE])) vectorAdd [0,0,0.5])
+					} else {
+						((_objectParent modelToWorldVisual (_objectParent worldToModelVisual (_unit modelToWorldVisual (selectionPosition [_unit,'head',11,TRUE])))) vectorAdd [0,0,0.5])
+					};
+					_dist = _focusOn distance2D _unit;
+					_alpha = 1 min (1 - (_dist / 50)) max 0.5;
+					_peak = linearConversion [0,50,_dist,2,1,TRUE];
+					_fade = _peak / 2;
+					_scale = (
+						(
+							linearConversion [
+								((_unit getVariable ['QS_unit_emoteShow',[FALSE,-1,-1]]) # 1),
+								((_unit getVariable ['QS_unit_emoteShow',[FALSE,-1,-1]]) # 2),
+								_time,
+								0,
+								1,
+								TRUE
+							]
+						) bezierInterpolation [
+							[0,0,0],
+							[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],
+							[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],[0,_peak,0],
+							[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],
+							[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],[0,_fade,0],
+							[0,0,0]
+						]
+					) # 1;
+					drawIcon3D [
+						(QS_emotes_list # _emoteIndex),
+						[1,1,1,_alpha],
+						_iconPos,
+						_scale,
+						_scale,
+						0,
+						'',
+						0,
+						0.3,
+						_font,
+						'center',
+						FALSE
+					];
+				};
+			};
+			if (_time > ((_unit getVariable ['QS_unit_emoteShow',[-1,-1]]) # 2)) then {
+				{
+					_unit setVariable _x;
+				} forEach [
+					['QS_unit_emoteShow',[FALSE,-1,-1],FALSE],
+					['QS_unit_emote',-1,FALSE]
+				];
+			};
+		} else {
+			if ((_unit getVariable ['QS_unit_emote',-1]) isNotEqualTo -1) then {
+				_unit setVariable ['QS_unit_emoteShow',[TRUE,_time,_time + 5],FALSE];
+			};
+		};
+	} forEach _emotesUnits;
+};
 if (_player getUnitTrait 'medic') then {
 	private _sTime = serverTime;
 	private _vehicle = objNull;
