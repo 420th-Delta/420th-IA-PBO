@@ -1025,7 +1025,7 @@ _QS_module_radioChannelManager_checkState = {
 _atcMarkerPos = markerPos ['QS_marker_base_atc',TRUE];
 _tocMarkerPos = markerPos ['QS_marker_base_toc',TRUE];
 /*/===== Weapon Sway module/*/
-_QS_module_swayManager = TRUE;
+_QS_module_swayManager = FALSE;
 _QS_module_swayManager_delay = 0.25;
 _QS_module_swayManager_checkDelay = _timeNow + _QS_module_swayManager_delay;
 _QS_module_swayManager_secWepSwayCoef = 2.5;
