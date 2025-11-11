@@ -1,13 +1,13 @@
 /*/
 File: fn_clientDamageModifier.sqf
-Author: 
+Author:
 
 	Quiksilver
-	
+
 Last modified:
 
 	31/05/2023 A3 2.12 by Quiksilver
-	
+
 Description:
 
 	Player Damage Modification
@@ -108,7 +108,7 @@ if (isNull _objectParent) then {
 			};
 			if (
 				(
-					(_objectParent isKindOf 'LandVehicle') || 
+					(_objectParent isKindOf 'LandVehicle') ||
 					{(_objectParent isKindOf 'Ship')}
 				) &&
 				{(isNull _source)} &&
