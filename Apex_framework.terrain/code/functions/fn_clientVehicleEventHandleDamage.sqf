@@ -33,7 +33,7 @@ if (!isNull _instigator) then {
 			(!(_vehicle in [_source,_instigator])) &&
 			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
 		) then {
-			_scale = 0.05;
+			_scale = [0.05,0] select isNil 'TGC_allowFF';
 		};
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
@@ -63,7 +63,7 @@ if (!isNull _source) then {
 			(!(_vehicle in [_source,_instigator])) &&
 			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
 		) then {
-			_scale = 0.05;
+			_scale = [0.05,0] select isNil 'TGC_allowFF';
 		};
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
@@ -182,14 +182,14 @@ if (
 		_instigator setDamage [1,FALSE];
 	};
 	if ((vehicle _instigator) isKindOf 'LandVehicle') then {
-		_scale = 0.01;
+		_scale = [0.01,0] select isNil 'TGC_allowFF';
 	};
 };
 if (
 	(_scale > 0.05) &&
 	{(_inSafezone && _safezoneActive && (_safezoneLevel > 1))}
 ) then {
-	_scale = 0.05;
+	_scale = [0.05,0] select isNil 'TGC_allowFF';
 };
 if (
 	(_projectile isEqualTo 'FuelExplosion') &&
