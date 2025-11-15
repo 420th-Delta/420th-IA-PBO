@@ -22,7 +22,7 @@ if (
 	(!((lifeState _unit) in ['HEALTHY','INJURED']))
 ) exitWith {_damage};
 if (
-	(soundVolume isNotEqualTo (getAudioOptionVolumes # 5)) &&
+	(soundVolume isEqualTo 1) &&
 	(diag_tickTime > (_unit getVariable ['QS_combatDeafness',0]))
 ) then {
 	_unit setVariable ['QS_combatDeafness',(diag_tickTime + 60),FALSE];
