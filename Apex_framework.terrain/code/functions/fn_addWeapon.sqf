@@ -69,4 +69,5 @@ if (_return) then {
 	_muzzles = getArray (configFile >> 'CfgWeapons' >> _weapon >> 'muzzles');
 	_muzzle = if ((_muzzles # 0) isEqualTo 'this') then {_weapon} else {(_muzzles # 0)};
 };
+_unit setUnitLoadout getUnitLoadout _unit; // Fix silent gunshot sounds in v2.16 modded
 _muzzle;
