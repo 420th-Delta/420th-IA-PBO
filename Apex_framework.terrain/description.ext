@@ -78,6 +78,8 @@ respawnDelay = 5;										/*/ Delay prior to respawn/*/
 respawnDialog = 0;										/*/ default = 1. show respawn timer and scoreboard when killed./*/
 respawnOnStart = 0;
 
+zeusCompositionScriptLevel = 2;
+
 // Security - CfgRemoteExec + CfgDisabledCommands
 // #include "code\config\security.hpp"						// Delete this line if you are having issues with Mod/DLC compatibility. This file contains CfgRemoteExec + CfgDisabledCommands
 
@@ -352,6 +354,7 @@ class CfgFunctions {
 			class clientMenuActionContext {file = "code\functions\fn_clientMenuActionContext.sqf";};
 			class clientMenuConsole {file = "code\functions\fn_clientMenuConsole.sqf";};
 			class clientMenuContext {file = "code\functions\fn_clientMenuContext.sqf";};
+			class clientMenuEmotes {file = "code\functions\fn_clientMenuEmotes.sqf";};
 			class clientMenuDeployment {file = "code\functions\fn_clientMenuDeployment.sqf";};
 			class clientMenuEntry {file = "code\functions\fn_clientMenuEntry.sqf";};
 			class clientMenuFace {file = "code\functions\fn_clientMenuFace.sqf";};
@@ -735,6 +738,22 @@ class CfgFunctions {
 			class zonePreset {file = "code\functions\fn_zonePreset.sqf";};
 		};
 	};
+	class TGC {
+        class Drones {
+            file = "TGC\Functions\Drones";
+            class initDroneHandlers { postInit = 1; };
+            class lockDroneByUID {};
+        };
+        class Lasers {
+            file = "TGC\Functions\Lasers";
+            class findLaserInstigators {};
+            class initLaserHandlers { postInit = 1; };
+        };
+        class Setting {
+            file = "TGC\Functions\Setting";
+            class addSetting {};
+        };
+    };
 };
 class CfgDebriefing {
 	class QS_RD_end_2 {
@@ -3741,6 +3760,83 @@ class QS_RD_client_dialog_menu_utexture {
 			h = 0.22 * safezoneH;
 			sizeEx = 0.03;
 			colorBackground[] = {0,0,0,0.5};
+		};
+	};
+};
+class QS_RD_client_dialog_menu_emotes {
+	idd = 18000;
+	movingEnable = 1;
+	enableSimulation = 1;
+	onLoad = "['onLoad',(_this # 0)] spawn (missionNamespace getVariable 'QS_fnc_clientMenuEmotes');";
+	onUnload = "['onUnload',(_this # 0)] spawn (missionNamespace getVariable 'QS_fnc_clientMenuEmotes');";
+	class controls {
+		class QS_RD_client_dialog_menu_emotes_frame_1: QS_RD_dialog_RscFrame {
+			moving = 1;
+			idc = 1800;
+			x = 0.372583 * safezoneW + safezoneX;
+			y = 0.52 * safezoneH + safezoneY;
+			w = 0.145 * safezoneW;
+			h = 0.40 * safezoneH;
+			shadow = 0;
+			colorBackground[] = {0,0,0,0.7};
+			colorDisabled[] = {1,1,1,0.25};
+		};
+		class QS_RD_client_dialog_menu_emotes_box_1: QS_RD_dialog_Box {
+			moving = 1;
+			idc = 1801;
+			x = 0.372583 * safezoneW + safezoneX;
+			y = 0.52 * safezoneH + safezoneY;
+			w = 0.145 * safezoneW;
+			h = 0.40 * safezoneH;
+		};
+		class QS_RD_client_dialog_menu_emotes_text_1: QS_RD_dialog_RscText {
+			moving = 1;
+			idc = 1802;
+			text = "$STR_QS_Menu_234";
+			x = 0.374500 * safezoneW + safezoneX;
+			y = 0.525 * safezoneH + safezoneY;
+			w = 0.139 * safezoneW;
+			h = 0.044 * safezoneH;
+			sizeEx = 0.04;
+			shadow = 0;
+			colorText[] = {1,1,1,1};
+		};
+		class QS_RD_client_dialog_menu_emotes_button_1: QS_RD_dialog_RscButton {
+			moving = 1;
+			idc = 1810;
+			text = "Select";
+			x = 0.38 * safezoneW + safezoneX;
+			y = 0.815 * safezoneH + safezoneY;
+			w = 0.13 * safezoneW;
+			h = 0.0340016 * safezoneH;
+			sizeEx = 0.03;
+			onButtonClick = "['Select',(_this # 0)] call (missionNamespace getVariable 'QS_fnc_clientMenuEmotes');";
+			shadow = 0;
+			colorText[] = {1,1,1,1};
+		};
+		class QS_RD_client_dialog_menu_emotes_button_2: QS_RD_dialog_RscButton {
+			moving = 1;
+			idc = 1811;
+			text = "Hide";
+			x = 0.38 * safezoneW + safezoneX;
+			y = 0.87 * safezoneH + safezoneY;
+			w = 0.13 * safezoneW;
+			h = 0.0340016 * safezoneH;
+			sizeEx = 0.03;
+			onButtonClick = "['Hide',(_this # 0)] call (missionNamespace getVariable 'QS_fnc_clientMenuEmotes');";
+			shadow = 0;
+			colorText[] = {1,1,1,1};
+		};
+		class listNboxA : QS_RD_dialog_RscListNBox {
+			moving = 1;
+			idc = 1804;
+			x = 0.38 * safezoneW + safezoneX;
+			y = 0.58 * safezoneH + safezoneY;
+			w = 0.13 * safezoneW;
+			h = 0.22 * safezoneH;
+			sizeEx = 0.03;
+			colorBackground[] = {0,0,0,0.5};
+			rowHeight = 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
 	};
 };

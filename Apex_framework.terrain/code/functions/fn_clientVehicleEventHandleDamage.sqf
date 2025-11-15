@@ -1,9 +1,9 @@
 /*
 File: fn_clientVehicleEventHandleDamage.sqf
 Author:
-	
+
 	Quiksilver
-	
+
 Last Modified:
 
 	10/11/2023 A3 2.14 by Quiksilver
@@ -33,7 +33,7 @@ if (!isNull _instigator) then {
 			(!(_vehicle in [_source,_instigator])) &&
 			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
 		) then {
-			_scale = 0.05;
+			_scale = [0.05,0] select isNil 'TGC_allowFF';
 		};
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
@@ -63,7 +63,7 @@ if (!isNull _source) then {
 			(!(_vehicle in [_source,_instigator])) &&
 			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
 		) then {
-			_scale = 0.05;
+			_scale = [0.05,0] select isNil 'TGC_allowFF';
 		};
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
@@ -110,7 +110,7 @@ if (!isNull _source) then {
 			};
 			/*/
 			if (
-				((['Car','Tank','Wheeled_APC_F'] findIf { _vehicle isKindOf _x }) isNotEqualTo -1) && 
+				((['Car','Tank','Wheeled_APC_F'] findIf { _vehicle isKindOf _x }) isNotEqualTo -1) &&
 				{(!(_vehicle isKindOf 'StaticWeapon'))} &&
 				{(_hitPoint in ['hithull','hitbody','hitengine','hitfuel'])} &&
 				{(!(_source isKindOf 'Tank'))}
@@ -182,15 +182,15 @@ if (
 		_instigator setDamage [1,FALSE];
 	};
 	if ((vehicle _instigator) isKindOf 'LandVehicle') then {
-		_scale = 0.01;
+		_scale = [0.01,0] select isNil 'TGC_allowFF';
 	};
 };
 if (
 	(_scale > 0.05) &&
 	{(_inSafezone && _safezoneActive && (_safezoneLevel > 1))}
 ) then {
-	_scale = 0.05;
-}; 
+	_scale = [0.05,0] select isNil 'TGC_allowFF';
+};
 if (
 	(_projectile isEqualTo 'FuelExplosion') &&
 	{(_inSafezone && _safezoneActive)}
@@ -205,7 +205,7 @@ if (_vehicle getVariable ['QS_logistics_wreck',FALSE]) exitWith {
 		} forEach (crew _vehicle);
 	};
 	if (isEngineOn _vehicle) then {
-		_vehicle engineOn FALSE;	
+		_vehicle engineOn FALSE;
 	};
 	if (isVehicleRadarOn _vehicle) then {
 		_vehicle setVehicleRadar 2;
@@ -221,7 +221,7 @@ if (_vehicle getVariable ['QS_logistics_wreck',FALSE]) exitWith {
 };
 if (_scale isEqualTo 0) exitWith {_oldDamage};
 if (
-	((['Car','Tank','Wheeled_APC_F'] findIf { _vehicle isKindOf _x }) isNotEqualTo -1) && 
+	((['Car','Tank','Wheeled_APC_F'] findIf { _vehicle isKindOf _x }) isNotEqualTo -1) &&
 	{(!(_vehicle isKindOf 'StaticWeapon'))} &&
 	{(!(_vehicle getVariable ['QS_logistics_wreck',FALSE]))}
 ) then {

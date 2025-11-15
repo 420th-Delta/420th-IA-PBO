@@ -110,7 +110,7 @@ if (_type isEqualTo 'GET_ROLE_COUNT') exitWith {
 		};
 		if (_exit) exitWith {};
 	} forEach (missionNamespace getVariable 'QS_roles_data');
-	if (_coef isEqualTo -1) then {
+	if (_coef <= 0) then {
 		_role_capacity = _min max _max;
 	} else {
 		_role_capacity = _min max (_min + (floor (_playerCount / _coef))) min _max;

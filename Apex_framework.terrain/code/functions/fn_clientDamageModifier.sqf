@@ -1,13 +1,13 @@
 /*/
 File: fn_clientDamageModifier.sqf
-Author: 
+Author:
 
 	Quiksilver
-	
+
 Last modified:
 
 	31/05/2023 A3 2.12 by Quiksilver
-	
+
 Description:
 
 	Player Damage Modification
@@ -25,7 +25,7 @@ if (isNull _objectParent) then {
 				((side (group _instigator)) in [(_unit getVariable ['QS_unit_side',WEST]),sideEnemy]) ||
 				{((side (group _source)) in [(_unit getVariable ['QS_unit_side',WEST]),sideEnemy])}
 			) then {
-				_return = 0.05;
+				_return = [0.05,0] select isNil 'TGC_allowFF';
 				if (_inSafezone && _safezoneActive) then {
 					_return = 0;
 				};
@@ -70,7 +70,7 @@ if (isNull _objectParent) then {
 			(!isNull _instigator) &&
 			{((side (group _instigator)) in [(_unit getVariable ['QS_unit_side',WEST]),sideEnemy])}
 		) then {
-			_return = 0.05;
+			_return = [0.05,0] select isNil 'TGC_allowFF';
 			if (_inSafezone && _safezoneActive) then {
 				_return = 0;
 			};
@@ -108,7 +108,7 @@ if (isNull _objectParent) then {
 			};
 			if (
 				(
-					(_objectParent isKindOf 'LandVehicle') || 
+					(_objectParent isKindOf 'LandVehicle') ||
 					{(_objectParent isKindOf 'Ship')}
 				) &&
 				{(isNull _source)} &&

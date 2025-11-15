@@ -25,7 +25,7 @@ Custom:
 	User9 - Earplugs
 	User10 - Player Menu
 	User11 - Admin Menu / Zeus Sync
-	User12 -
+	User12 - Emotes menu
 	User13 -
 	User14 - Aircraft Collision Lights
 	User15 - Force (Dis)mount AI
@@ -130,7 +130,21 @@ if (_this isEqualTo 'init') exitWith {
 			// Admin menu
 			[['KeyDown','Curator'] select (!isNull curatorCamera)] call (missionNamespace getVariable 'QS_fnc_clientMenuStaff');
 		}],
-		['User12','activate',{}],
+		['User12','activate',{
+			uiNamespace setVariable ['QS_controls_user12_active',TRUE];
+			if (
+				(isNull (uiNamespace getVariable ['QS_display_emotes',displayNull]))
+			) then {
+				uiNamespace setVariable ['QS_display_emotes',(findDisplay 46) createDisplay 'QS_RD_client_dialog_menu_emotes'];			
+			};
+		}],
+		['User12','deactivate',{
+			uiNamespace setVariable ['QS_controls_user12_active',FALSE];
+			if (!isNull (uiNamespace getVariable ['QS_display_emotes',displayNull])) then {
+				(uiNamespace getVariable ['QS_display_emotes',displayNull]) closeDisplay 2;
+				uiNamespace setVariable ['QS_display_emotes',displayNull];
+			};
+		}],
 		['User13','activate',{}],
 		['User14','activate',{
 			_cameraOn = cameraOn;

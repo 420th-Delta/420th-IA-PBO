@@ -132,7 +132,7 @@ if (_type isEqualTo 'profilename_blacklisted_text_1') exitWith {
 		'Fuck','Shit','Cunt','Bitch','Nigger','Prick','Fag','Phag',
 		'Penis','Vagina','Asshole','Gay','Lesbian','Cvnt',
 		'Sh1t','Shlt','G4y','Fvck','H4ck','N1gger','Nlgger','pussy','pvssy','puzzy','pvzzy',
-		'rape','r4pe','r4p3','rapist','r4pist','r4p1st','Server','Admin'
+		'rape','r4pe','r4p3','rapist','r4pist','r4p1st','Server','Admin','Owner','__'
 	]
 };
 if (_type isEqualTo 'zeus_modules_blocked_1') exitWith {

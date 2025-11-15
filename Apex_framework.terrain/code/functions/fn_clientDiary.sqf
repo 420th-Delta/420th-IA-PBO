@@ -281,7 +281,8 @@ player createDiaryRecord [
 			localize 'STR_QS_Diary_143',
 			localize 'STR_QS_Diary_144',
 			localize 'STR_QS_Diary_145',
-			localize 'STR_QS_Diary_151',localize 'STR_QS_Diary_151',
+			localize 'STR_QS_Menu_234',
+			localize 'STR_QS_Diary_151',
 			localize 'STR_QS_Diary_146',
 			localize 'STR_QS_Diary_147',
 			localize 'STR_QS_Diary_151',
@@ -328,6 +329,7 @@ player createDiaryRecord [
 		<br/>%16 - [Ctrl]+[Numpad x]
 		<br/>%17 - %1
 		<br/>%18 - [Page [Up/Down]]
+		<br/>%19 - [Custom 12]
 		',
 			(actionKeysNames 'TacticalPing'),
 			(actionKeysNames 'ReloadMagazine'),
@@ -346,11 +348,11 @@ player createDiaryRecord [
 			localize 'STR_QS_Diary_112',
 			localize 'STR_QS_Diary_113',
 			localize 'STR_QS_Diary_114',
-			localize 'STR_QS_Diary_115'
+			localize 'STR_QS_Diary_115',
+			localize 'STR_QS_Menu_234'
 		])
 	]
 ];
-
 if ((getPlayerUID player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'))) then {
 	player createDiaryRecord [
 		'QS_diary_hotkeys',
@@ -574,4 +576,4 @@ player createDiaryRecord [
 		localize 'STR_QS_Diary_139',
 		"<br/><br/><font size='20'>Quiksilver</font><br/><br/>This framework is the product of many thousands of hours of doing battle in notepad++ over a number of years (2013-2017). We sincerely hope you enjoy your experience!<br/><br/>If you would like to show your appreciation but do not know how, you can<br/><br/><executeClose expression=""createDialog 'QS_RD_client_dialog_menu_hub';"">Donate to Quiksilver (Patreon)</executeClose><br/><br/>Stay safe out there, soldier!"
 	]
-];
+];;
