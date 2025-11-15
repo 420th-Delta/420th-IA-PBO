@@ -78,6 +78,8 @@ respawnDelay = 5;										/*/ Delay prior to respawn/*/
 respawnDialog = 0;										/*/ default = 1. show respawn timer and scoreboard when killed./*/
 respawnOnStart = 0;
 
+zeusCompositionScriptLevel = 2;
+
 // Security - CfgRemoteExec + CfgDisabledCommands
 // #include "code\config\security.hpp"						// Delete this line if you are having issues with Mod/DLC compatibility. This file contains CfgRemoteExec + CfgDisabledCommands
 
