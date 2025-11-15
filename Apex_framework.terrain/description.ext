@@ -739,6 +739,11 @@ class CfgFunctions {
 		};
 	};
     class TGC {
+        class Drones {
+            file = "TGC\Functions\Drones";
+            class initDroneHandlers { postInit = 1; };
+            class lockDroneByUID {};
+        };
         class Lasers {
             file = "TGC\Functions\Lasers";
             class findLaserInstigators {};
