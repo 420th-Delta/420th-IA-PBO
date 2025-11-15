@@ -738,12 +738,7 @@ class CfgFunctions {
 			class zonePreset {file = "code\functions\fn_zonePreset.sqf";};
 		};
 	};
-	class TGC {
-        class Drones {
-            file = "TGC\Functions\Drones";
-            class initDroneHandlers { postInit = 1; };
-            class lockDroneByUID {};
-        };
+    class TGC {
         class Lasers {
             file = "TGC\Functions\Lasers";
             class findLaserInstigators {};
