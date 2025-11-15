@@ -81,7 +81,7 @@ if (_vehicle isKindOf 'LandVehicle') then {
 };
 if (
 	(_vehicle isKindOf 'Air') &&
-	{(soundVolume isEqualTo (getAudioOptionVolumes # 5))}
+	{(soundVolume isNotEqualTo 1)}
 ) then {
 	playSoundUI ['missile_warning_1',0.25,1,FALSE];
 };
