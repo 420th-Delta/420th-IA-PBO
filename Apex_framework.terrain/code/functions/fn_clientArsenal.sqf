@@ -67,7 +67,7 @@ private _logStep = {
 	['_restrictedBackpacks',[]]
 ];
 /*/
-
+/*
 private _QS_restrictedItems = [
 	'h_helmetleadero_oucamo',
 	'h_helmetleadero_ocamo',
@@ -126,6 +126,12 @@ private _QS_restrictedItems = [
 	'integrated_nvg_f',
 	'integrated_nvg_ti_0_f',
 	'integrated_nvg_ti_1_f',
+	'o_uavterminal',
+	'i_uavterminal',
+	'c_uavterminal',
+	'i_e_uavterminal'
+];*/
+private _QS_restrictedItems = [
 	'o_uavterminal',
 	'i_uavterminal',
 	'c_uavterminal',
