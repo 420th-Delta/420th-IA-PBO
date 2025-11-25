@@ -140,18 +140,22 @@ _uav = objNull;
 _uavFlyInHeight = 600 + (random 1400);
 _QS_infantry = TRUE;
 _infantryInitialSpawnDelay = time + 0;
+
 private _infantryLimit_0 = 54;
 private _infantryLimit_1 = 64;
 private _infantryLimit_2 = 72;
 private _infantryLimit_3 = 78;
 private _infantryLimit_4 = 84;
 private _infantryLimit_5 = 90;
+private _infantryLimit_6 = 100;
+
 if (_allPlayersCount > 0) then {_infantryMaxSpawned = _infantryLimit_0;};
 if (_allPlayersCount > 10) then {_infantryMaxSpawned = _infantryLimit_1;};
 if (_allPlayersCount > 20) then {_infantryMaxSpawned = _infantryLimit_2;};
 if (_allPlayersCount > 30) then {_infantryMaxSpawned = _infantryLimit_3;};
 if (_allPlayersCount > 40) then {_infantryMaxSpawned = _infantryLimit_4;};
 if (_allPlayersCount > 50) then {_infantryMaxSpawned = _infantryLimit_5;};
+if (_allPlayersCount > 60) then {_infantryMaxSpawned = _infantryLimit_6;};
 _infantryArray = [];
 _infantryCheckDelay = _tickTimeNow + 10;
 _infantrySpawnDelay = time + 10;
