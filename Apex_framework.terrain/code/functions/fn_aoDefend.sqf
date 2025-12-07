@@ -141,13 +141,13 @@ _uavFlyInHeight = 600 + (random 1400);
 _QS_infantry = TRUE;
 _infantryInitialSpawnDelay = time + 0;
 
-private _infantryLimit_0 = 54;
-private _infantryLimit_1 = 64;
-private _infantryLimit_2 = 72;
-private _infantryLimit_3 = 78;
-private _infantryLimit_4 = 84;
-private _infantryLimit_5 = 90;
-private _infantryLimit_6 = 100;
+private _infantryLimit_0 = 60;
+private _infantryLimit_1 = 70;
+private _infantryLimit_2 = 80;
+private _infantryLimit_3 = 90;
+private _infantryLimit_4 = 100;
+private _infantryLimit_5 = 120;
+private _infantryLimit_6 = 150;
 
 if (_allPlayersCount > 0) then {_infantryMaxSpawned = _infantryLimit_0;};
 if (_allPlayersCount > 10) then {_infantryMaxSpawned = _infantryLimit_1;};
@@ -184,14 +184,17 @@ _armorInitialSpawnDelay = time + 60 + (random 60);
 if (_allPlayersCount > 0) then {_armorMaxSpawned = 0;};
 if (_allPlayersCount > 10) then {_armorMaxSpawned = 1;};
 if (_allPlayersCount > 20) then {_armorMaxSpawned = 2;};
-if (_allPlayersCount > 30) then {if ((random 1) > 0.333) then {_armorMaxSpawned = 3;} else {_armorMaxSpawned = 2;};};
-if (_allPlayersCount > 40) then {_armorMaxSpawned = 2;};
-if (_allPlayersCount > 50) then {if ((random 1) > 0.666) then {_armorMaxSpawned = 4;} else {_armorMaxSpawned = 3;};};
+if (_allPlayersCount > 30) then {_armorMaxSpawned = 4;};
+if (_allPlayersCount > 40) then {_armorMaxSpawned = 6;};
+if (_allPlayersCount > 50) then {_armorMaxSpawned = 8;};
+if (_allPlayersCount > 60) then {_armorMaxSpawned = 10;};
+/*
 if (_armorMaxSpawned < 2) then {
 	if ((missionNamespace getVariable ['QS_AI_targetsKnowledge_threat_armor',0]) > 1) then {
 		_armorMaxSpawned = _armorMaxSpawned max 2;
 	};
 };
+*/
 _armorArray = [];
 _armorCheckDelay = time + 5;
 _armorSpawnDelay = time + 5;
