@@ -477,17 +477,11 @@ private _vehCount = [1,1] select _allowVehicles;
 if (_playerCount > 10) then {
 	_vehCount = [1,2] select _allowVehicles;
 };
-if (_playerCount > 20) then {
-	_vehCount = [1,2] select _allowVehicles;
-};
 if (_playerCount > 30) then {
-	_vehCount = [2,3] select _allowVehicles;
+	_vehCount = [4,6] select _allowVehicles;
 };
-if (_playerCount > 40) then {
-	_vehCount = [2,3] select _allowVehicles;
-};	
-if (_playerCount > 50) then {
-	_vehCount = [2,3] select _allowVehicles;
+if (_playerCount > 60) then {
+	_vehCount = [8,10] select _allowVehicles;
 };
 private _motorPool = [0,7] select _allowVehicles;
 if (worldName in ['Stratis']) then {
