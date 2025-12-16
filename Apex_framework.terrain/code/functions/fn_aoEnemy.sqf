@@ -102,12 +102,12 @@ if (_playerCount > 40) then {_grpCount = [14,12] select _allowVehicles;};
 if (_playerCount > 50) then {_grpCount = [16,14] select _allowVehicles;};
 if (worldName isEqualTo 'Altis') then {
 	_grpCount = 6;
-	if (_playerCount > 10) then {_grpCount = [8,6] select _allowVehicles;};
-	if (_playerCount > 20) then {_grpCount = [10,8] select _allowVehicles;};
-	if (_playerCount > 30) then {_grpCount = [15,13] select _allowVehicles;};
-	if (_playerCount > 40) then {_grpCount = [17,15] select _allowVehicles;};
-	if (_playerCount > 50) then {_grpCount = [19,17] select _allowVehicles;};
-	if (_playerCount > 60) then {_grpCount = [22,20] select _allowVehicles;};
+	if (_playerCount > 10) then {_grpCount = [8,7] select _allowVehicles;};
+	if (_playerCount > 20) then {_grpCount = [9,8] select _allowVehicles;};
+	if (_playerCount > 30) then {_grpCount = [12,11] select _allowVehicles;};
+	if (_playerCount > 40) then {_grpCount = [13,12] select _allowVehicles;};
+	if (_playerCount > 50) then {_grpCount = [14,13] select _allowVehicles;};
+	if (_playerCount > 60) then {_grpCount = [17,16] select _allowVehicles;};
 };
 if (worldName in ['Tanoa']) then {
 	if (_playerCount > 10) then {_grpCount = [8,6] select _allowVehicles;};
