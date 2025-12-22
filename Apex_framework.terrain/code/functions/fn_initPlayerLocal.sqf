@@ -136,6 +136,10 @@ if (isNil {missionProfileNamespace getVariable 'QS_1PV'}) then {
 	};
 };
 
+/*/=========================== EMOTES/*/
+
+['init_system'] call QS_fnc_clientMenuEmotes;
+
 /*/=========================== QUACKTAC HUD/*/
 
 if (!isNil {missionProfileNamespace getVariable 'QS_QTHUD'}) then {

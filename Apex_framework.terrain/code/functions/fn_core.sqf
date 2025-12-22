@@ -2046,7 +2046,7 @@ for '_x' from 0 to 1 step 0 do {
 					if (_timeNow > _QS_ao_invincibility_checkDelay) then {
 						if (alive (missionNamespace getVariable 'QS_radioTower')) then {
 							if (!isDamageAllowed (missionNamespace getVariable 'QS_radioTower')) then {
-								_QS_listNearbyPlayers = [(missionNamespace getVariable 'QS_radioTower_pos'),250,[_west],(_allPlayers unitsBelowHeight 30),0] call _fn_serverDetector;
+								_QS_listNearbyPlayers = [(missionNamespace getVariable 'QS_radioTower_pos'),50,[_west],(_allPlayers unitsBelowHeight 30),0] call _fn_serverDetector;
 								if (_QS_listNearbyPlayers isNotEqualTo []) then {
 									{
 										if (!((vehicle _x) isKindOf 'Air')) exitWith {
@@ -2067,7 +2067,7 @@ for '_x' from 0 to 1 step 0 do {
 							};
 						};
 						if (!isDamageAllowed (missionNamespace getVariable 'QS_csatCommander')) then {
-							_QS_listNearbyPlayers = [(missionNamespace getVariable 'QS_HQpos'),250,[_west],(_allPlayers unitsBelowHeight 30),0] call _fn_serverDetector;
+							_QS_listNearbyPlayers = [(missionNamespace getVariable 'QS_HQpos'),50,[_west],(_allPlayers unitsBelowHeight 30),0] call _fn_serverDetector;
 							if (_QS_listNearbyPlayers isNotEqualTo []) then {
 								{
 									if (!((vehicle _x) isKindOf 'Air')) exitWith {

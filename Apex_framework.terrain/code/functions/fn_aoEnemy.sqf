@@ -74,7 +74,11 @@ if (_playerCount > 0) then {
 	diag_log '****************************************************';
 	diag_log '***** AO ENEMY ***** Spawning Fortified AA *****';
 	diag_log '****************************************************';
-	private _aaCount = [1,2] select (_playerCount > 10);
+	/* private _aaCount = [1,2] select (_playerCount > 10); */
+	private _aaCount = 1;
+	if (_playerCount > 20) then {_aaCount = 2;};
+	if (_playerCount > 40) then {_aaCount = 3;};
+	if (_playerCount > 60) then {_aaCount = 4;};
 	for '_x' from 1 to _aaCount step 1 do {
 		_aaArray = [_centerPos] call (missionNamespace getVariable 'QS_fnc_aoFortifiedAA');
 		if (_aaArray isNotEqualTo []) then {
@@ -90,18 +94,20 @@ if (_playerCount > 0) then {
 diag_log '****************************************************';
 diag_log '***** AO ENEMY ***** Spawning infantry patrols *****';
 diag_log '****************************************************';
-private _grpCount = 5;
+private _grpCount = 6;
 if (_playerCount > 10) then {_grpCount = [8,6] select _allowVehicles;};
-if (_playerCount > 20) then {_grpCount = [9,7] select _allowVehicles;};
-if (_playerCount > 30) then {_grpCount = [10,8] select _allowVehicles;};
-if (_playerCount > 40) then {_grpCount = [11,8] select _allowVehicles;};
-if (_playerCount > 50) then {_grpCount = [12,9] select _allowVehicles;};
+if (_playerCount > 20) then {_grpCount = [10,8] select _allowVehicles;};
+if (_playerCount > 30) then {_grpCount = [12,10] select _allowVehicles;};
+if (_playerCount > 40) then {_grpCount = [14,12] select _allowVehicles;};
+if (_playerCount > 50) then {_grpCount = [16,14] select _allowVehicles;};
 if (worldName isEqualTo 'Altis') then {
-	if (_playerCount > 10) then {_grpCount = [8,6] select _allowVehicles;};
-	if (_playerCount > 20) then {_grpCount = [9,7] select _allowVehicles;};
-	if (_playerCount > 30) then {_grpCount = [10,8] select _allowVehicles;};
-	if (_playerCount > 40) then {_grpCount = [11,9] select _allowVehicles;};
-	if (_playerCount > 50) then {_grpCount = [12,10] select _allowVehicles;};
+	_grpCount = 6;
+	if (_playerCount > 10) then {_grpCount = [8,7] select _allowVehicles;};
+	if (_playerCount > 20) then {_grpCount = [9,8] select _allowVehicles;};
+	if (_playerCount > 30) then {_grpCount = [12,11] select _allowVehicles;};
+	if (_playerCount > 40) then {_grpCount = [13,12] select _allowVehicles;};
+	if (_playerCount > 50) then {_grpCount = [14,13] select _allowVehicles;};
+	if (_playerCount > 60) then {_grpCount = [17,16] select _allowVehicles;};
 };
 if (worldName in ['Tanoa']) then {
 	if (_playerCount > 10) then {_grpCount = [8,6] select _allowVehicles;};
@@ -471,17 +477,11 @@ private _vehCount = [1,1] select _allowVehicles;
 if (_playerCount > 10) then {
 	_vehCount = [1,2] select _allowVehicles;
 };
-if (_playerCount > 20) then {
-	_vehCount = [1,2] select _allowVehicles;
-};
 if (_playerCount > 30) then {
-	_vehCount = [2,3] select _allowVehicles;
+	_vehCount = [4,6] select _allowVehicles;
 };
-if (_playerCount > 40) then {
-	_vehCount = [2,3] select _allowVehicles;
-};	
-if (_playerCount > 50) then {
-	_vehCount = [2,3] select _allowVehicles;
+if (_playerCount > 60) then {
+	_vehCount = [8,10] select _allowVehicles;
 };
 private _motorPool = [0,7] select _allowVehicles;
 if (worldName in ['Stratis']) then {
