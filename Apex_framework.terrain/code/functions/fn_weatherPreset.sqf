@@ -92,7 +92,7 @@ if (_mode isEqualTo 4) exitWith {
 	0 setGusts 0;
 	0 setRainbow 0;
 	0 setWaves 0;
-	setHumidity 0.95;
+	setHumidity 0.1;
 	TRUE;
 };
 // Default (Clear Skies)
