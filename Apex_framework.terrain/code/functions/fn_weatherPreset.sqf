@@ -82,7 +82,7 @@ if (_mode isEqualTo 3) exitWith {
 if (_mode isEqualTo 4) exitWith {
 	// Snow
 	setWind [0,0,FALSE];
-	0 setOvercast 1;
+	0 setOvercast 0.33;
 	0 setFog [1,1,0];
 	0 setRain 1;
 	0 setLightnings 0;
