@@ -380,7 +380,7 @@ if (_QS_worldName isEqualTo 'Altis') then {
 	];
 };
 _QS_module_customMission_selected = '';
-_QS_module_customMissions_delay = time + 1800 + (random 10800);
+_QS_module_customMissions_delay = time + 900 + (random 900);
 _QS_module_customMission_played = FALSE;
 {
 	missionNamespace setVariable _x;
