@@ -83,16 +83,16 @@ if (_mode isEqualTo 4) exitWith {
 	// Snow
 	setWind [0,0,FALSE];
 	0 setOvercast 1;
-	0 setFog [0.1,0,0];
+	0 setFog [0.33,0.1,0];
 	0 setRain 1;
-	0 setLightnings 1;
+	0 setLightnings 0;
 	0 setWindDir 0;
 	0 setWindStr 0;
 	0 setWindForce 0;
 	0 setGusts 0;
 	0 setRainbow 0;
 	0 setWaves 0;
-	setHumidity 0.95;
+	setHumidity 0.1;
 	TRUE;
 };
 // Default (Clear Skies)

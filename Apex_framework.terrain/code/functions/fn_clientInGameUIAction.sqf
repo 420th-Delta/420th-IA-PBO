@@ -323,6 +323,7 @@ if (_QS_actionName isEqualTo 'GetInPilot') exitWith {
 		{(
 			(_QS_actionTarget isKindOf 'Helicopter') || 
 			{(_QS_actionTarget isKindOf 'VTOL_Base_F')}
+			|| {(_QS_actionTarget isKindOf 'Plane_Civil_01_base_F')}
 		)}
 	) then {
 		_text = localize 'STR_QS_Hints_015';
@@ -335,6 +336,7 @@ if (_QS_actionName isEqualTo 'GetInPilot') exitWith {
 		{(!(player getUnitTrait 'QS_trait_fighterPilot'))} &&
 		{(_QS_actionTarget isKindOf 'Plane')} && 
 		{(!(_QS_actionTarget isKindOf 'VTOL_Base_F'))}
+		&& {!(_QS_actionTarget isKindOf 'Plane_Civil_01_base_F')}
 	) then {
 		_text = localize 'STR_QS_Hints_015';
 		(missionNamespace getVariable 'QS_managed_hints') pushBack [1,FALSE,8,-1,_text,[],-1];
