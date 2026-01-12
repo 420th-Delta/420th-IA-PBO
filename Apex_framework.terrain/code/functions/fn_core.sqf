@@ -111,7 +111,7 @@ private [
 _QS_productVersion = productVersion;
 _QS_worldName = worldName;
 _QS_worldSize = worldSize;
-_unitCap = [125,110] select (_QS_worldName isEqualTo 'Tanoa');
+_unitCap = 200;
 _aoThreshold = 10;
 _casThreshold = 12;
 _pause = 5;
@@ -877,7 +877,7 @@ if (_QS_helmetCam) then {
 
 _QS_module_recruitableAI = TRUE && ((missionNamespace getVariable ['QS_missionConfig_recruitableAI',1]) isEqualTo 1);
 if (_QS_module_recruitableAI) then {
-	_QS_module_recruitableAI_delay = 3;
+	_QS_module_recruitableAI_delay = 1;
 	_QS_module_recruitableAI_checkDelay = time + _QS_module_recruitableAI_delay;
 	if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0) then {
 		_QS_module_recruitableAI_data = call (compileScript ['code\config\QS_data_recruitableAI.sqf']);
@@ -2948,7 +2948,7 @@ for '_x' from 0 to 1 step 0 do {
 				{(!(missionNamespace getVariable ['QS_customAO_blockSideMissions',_false]))} &&
 				{(!(missionNamespace getVariable ['QS_smSuspend',_false]))} &&
 				{((_timeNow > _smDelay) || {(missionNamespace getVariable ['QS_forceSideMission',_false])})} &&
-				{((_allAICount < _unitCap) || {(_allPlayersCount < 25)} || {(missionNamespace getVariable ['QS_forceSideMission',_false])})}
+				{(missionNamespace getVariable ['QS_forceSideMission',_false])}
 			) then {
 				if (missionNamespace getVariable 'QS_forceSideMission') then {
 					missionNamespace setVariable ['QS_forceSideMission',_false,_false];
@@ -2959,10 +2959,7 @@ for '_x' from 0 to 1 step 0 do {
 			};
 		} else {
 			if (scriptDone _currentSideMission) then {
-				if (_allPlayersCount < 20) then {
-					_smDelay = time + ((_sideMissionDelayFixed + (random _sideMissionDelayRandom)) / 2);
-				} else {
-					_smDelay = time + (_sideMissionDelayFixed + (random _sideMissionDelayRandom));
+				_smDelay = time + (_sideMissionDelayFixed + (random _sideMissionDelayRandom));
 				};
 				_sideMissionActive = _false;
 			};
