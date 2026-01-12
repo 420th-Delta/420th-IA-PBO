@@ -877,7 +877,7 @@ if (_QS_helmetCam) then {
 
 _QS_module_recruitableAI = TRUE && ((missionNamespace getVariable ['QS_missionConfig_recruitableAI',1]) isEqualTo 1);
 if (_QS_module_recruitableAI) then {
-	_QS_module_recruitableAI_delay = 1;
+	_QS_module_recruitableAI_delay = 3;
 	_QS_module_recruitableAI_checkDelay = time + _QS_module_recruitableAI_delay;
 	if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0) then {
 		_QS_module_recruitableAI_data = call (compileScript ['code\config\QS_data_recruitableAI.sqf']);
@@ -2960,7 +2960,6 @@ for '_x' from 0 to 1 step 0 do {
 		} else {
 			if (scriptDone _currentSideMission) then {
 				_smDelay = time + (_sideMissionDelayFixed + (random _sideMissionDelayRandom));
-				};
 				_sideMissionActive = _false;
 			};
 		};
