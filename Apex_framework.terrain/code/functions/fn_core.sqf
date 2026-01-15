@@ -111,7 +111,7 @@ private [
 _QS_productVersion = productVersion;
 _QS_worldName = worldName;
 _QS_worldSize = worldSize;
-_unitCap = [125,110] select (_QS_worldName isEqualTo 'Tanoa');
+_unitCap = 200;
 _aoThreshold = 10;
 _casThreshold = 12;
 _pause = 5;
@@ -2948,7 +2948,7 @@ for '_x' from 0 to 1 step 0 do {
 				{(!(missionNamespace getVariable ['QS_customAO_blockSideMissions',_false]))} &&
 				{(!(missionNamespace getVariable ['QS_smSuspend',_false]))} &&
 				{((_timeNow > _smDelay) || {(missionNamespace getVariable ['QS_forceSideMission',_false])})} &&
-				{((_allAICount < _unitCap) || {(_allPlayersCount < 25)} || {(missionNamespace getVariable ['QS_forceSideMission',_false])})}
+				{(missionNamespace getVariable ['QS_forceSideMission',_false])}
 			) then {
 				if (missionNamespace getVariable 'QS_forceSideMission') then {
 					missionNamespace setVariable ['QS_forceSideMission',_false,_false];
@@ -2959,11 +2959,7 @@ for '_x' from 0 to 1 step 0 do {
 			};
 		} else {
 			if (scriptDone _currentSideMission) then {
-				if (_allPlayersCount < 20) then {
-					_smDelay = time + ((_sideMissionDelayFixed + (random _sideMissionDelayRandom)) / 2);
-				} else {
-					_smDelay = time + (_sideMissionDelayFixed + (random _sideMissionDelayRandom));
-				};
+				_smDelay = time + (_sideMissionDelayFixed + (random _sideMissionDelayRandom));
 				_sideMissionActive = _false;
 			};
 		};
