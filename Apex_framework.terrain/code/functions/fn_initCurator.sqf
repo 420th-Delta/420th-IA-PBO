@@ -106,6 +106,8 @@ if (_type isEqualTo 1) then {
 	if (isServer || !hasInterface) exitWith {};
 	_module = getAssignedCuratorLogic player;
 	if (!isNull _module) then {
+		private _addons = activatedAddons - (['zeus_addons_disabled_1'] call QS_data_listOther);
+		[player, _addons] remoteExec ['TGC_fnc_addCuratorAddons',2];
 		[_module,'Init'] call (missionNamespace getVariable 'BIS_fnc_moduleInit');
 		{
 			_module removeAllEventHandlers _x;

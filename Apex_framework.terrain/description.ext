@@ -754,6 +754,10 @@ class CfgFunctions {
 		};
 	};
     class TGC {
+        class Curators {
+            file = "TGC\Functions\Curators";
+            class addCuratorAddons {};
+        };
         class Database {
             file = "TGC\Functions\Database";
             class dbQuery {};
