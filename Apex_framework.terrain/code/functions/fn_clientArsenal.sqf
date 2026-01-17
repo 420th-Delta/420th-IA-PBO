@@ -270,129 +270,71 @@ if (_isBlacklisted || {QS_missionConfig_Arsenal isEqualTo 0}) then {
 		'Reuse cached arsenal data' call _logStep;
 	};
 
-	private _internalRestrictions = TRUE;		// Caution, leave TRUE unless you know what you're doing. Set FALSE to disable hard-coded restrictions (respawn backpacks, racing + vr uniforms, etc).
+	["Preload"] call BIS_fnc_arsenal;
+	private _data = +BIS_fnc_arsenal_data;
+	_data params [
+		'_primaries',
+		'_secondaries',
+		'_handguns',
+		'_uniforms',
+		'_vests',
+		'_backpacks',
+		'_headwear',
+		'_facewear',
+		'_goggles',
+		'_binoculars',
+		'_maps',
+		'_GPS',
+		'_radios',
+		'_compasses',
+		'_watches',
+		'_faces',
+		'_voices',
+		'_insignias',
+		'', // optics, not preloaded
+		'', // accessories, not preloaded
+		'', // muzzles, not preloaded
+		'', // bipods, not preloaded
+		'_throwables',
+		'_placeables',
+		'_specials',
+		'', // ???
+		'_magazines'
+	];
+	format ['Preload vanilla arsenal (total: %1)', count flatten _data] call _logStep;
 
-	private _configArray = [];
-	_configArray append (
-		'
-		configName _x isKindOf ["ItemCore",configFile >> "CfgWeapons"]
-		|| {configName _x isKindOf ["DetectorCore",configFile >> "CfgWeapons"]
-		|| {configName _x isKindOf ["NVGoggles",configFile >> "CfgWeapons"]}}
-		' configClasses (configFile >> 'CfgWeapons')
-	);
-	_configArray append (
-		'
-		getNumber (_x >> "scope") isEqualTo 2
-		&& {getNumber (_x >> "isBackpack") isEqualTo 1}
-		' configClasses (configFile >> 'CfgVehicles')
-	);
-	_configArray append (
-		'true' configClasses (configFile >> 'CfgGlasses')
-	);
-	format ['Filter item configs (total: %1)',count _configArray] call _logStep;
+	// ~1.9ms for 1500 items
+	private _attachments = toString {
+		getNumber (_x >> 'ItemInfo' >> 'type') in [101, 201, 301, 302]
+		&& {
+			if (isNumber (_x >> 'scopeArsenal')) then {getNumber (_x >> 'scopeArsenal') >= 2}
+			else {getNumber (_x >> 'scope') >= 2}
+		}
+	} configClasses (configFile >> 'CfgWeapons') apply {configName _x};
 
-	if !(_internalRestrictions) then {
-		_combinedRestrictionsMap = createHashMap;
-	};
+	_data pushBack _attachments; // Include in item restrictions
+	format ['Collect weapon attachments (total: %1)', count _attachments] call _logStep;
 
-	// Collect item classes (slow!)
-	private _cfgItems = createHashMap;
+	// ~3.75ms with 5000+ items
 	{
-		private _class = _x;
-		private _className = configName _class;
-
-		private _scope = if (isNumber (_class >> 'scopeArsenal')) then {
-			getNumber (_class >> 'scopeArsenal')
-		} else {
-			getNumber (_class >> 'scope')
-		};
-		if (_scope isNotEqualTo 2) then {continue};
-
-		if (getText (_class >> 'model') isEqualTo '') then {continue};
-
-		private _isBase = (
-			!(isArray (_class >> 'muzzles'))
-			|| {_className call QS_fnc_baseWeapon == _className}
-		);
-		if (!_isBase) then {continue};
-
-		private _weaponType = _className call BIS_fnc_itemType;
-		private _weaponTypeCategory = _weaponType # 0;
-		if (_weaponTypeCategory == 'VehicleWeapon') then {continue};
-
-		if (toLowerANSI _className in _combinedRestrictionsMap) then {continue};
-
-		_cfgItems set [_className,true];
-	} forEach _configArray;
-	_cfgItems = keys _cfgItems;
-	format ['Collect item classes (total: %1)',count _cfgItems] call _logStep;
-
-	// Collect weapon classes
-	private _cfgWeapons = (
-		'
-		getNumber (_x >> "scope") isEqualTo 2
-		&& {getNumber (_x >> "type") < 5}
-		|| getNumber (_x >> "type") isEqualTo 4096
-		' configClasses (configFile >> 'CfgWeapons')
-	);
-	_cfgWeapons = _cfgWeapons select {
-		private _name = configName _x;
-		(
-			!(toLowerANSI _name in _combinedRestrictionsMap)
-			&& {_name call QS_fnc_baseWeapon == _name}
-		)
-	};
-	_cfgWeapons = _cfgWeapons apply {configName _x};
-	format ['Collect weapon classes (total: %1)',count _cfgWeapons] call _logStep;
-
-	// Collect magazine classes
-	private _cfgMagazines = createHashMap;
-	{
-		private _weaponClass = _x;
-		private _weapon = configFile >> 'CfgWeapons' >> _weaponClass;
+		private _group = _x;
+		private _toRemove = [];
 		{
-			private _mag = _x;
-			if (toLowerANSI _x in _combinedRestrictionsMap) then {continue};
-			_cfgMagazines set [_x,true];
-		} forEach (getArray (_weapon >> 'magazines'));
-	} forEach _cfgWeapons;
-	{
-		private _weaponClass = _x;
-		private _weapon = configFile >> 'CfgWeapons' >> _weaponClass;
-		private _muzzles = getArray (_weapon >> 'muzzles');
-		{
-			private _muzzle = _x;
-			private _magazines = getArray (configFile >> 'CfgWeapons' >> _weaponClass >> _muzzle >> 'magazines');
-			{
-				if (isClass (configFile >> 'CfgMagazines' >> _x)) then {
-					if ((getNumber (configFile >> 'CfgMagazines' >> _x >> 'scope')) isEqualTo 2) then {
-						_cfgMagazines set [_x,true];
-					};
-				};
-			} forEach _magazines;
-		} forEach _muzzles;
-	} forEach ['Throw','Put'];
-	_cfgMagazines = keys _cfgMagazines;
-	format ['Collect magazine classes (total: %1)',count _cfgMagazines] call _logStep;
+			if (toLowerANSI _x in _combinedRestrictionsMap) then {
+				_toRemove pushBack _forEachIndex;
+			};
+		} forEach _group;
+		{_group deleteAt _x} forEachReversed _toRemove;
+	} forEach _data;
+	'Apply global item restrictions' call _logStep;
 
-	// Collect backpack classes
-	private _cfgBackpacks = (
-		'
-		getNumber (_x >> "scope") >= 1
-		&& {getNumber (_x >> "isBackpack") isEqualTo 1}
-		' configClasses (configFile >> 'CfgVehicles')
-	);
-	_cfgBackpacks = _cfgBackpacks select {
-		private _name = configName _x;
-		(
-			!(toLowerANSI _name in _combinedRestrictionsMap)
-			&& {_name call QS_fnc_baseBackpack == _name}
-		)
-	};
-	_cfgBackpacks = _cfgBackpacks apply {configName _x};
-	format ['Collect backpack classes (total: %1)',count _cfgBackpacks] call _logStep;
+	private _items =
+		_uniforms + _vests + _headwear + _facewear + _goggles + _maps + _GPS
+		+ _radios + _compasses + _watches + _attachments + _specials;
+	private _weapons = _primaries + _secondaries + _handguns + _binoculars;
+	_magazines = _magazines + _throwables + _placeables;
 
-	QS_client_arsenalCache = [_cfgItems,_cfgWeapons,_cfgMagazines,_cfgBackpacks];
+	QS_client_arsenalCache = [_items,_weapons,_magazines,_backpacks];
 	_unit setVariable ['bis_addVirtualWeaponCargo_cargo',+QS_client_arsenalCache,FALSE];
 };
 
