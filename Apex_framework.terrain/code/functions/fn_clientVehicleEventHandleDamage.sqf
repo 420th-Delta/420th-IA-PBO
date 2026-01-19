@@ -28,13 +28,11 @@ private _scale = 1;
 private _aircraft_crit = FALSE;
 _oldDamage = [(_vehicle getHit _selectionName),(damage _vehicle)] select (_selectionName isEqualTo '');
 if (!isNull _instigator) then {
-	if ((isPlayer _instigator) || {(isPlayer (effectiveCommander _instigator))}) then {
-		if (
-			(!(_vehicle in [_source,_instigator])) &&
-			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
-		) then {
-			_scale = [0.05,0] select isNil 'TGC_allowFF';
-		};
+	if (
+		(!(_vehicle in [_source,_instigator])) &&
+		{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
+	) then {
+		_scale = [0.05,0] select isNil 'TGC_allowFF';
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
 			_scale = 0.5;
@@ -58,13 +56,11 @@ if (!isNull _source) then {
 	) then {
 		_scale = 0.05;
 	};
-	if ((isPlayer _source) || {(isPlayer (effectiveCommander _source))}) then {
-		if (
-			(!(_vehicle in [_source,_instigator])) &&
-			{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
-		) then {
-			_scale = [0.05,0] select isNil 'TGC_allowFF';
-		};
+	if (
+		(!(_vehicle in [_source,_instigator])) &&
+		{((side (group _instigator)) in [(player getVariable ['QS_unit_side',WEST]),sideEnemy])}
+	) then {
+		_scale = [0.05,0] select isNil 'TGC_allowFF';
 	} else {
 		if (_vehicle isKindOf 'Helicopter') then {
 			_scale = 0.333;
