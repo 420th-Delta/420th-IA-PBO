@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=572;
+		nextID=594;
 	};
 	class LayerIndexProvider
 	{
-		nextID=287;
+		nextID=365;
 	};
 	class Camera
 	{
-		pos[]={14952.24,343.42453,16585.887};
-		dir[]={-0.42423201,-0.81761938,0.38927072};
-		up[]={-0.60243434,0.57575893,0.55278802};
-		aside[]={0.6760962,1.6472768e-08,0.73681676};
+		pos[]={14710.947,95.499413,16682.779};
+		dir[]={-0.67724603,-0.57519144,0.45903721};
+		up[]={-0.47620103,0.81793803,0.32277405};
+		aside[]={0.56112701,-4.6720379e-07,0.82786363};
 	};
 };
 binarizationWanted=0;
-sourceName="Apex_framework_420th_20250621";
+sourceName="Apex_framework_420th_20251216";
 addons[]=
 {
 	"A3_Ui_F",
@@ -64,13 +64,22 @@ addons[]=
 	"A3_Soft_F_Orange_Offroad_02",
 	"A3_Soft_F_Exp_Truck_01",
 	"A3_Air_F_Gamma_Plane_Fighter_03",
-	"A3_Soft_F_Gamma_Truck_01"
+	"A3_Soft_F_Gamma_Truck_01",
+	"A3_Air_F_Exp_Plane_Civil_01",
+	"A3_Soft_F_MRAP_02",
+	"A3_Soft_F_Exp_LSV_02",
+	"A3_Armor_F_Beta_APC_Tracked_02",
+	"A3_Armor_F_Beta_APC_Wheeled_02",
+	"A3_Armor_F_Decade_MBT_02",
+	"A3_Armor_F_Gamma_MBT_02",
+	"A3_Soft_F_Offroad_01",
+	"A3_Air_F_Heli_Heli_Transport_03"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=31;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -260,6 +269,34 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item27
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item28
+		{
+			className="A3_Armor_F_Beta";
+			name="Arma 3 Beta - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item29
+		{
+			className="A3_Armor_F_Decade";
+			name="CFGPATCHES_A3_Armor_F_Decade";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item30
+		{
+			className="A3_Armor_F_Gamma";
+			name="Arma 3 - Armored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -351,11 +388,11 @@ class Mission
 	};
 	class Entities
 	{
-		items=216;
+		items=231;
 		class Item0
 		{
 			dataType="Marker";
-			position[]={14693.144,17.91,16690.062};
+			position[]={14693.144,17.91,16690.063};
 			name="QS_marker_base_marker";
 			text="Base";
 			type="respawn_unknown";
@@ -2669,7 +2706,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8446.1562,106.00233,25122.777};
+						position[]={8446.1563,106.00233,25122.777};
 					};
 					side="West";
 					flags=7;
@@ -3407,7 +3444,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8453.2988,105.37357,25117.812};
+						position[]={8453.2988,105.37357,25117.813};
 					};
 					side="West";
 					flags=7;
@@ -6471,7 +6508,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this setObjectTextureGlobal [0, ""A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body1_black_CO.paa""];_this setObjectTextureGlobal [1, ""A3\Air_F_Beta\Heli_Attack_02\Data\Heli_Attack_02_body2_black_CO.paa""];},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle; " \n "this setvariable [""QS_missionObject_protected"",true];";
 								textures="Black";
 								disableSimulation=1;
 							};
@@ -6681,7 +6718,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this addWeapon ""CMFlareLauncher"";_this addMagazine ""168Rnd_CMFlare_Chaff_Magazine"";_this setVehicleAmmo 1;},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=327;
@@ -6717,7 +6754,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this addWeapon ""CMFlareLauncher"";_this addMagazine ""168Rnd_CMFlare_Chaff_Magazine"";_this setVehicleAmmo 1;},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=379;
@@ -6753,7 +6790,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this addWeapon ""CMFlareLauncher"";_this addMagazine ""168Rnd_CMFlare_Chaff_Magazine"";_this setVehicleAmmo 1;},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=380;
@@ -6790,6 +6827,7 @@ class Mission
 							class Attributes
 							{
 								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								textures="Black";
 								disableSimulation=1;
 							};
 							id=381;
@@ -6810,7 +6848,57 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								class Attribute1
+								{
+									property="VehicleCustomization";
+									expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Black";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="ARRAY";
+													};
+												};
+											};
+										};
+									};
+								};
+								nAttributes=2;
 							};
 						};
 					};
@@ -6823,7 +6911,7 @@ class Mission
 					name="Objects";
 					class Entities
 					{
-						items=22;
+						items=23;
 						class Item0
 						{
 							dataType="Object";
@@ -7047,7 +7135,7 @@ class Mission
 							flags=1;
 							class Attributes
 							{
-								init="0 = [this,1,false,{},1,1,-1,false,-1,1,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 								disableSimulation=1;
 							};
 							id=335;
@@ -8186,17 +8274,18 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={15046.275,21.012091,17004.227};
-										angles[]={0,2.322165,0};
+										position[]={15064.889,21.77409,17006.143};
+										angles[]={0,4.2596154,0};
 									};
 									side="Empty";
 									flags=5;
 									class Attributes
 									{
-										init="this setvariable [""QS_missionObject_protected"",true];";
+										init="0 = [this,1,false,{},1,1,-1,false,-1,1,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 									};
 									id=563;
 									type="Land_LampStreet_small_F";
+									atlOffset=0.00026893616;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -8217,7 +8306,7 @@ class Mission
 								};
 							};
 							id=344;
-							atlOffset=0.18848228;
+							atlOffset=0.5694809;
 						};
 						class Item16
 						{
@@ -8399,8 +8488,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={15050.631,24.054188,16988.027};
-								angles[]={0,4.2743778,0};
+								position[]={15050.631,24.054457,16988.027};
+								angles[]={0,4.2743812,0};
 							};
 							side="Empty";
 							flags=1;
@@ -8411,7 +8500,43 @@ class Mission
 							};
 							id=562;
 							type="Land_Hangar_F";
-							atlOffset=0.68073082;
+							atlOffset=0.68099976;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14922.564,17.642971,16774.408};
+								angles[]={0.010664274,0.78063798,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,5,false,{},1,1,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=593;
+							type="Land_HelipadCircle_F";
+							atlOffset=1.9073486e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8432,7 +8557,7 @@ class Mission
 						};
 					};
 					id=328;
-					atlOffset=0.70314407;
+					atlOffset=0.071596146;
 				};
 				class Item7
 				{
@@ -8453,7 +8578,8 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this setObjectTextureGlobal [0, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa""];_this setObjectTextureGlobal [1, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa""];_this setObjectTextureGlobal [2, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa""];_this setObjectTextureGlobal [3, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa""];},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle; " \n "this setvariable [""QS_missionObject_protected"",true];";
+								textures="Grey";
 								disableSimulation=1;
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
@@ -8477,7 +8603,57 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								class Attribute1
+								{
+									property="VehicleCustomization";
+									expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Grey";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="ARRAY";
+													};
+												};
+											};
+										};
+									};
+								};
+								nAttributes=2;
 							};
 						};
 						class Item1
@@ -8492,7 +8668,8 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								init="0 = [this,30,false,{_this setObjectTextureGlobal [0, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa""];_this setObjectTextureGlobal [1, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa""];_this setObjectTextureGlobal [2, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa""];_this setObjectTextureGlobal [3, ""\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa""];},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle; " \n "this setvariable [""QS_missionObject_protected"",true];";
+								textures="Grey";
 								disableSimulation=1;
 								reportRemoteTargets=1;
 								receiveRemoteTargets=1;
@@ -8516,7 +8693,57 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								class Attribute1
+								{
+									property="VehicleCustomization";
+									expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+									class Value
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="ARRAY";
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Grey";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1;
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="ARRAY";
+													};
+												};
+											};
+										};
+									};
+								};
+								nAttributes=2;
 							};
 						};
 						class Item2
@@ -8752,8 +8979,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14475.637,20.67684,16735.229};
-						angles[]={0,2.3387411,0.059928458};
+						position[]={14475.637,20.67672,16735.229};
+						angles[]={0,2.3387411,0.059934605};
 					};
 					side="Empty";
 					flags=4;
@@ -8763,7 +8990,7 @@ class Mission
 					};
 					id=531;
 					type="I_MBT_03_cannon_F";
-					atlOffset=-0.0048789978;
+					atlOffset=-0.0049991608;
 				};
 				class Item17
 				{
@@ -8878,7 +9105,7 @@ class Mission
 				};
 			};
 			id=306;
-			atlOffset=-0.019201279;
+			atlOffset=-0.01965332;
 		};
 		class Item110
 		{
@@ -9200,7 +9427,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8427.7451,109.27951,25128.312};
+						position[]={8427.7451,109.27951,25128.313};
 					};
 					side="West";
 					flags=7;
@@ -9382,7 +9609,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8422.6885,110.78201,25106.062};
+						position[]={8422.6885,110.78201,25106.063};
 					};
 					side="West";
 					flags=7;
@@ -10856,12 +11083,12 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={982.00378,3269.9031,1223.2434};
+								position[]={982.00403,3269.9031,1223.243};
 							};
 							side="Empty";
 							class Attributes
 							{
-								init="SLT_fnc_RE_Server = {   " \n " params[""_arguments"",""_code""];   " \n " _varName = (""SLT""+str (round random 10000));   " \n "   " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;""));   " \n " TempArgs = _arguments;   " \n "   " \n " call compile (_varName +"" = [TempArgs,TempCode];   " \n " publicVariable '""+_varName+""';   " \n "   " \n " [[], {   " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1);   " \n " }] remoteExec ['spawn',2];"");   " \n "};   " \n "   " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Name Tags"";};   " \n "   " \n "SLT_fnc_enableScript = {   " \n " {   " \n "  [] spawn   " \n "  {   " \n "   if(!hasInterface) exitWith {};   " \n "   if (!isNil ""TeamNameTagEvent"") exitWith {};   " \n "   if(isMultiplayer) then {waitUntil{getClientState isEqualTo ""BRIEFING READ""};};   " \n "   sleep 1;   " \n "   disableMapIndicators [true,false,false,false];   " \n "      " \n "   TNTMaxDistanceUnitMarker3D = 5000;   " \n "   TNTMaxDistanceUnitMarkerText3D = 7.5;   " \n "      " \n "   TeamNameTagEvent = addMissionEventHandler [""Draw3D"", {   " \n "    private _vehicleList = [];   " \n "    {   " \n "     if(((side group _x) isEqualTo (side group player)) && (_x != player)) then   " \n "     {   " \n "      _position = _x modelToWorldVisual (_x selectionPosition ""head_axis"");   " \n "      _position set[2,(_position select 2)+0.5];   " \n "      _distance = (player) distance (_position);   " \n "      _driver = if (driver vehicle _x isEqualTo objNull) then {effectiveCommander vehicle _x} else {driver vehicle _x};   " \n "      _textSize = 0.0325;   " \n "      _text = name _x;   " \n "      _imageSize = [0.5,0.5];   " \n "      " \n "      _dif = (TNTMaxDistanceUnitMarker3D-_distance);   " \n "      _alpha = (_dif/TNTMaxDistanceUnitMarker3D);   " \n "      if(vehicle _x == cursorTarget) then {_alpha = 1;};   " \n "   " \n "      _color = switch (side group player) do   " \n "      {   " \n "       case west: {[0,1,1,_alpha]};   " \n "       case east: {[1,0,0,_alpha]};   " \n "       case independent: {[0,1,0,_alpha]};   " \n "       case civilian: {[1,0,1,_alpha]};   " \n "       default {[1,1,1,_alpha]};   " \n "      };   " \n "         " \n "      if((group player) isEqualTo (group _x)) then    " \n "      {   " \n "       _color = switch (side group _x) do   " \n "       {   " \n "        case west: {[0,1,1,_alpha]};   " \n "        case east: {[1,0,0,_alpha]};   " \n "        case independent: {[0,1,0,_alpha]};   " \n "        case civilian: {[1,0,1,_alpha]};   " \n "        default {[1,1,1,_alpha]};  " \n "       };   " \n "      };   " \n "      " \n "      _rankPath = switch (rank _x) do    " \n "      {   " \n "       case ""COLONEL"": {""\a3\ui_f\data\GUI\cfg\Ranks\colonel_pr.paa""};   " \n "       case ""MAJOR"": {""\a3\ui_f\data\GUI\cfg\Ranks\major_pr.paa""};   " \n "       case ""CAPTAIN"": {""\a3\ui_f\data\GUI\cfg\Ranks\captain_pr.paa""};   " \n "       case ""LIEUTENANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\lieutenant_pr.paa""};   " \n "       case ""SERGEANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\sergeant_pr.paa""};   " \n "       case ""CORPORAL"": {""\a3\ui_f\data\GUI\cfg\Ranks\corporal_pr.paa""};   " \n "       case ""PRIVATE"": {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};   " \n "       default {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};   " \n "      };   " \n "   " \n "      if((rank _x) isEqualTo ""COLONEL"") then {_imageSize = [0.75,0.75]; _color = [1,1,1,1];};   " \n "   " \n "      comment ""Dead"";   " \n "      _deadIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\d100_ca.paa"";   " \n "      _deadColor = [0.25,0.25,0.25,0.75];    " \n "   " \n "      comment ""Incap"";   " \n "      _incapIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\u100_ca.paa"";   " \n "      _incapColor = [0.75,0.15,0.15,1];   " \n "   " \n "      comment ""Mic"";   " \n "      _micIcon = ""\a3\ui_f\data\IGUI\RscIngameUI\RscDisplayVoiceChat\microphone_ca.paa"";   " \n "   " \n "      if (lifeState _driver isEqualTo ""INCAPACITATED"" && damage _driver > 0.4) then    " \n "      {   " \n "       _color = _incapColor;   " \n "       _rankPath = _incapIcon;   " \n "      };   " \n "   " \n "      if (!alive _driver) then    " \n "      {   " \n "       _color = _deadColor;   " \n "       _rankPath = _deadIcon;   " \n "      };   " \n "   " \n "      if !(getPlayerChannel _driver isEqualTo -1) then    " \n "      {   " \n "       _rankPath = _micIcon;   " \n "      };   " \n "   " \n "      if (vehicle _x != _x) then   " \n "      {   " \n "       if !((vehicle _x) in _vehicleList) then    " \n "       {   " \n "        _vehicleList pushback vehicle _x;   " \n "   " \n "        if (vehicle _x isEqualTo vehicle player) exitWith {};   " \n "   " \n "        _position = (vehicle _x) modelToWorldVisual [0,0,2];   " \n "   " \n "        _className = (typeOf vehicle _x);   " \n "        _file = getText (configfile >> ""CfgVehicles"" >> _className >> ""icon"");   " \n "        _rankPath = _file;   " \n "   " \n "        if(_driver isEqualTo objNull) then {_driver = _x;};   " \n "   " \n "        _vehName = getText (configfile >> ""CfgVehicles"" >> _className >> ""displayName"");   " \n "        _text = _vehName;   " \n "   " \n "        _count = count crew vehicle _x;   " \n "        if(_count > 1) then    " \n "        {   " \n "         _text = ((name _driver) + "" + "" + (str (_count-1)) + "" more"");   " \n "        }   " \n "        else   " \n "        {   " \n "         _text = (name _driver);   " \n "        };   " \n "   " \n "        _imageSize = [0.65,0.65];   " \n "   " \n "        if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};   " \n "   " \n "        if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then   " \n "        {   " \n "         drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];   " \n "        };   " \n "       };   " \n "      };   " \n "         " \n "      if !((vehicle _x) in _vehicleList) then    " \n "      {   " \n "       if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};   " \n "   " \n "       if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then   " \n "       {   " \n "        drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];   " \n "       };   " \n "      };   " \n "     };   " \n "    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers});   " \n "   }];   " \n "  };   " \n " } remoteExec [""BIS_fnc_call"",0,""TeamNameTag""];   " \n "};   " \n "   " \n "SLT_fnc_disableScript = {   " \n " {    " \n "  removeMissionEventHandler ['Draw3D', TeamNameTagEvent];   " \n "  TeamNameTagEvent = nil;   " \n " } remoteExec ['bis_fnc_call', 0];   " \n "   " \n " {} remoteExec ['BIS_fnc_call',0,'TeamNameTag'];   " \n "};   " \n "   " \n "SLT_fnc_init = {   " \n " params[[""_useToggleOptions"",true]];   " \n "   " \n " with uiNamespace do {   " \n "     " \n "  createDialog ""RscDisplayEmpty"";   " \n "  private _display = findDisplay -1;   " \n "  {_x ctrlShow false;} foreach allControls _display;   " \n "   " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1];   " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH];   " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66];   " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>"");   " \n "  _ctrlHeader ctrlCommit 0;   " \n "   " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH];   " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5];   " \n "  _ctrlBorder ctrlCommit 0;   " \n "   " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH];   " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75];   " \n "  _ctrlBackground ctrlCommit 0;   " \n "   " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTEnableButton ctrlSetText ""ENABLE"";   " \n "  SLTEnableButton ctrlCommit 0;   " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTDisableButton ctrlSetText ""DISABLE"";   " \n "  SLTDisableButton ctrlCommit 0;   " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  if (!_useToggleOptions) then    " \n "  {   " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?"";   " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!"";   " \n "   SLTEnableButton ctrlCommit 0;   " \n "   " \n "   SLTDisableButton ctrlSetText ""CANCEL"";   " \n "   SLTDisableButton ctrlCommit 0;   " \n "  };   " \n " };   " \n " deleteVehicle this;   " \n "};   " \n "   " \n "if (time < 1) then    " \n "{   " \n " [] spawn SLT_fnc_enableScript;   " \n "}   " \n "else    " \n "{   " \n " [true] call SLT_fnc_init;   " \n "};";
+								init="SLT_fnc_RE_Server = {    " \n " params[""_arguments"",""_code""];    " \n " _varName = (""SLT""+str (round random 10000));    " \n "    " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;""));    " \n " TempArgs = _arguments;    " \n "    " \n " call compile (_varName +"" = [TempArgs,TempCode];    " \n " publicVariable '""+_varName+""';    " \n "    " \n " [[], {    " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1);    " \n " }] remoteExec ['spawn',2];"");    " \n "};    " \n "    " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Name Tags"";};    " \n "    " \n "SLT_fnc_enableScript = {    " \n " {    " \n "  [] spawn    " \n "  {    " \n "   if(!hasInterface) exitWith {};    " \n "   if (!isNil ""TeamNameTagEvent"") exitWith {};    " \n "   if(isMultiplayer) then {waitUntil{getClientState isEqualTo ""BRIEFING READ""};};    " \n "   sleep 1;    " \n "   disableMapIndicators [true,false,false,false];    " \n "       " \n "   TNTMaxDistanceUnitMarker3D = 4000;    " \n "   TNTMaxDistanceUnitMarkerText3D = 7.5;    " \n "       " \n "   TeamNameTagEvent = addMissionEventHandler [""Draw3D"", {    " \n "    private _vehicleList = [];    " \n "    {    " \n "     if(((side group _x) isEqualTo (side group player)) && (_x != player)) then    " \n "     {    " \n "      _position = _x modelToWorldVisual (_x selectionPosition ""head_axis"");    " \n "      _position set[2,(_position select 2)+0.5];    " \n "      _distance = (player) distance (_position);    " \n "      _driver = if (driver vehicle _x isEqualTo objNull) then {effectiveCommander vehicle _x} else {driver vehicle _x};    " \n "      _textSize = 0.0325;    " \n "      _text = name _x;    " \n "      _imageSize = [0.5,0.5];    " \n "       " \n "      _dif = (TNTMaxDistanceUnitMarker3D-_distance);    " \n "      _alpha = (_dif/TNTMaxDistanceUnitMarker3D);    " \n "      if(vehicle _x == cursorTarget) then {_alpha = 1;};    " \n "    " \n "      _color = switch (side group player) do    " \n "      {    " \n "       case west: {[0,1,1,_alpha]};    " \n "       case east: {[1,0,0,_alpha]};    " \n "       case independent: {[0,1,0,_alpha]};    " \n "       case civilian: {[1,0,1,_alpha]};    " \n "       default {[1,1,1,_alpha]};    " \n "      };    " \n "          " \n "      if((group player) isEqualTo (group _x)) then     " \n "      {    " \n "       _color = switch (side group _x) do    " \n "       {    " \n "        case west: {[0,1,1,_alpha]};    " \n "        case east: {[1,0,0,_alpha]};    " \n "        case independent: {[0,1,0,_alpha]};    " \n "        case civilian: {[1,0,1,_alpha]};    " \n "        default {[1,1,1,_alpha]};   " \n "       };    " \n "      };    " \n "       " \n "      _rankPath = switch (rank _x) do     " \n "      {    " \n "       case ""COLONEL"": {""\a3\ui_f\data\GUI\cfg\Ranks\colonel_pr.paa""};    " \n "       case ""MAJOR"": {""\a3\ui_f\data\GUI\cfg\Ranks\major_pr.paa""};    " \n "       case ""CAPTAIN"": {""\a3\ui_f\data\GUI\cfg\Ranks\captain_pr.paa""};    " \n "       case ""LIEUTENANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\lieutenant_pr.paa""};    " \n "       case ""SERGEANT"": {""\a3\ui_f\data\GUI\cfg\Ranks\sergeant_pr.paa""};    " \n "       case ""CORPORAL"": {""\a3\ui_f\data\GUI\cfg\Ranks\corporal_pr.paa""};    " \n "       case ""PRIVATE"": {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};    " \n "       default {""\a3\ui_f\data\GUI\cfg\Ranks\private_pr.paa""};    " \n "      };    " \n "    " \n "      if((rank _x) isEqualTo ""COLONEL"") then {_imageSize = [0.75,0.75]; _color = [1,1,1,1];};    " \n "    " \n "      comment ""Dead"";    " \n "      _deadIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\d100_ca.paa"";    " \n "      _deadColor = [0.25,0.25,0.25,0.75];     " \n "    " \n "      comment ""Incap"";    " \n "      _incapIcon = ""\A3\ui_f\data\igui\cfg\revive\overlayicons\u100_ca.paa"";    " \n "      _incapColor = [0.75,0.15,0.15,1];    " \n "    " \n "      comment ""Mic"";    " \n "      _micIcon = ""\a3\ui_f\data\IGUI\RscIngameUI\RscDisplayVoiceChat\microphone_ca.paa"";    " \n "    " \n "      if (lifeState _driver isEqualTo ""INCAPACITATED"" && damage _driver > 0.4) then     " \n "      {    " \n "       _color = _incapColor;    " \n "       _rankPath = _incapIcon;    " \n "      };    " \n "    " \n "      if (!alive _driver) then     " \n "      {    " \n "       _color = _deadColor;    " \n "       _rankPath = _deadIcon;    " \n "      };    " \n "    " \n "      if !(getPlayerChannel _driver isEqualTo -1) then     " \n "      {    " \n "       _rankPath = _micIcon;    " \n "      };    " \n "    " \n "      if (vehicle _x != _x) then    " \n "      {    " \n "       if !((vehicle _x) in _vehicleList) then     " \n "       {    " \n "        _vehicleList pushback vehicle _x;    " \n "    " \n "        if (vehicle _x isEqualTo vehicle player) exitWith {};    " \n "    " \n "        _position = (vehicle _x) modelToWorldVisual [0,0,2];    " \n "    " \n "        _className = (typeOf vehicle _x);    " \n "        _file = getText (configfile >> ""CfgVehicles"" >> _className >> ""icon"");    " \n "        _rankPath = _file;    " \n "    " \n "        if(_driver isEqualTo objNull) then {_driver = _x;};    " \n "    " \n "        _vehName = getText (configfile >> ""CfgVehicles"" >> _className >> ""displayName"");    " \n "        _text = _vehName;    " \n "    " \n "        _count = count crew vehicle _x;    " \n "        if(_count > 1) then     " \n "        {    " \n "         _text = ((name _driver) + "" + "" + (str (_count-1)) + "" more"");    " \n "        }    " \n "        else    " \n "        {    " \n "         _text = (name _driver);    " \n "        };    " \n "    " \n "        _imageSize = [0.65,0.65];    " \n "    " \n "        if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};    " \n "    " \n "        if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then    " \n "        {    " \n "         drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];    " \n "        };    " \n "       };    " \n "      };    " \n "          " \n "      if !((vehicle _x) in _vehicleList) then     " \n "      {    " \n "       if((_distance > TNTMaxDistanceUnitMarkerText3D) && (vehicle _x != cursorTarget)) then {_text = """";};    " \n "    " \n "       if ((_distance < TNTMaxDistanceUnitMarker3D) || (vehicle _x == cursorTarget)) then    " \n "       {    " \n "        drawIcon3D [_rankPath,_color,_position, _imageSize select 0,_imageSize select 1, 0,(_text), 2, _textSize, ""RobotoCondensedBold"",""center"",false];    " \n "       };    " \n "      };    " \n "     };    " \n "    } foreach (if (count allPlayers isEqualTo 1) then {allUnits+allDeadMen} else {allPlayers});    " \n "   }];    " \n "  };    " \n " } remoteExec [""BIS_fnc_call"",0,""TeamNameTag""];    " \n "};    " \n "    " \n "SLT_fnc_disableScript = {    " \n " {     " \n "  removeMissionEventHandler ['Draw3D', TeamNameTagEvent];    " \n "  TeamNameTagEvent = nil;    " \n " } remoteExec ['bis_fnc_call', 0];    " \n "    " \n " {} remoteExec ['BIS_fnc_call',0,'TeamNameTag'];    " \n "};    " \n "    " \n "SLT_fnc_init = {    " \n " params[[""_useToggleOptions"",true]];    " \n "    " \n " with uiNamespace do {    " \n "      " \n "  createDialog ""RscDisplayEmpty"";    " \n "  private _display = findDisplay -1;    " \n "  {_x ctrlShow false;} foreach allControls _display;    " \n "    " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1];    " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH];    " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66];    " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>"");    " \n "  _ctrlHeader ctrlCommit 0;    " \n "    " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1];    " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH];    " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";    " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5];    " \n "  _ctrlBorder ctrlCommit 0;    " \n "    " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1];    " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH];    " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";    " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75];    " \n "  _ctrlBackground ctrlCommit 0;    " \n "    " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1];    " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];    " \n "  SLTEnableButton ctrlSetText ""ENABLE"";    " \n "  SLTEnableButton ctrlCommit 0;    " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{    " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");    " \n "   closeDialog 0;    " \n "  }];    " \n "    " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1];    " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];    " \n "  SLTDisableButton ctrlSetText ""DISABLE"";    " \n "  SLTDisableButton ctrlCommit 0;    " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{    " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");    " \n "   closeDialog 0;    " \n "  }];    " \n "    " \n "  if (!_useToggleOptions) then     " \n "  {    " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?"";    " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!"";    " \n "   SLTEnableButton ctrlCommit 0;    " \n "    " \n "   SLTDisableButton ctrlSetText ""CANCEL"";    " \n "   SLTDisableButton ctrlCommit 0;    " \n "  };    " \n " };    " \n " deleteVehicle this;    " \n "};    " \n "    " \n "if (time < 1) then     " \n "{    " \n " [] spawn SLT_fnc_enableScript;    " \n "}    " \n "else     " \n "{    " \n " [true] call SLT_fnc_init;    " \n "};";
 							};
 							id=459;
 							type="Land_HelipadEmpty_F";
@@ -10915,10 +11142,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=473;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item148
 		{
@@ -10932,10 +11177,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=474;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item149
 		{
@@ -10949,10 +11212,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=475;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item150
 		{
@@ -10966,10 +11247,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=476;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item151
 		{
@@ -10983,10 +11282,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=477;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item152
 		{
@@ -11000,10 +11317,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=478;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item153
 		{
@@ -11017,10 +11352,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=479;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item154
 		{
@@ -11034,10 +11387,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=480;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item155
 		{
@@ -11051,10 +11422,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=481;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item156
 		{
@@ -11068,10 +11457,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=482;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item157
 		{
@@ -11085,10 +11492,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=483;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item158
 		{
@@ -11102,10 +11527,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=484;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item159
 		{
@@ -11119,10 +11562,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=485;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item160
 		{
@@ -11136,10 +11597,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=486;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item161
 		{
@@ -11153,10 +11632,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=487;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item162
 		{
@@ -11170,10 +11667,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=488;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item163
 		{
@@ -11187,10 +11702,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=489;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item164
 		{
@@ -11204,10 +11737,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=490;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item165
 		{
@@ -11221,10 +11772,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=491;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item166
 		{
@@ -11238,10 +11807,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=492;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item167
 		{
@@ -11255,10 +11842,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=493;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item168
 		{
@@ -11272,10 +11877,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=494;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item169
 		{
@@ -11289,10 +11912,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=495;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item170
 		{
@@ -11306,10 +11947,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=496;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item171
 		{
@@ -11323,10 +11982,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=497;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item172
 		{
@@ -11340,10 +12017,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=498;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item173
 		{
@@ -11357,10 +12052,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=499;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item174
 		{
@@ -11374,10 +12087,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=500;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item175
 		{
@@ -11391,10 +12122,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=501;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item176
 		{
@@ -11408,10 +12157,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=502;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item177
 		{
@@ -11425,10 +12192,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=503;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item178
 		{
@@ -11442,10 +12227,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=504;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item179
 		{
@@ -11459,10 +12262,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=505;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item180
 		{
@@ -11476,10 +12297,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=506;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item181
 		{
@@ -11493,10 +12332,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=507;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item182
 		{
@@ -11510,10 +12367,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=508;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item183
 		{
@@ -11527,10 +12402,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=509;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item184
 		{
@@ -11544,10 +12437,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=510;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item185
 		{
@@ -11561,10 +12472,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=511;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item186
 		{
@@ -11578,10 +12507,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=512;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item187
 		{
@@ -11595,10 +12542,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=513;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item188
 		{
@@ -11612,10 +12577,28 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=514;
 			type="PlasticBarrier_02_yellow_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item189
 		{
@@ -11629,10 +12612,28 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=515;
 			type="Land_PedestrianCrossing_01_8m_10str_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item190
 		{
@@ -11646,10 +12647,28 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="0 = [this,3,false,{},1,1,-1,true,-1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				init="this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=516;
 			type="Land_PedestrianCrossing_01_8m_10str_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item191
 		{
@@ -11664,6 +12683,7 @@ class Mission
 			class Attributes
 			{
 				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=523;
 			type="B_Heli_Transport_01_pylons_F";
@@ -11681,6 +12701,7 @@ class Mission
 			class Attributes
 			{
 				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=524;
 			type="B_Heli_Transport_01_pylons_F";
@@ -11967,21 +12988,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={952.80225,3269.7842,1185.1941};
+						position[]={952.802,3269.7839,1185.194};
 						angles[]={0,5.4620252,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						init="SLT_fnc_RE_Server = { " \n " params[""_arguments"",""_code""]; " \n " _varName = (""SLT""+str (round random 10000)); " \n " " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;"")); " \n " TempArgs = _arguments; " \n " " \n " call compile (_varName +"" = [TempArgs,TempCode]; " \n " publicVariable '""+_varName+""'; " \n " " \n " [[], { " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1); " \n " }] remoteExec ['spawn',2];""); " \n "}; " \n " " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Map Intel"";}; " \n " " \n "SLT_fnc_enableScript = { " \n " { " \n "  [] spawn { " \n "    " \n "   if (isMultiplayer) then {waitUntil {sleep 0.1; getClientState == ""BRIEFING READ""};}; " \n "   waitUntil {sleep 0.1; !((findDisplay 12 displayCtrl 51) isEqualTo controlNull)}; " \n "    " \n "   if !(isNil ""RKAGRevealedGroups"") exitWith {}; " \n " " \n "   comment ""Parameters""; " \n "   RKAGOnlyShowMarkersOnMap = true; " \n "   RKAGIncludePlayerGroups = false; " \n "   RKAGHideFriendlyForces = true; " \n "   RKAGMinGroupSize = 2; " \n "   RKAGLastKnownLocationMarkerTime = 180; " \n "   RKAGBulletMarkerSpeed = 7.5; " \n "   RKAGBulletMarkerSize = [1,4]; " \n "   RKAGBulletMarkerColor = ""ColorWhite""; " \n "   RKAGBulletMarkerLifetime = 1; " \n "   RKAGBulletIncludePlayers = true; " \n "   RKAGShowGroups = true; " \n " " \n "   setGroupIconsVisible [true,true]; " \n "   setGroupIconsSelectable true; " \n "   disableMapIndicators [RKAGHideFriendlyForces,true,false,false]; " \n "   uiNamespace setVariable [""_map"",findDisplay 12 displayCtrl 51];  " \n " " \n "   RKAG_fnc_createMapTooltip = { " \n "    with uiNamespace do { " \n "     _display = (finddisplay 12); " \n " " \n "     RKAGMapTooltipGroup = _display ctrlCreate [""RscControlsGroup"", 2300]; " \n "     RKAGMapTooltipGroup ctrlSetPosition [0, 0, 0.4625, 0.34]; " \n "     RKAGMapTooltipGroup ctrlCommit 0;  " \n " " \n "     RKAGMapInfantryTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1100,RKAGMapTooltipGroup]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Infantry Intel</t>""); " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75]; " \n "     RKAGMapInfantryTooltipHeader ctrlCommit 0; " \n " " \n "     RKAGMapInfantryTooltipBody = _display ctrlCreate [""RscStructuredText"", 1101,RKAGMapTooltipGroup]; " \n "     RKAGMapInfantryTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1]; " \n "     RKAGMapInfantryTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75]; " \n "     RKAGMapInfantryTooltipBody ctrlCommit 0; " \n " " \n "     RKAGMapVehicleTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1102,RKAGMapTooltipGroup]; " \n "     RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04]; " \n "     RKAGMapVehicleTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Vehicle Intel</t>""); " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75]; " \n "     RKAGMapVehicleTooltipHeader ctrlCommit 0; " \n " " \n "     RKAGMapVehicleTooltipBody = _display ctrlCreate [""RscStructuredText"", 1103,RKAGMapTooltipGroup]; " \n "     RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1]; " \n "     RKAGMapVehicleTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75]; " \n "     RKAGMapVehicleTooltipBody ctrlCommit 0; " \n "    }; " \n " " \n "    addMissionEventHandler [""EachFrame"", { " \n "     with uiNamespace do  " \n "     { " \n "      _mousePos = getMousePosition; " \n "      RKAGMapTooltipGroup ctrlSetPosition [(getMousePosition select 0),(getMousePosition select 1)+0.05,0.4625, 0.34]; " \n "      RKAGMapTooltipGroup ctrlCommit 0; " \n "     }; " \n "    }]; " \n "   }; " \n " " \n "   RKAG_fnc_createMapHideMarkersCheckbox = { " \n "    with uiNamespace do { " \n "     private _display = finddisplay 12; " \n "     private _RscCheckbox_2800 = _display ctrlCreate [""RscCheckbox"", 2800]; " \n "     _RscCheckbox_2800 ctrlSetPosition [0.965937 * safezoneW + safezoneX, 0.948 * safezoneH + safezoneY, 0.018125 * safezoneW, 0.0336666 * safezoneH]; " \n "     _RscCheckbox_2800 ctrlSetTooltip ""Show Unit Markers: ON""; " \n "     _RscCheckbox_2800 cbSetChecked true; " \n "     _RscCheckbox_2800 ctrlSetBackgroundColor [0,0.5,0,1]; " \n "     _RscCheckbox_2800 ctrlCommit 0; " \n "     _RscCheckbox_2800 ctrlAddEventHandler [""CheckedChanged"",{ " \n "      params [""_control"", ""_checked""]; " \n " " \n "      if (_checked == 1) then  " \n "      { " \n "       setGroupIconsVisible [true,true]; " \n "       setGroupIconsSelectable true; " \n "       disableMapIndicators [RKAGHideFriendlyForces,true,false,false]; " \n "       RKAGShowGroups = true; " \n "       _control ctrlSetTooltip ""Show Unit Markers: ON""; " \n "      } " \n "      else  " \n "      { " \n "       setGroupIconsVisible [false,false]; " \n "       setGroupIconsSelectable false; " \n "       RKAGShowGroups = false; " \n "       _control ctrlSetTooltip ""Show Unit Markers: OFF""; " \n "      }; " \n "     }]; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_getGroupNATOMarkerType = { " \n "    params[""_group""]; " \n "    private _side = sideUnknown; " \n "    private _mkr = """"; " \n " " \n "    private _prefix = """"; " \n "    _prefix = switch (side _group) do  " \n "    { " \n "     case west: {""b_""}; " \n "     case east: {""o_""}; " \n "     case independent: {""n_""}; " \n "     default {""""}; " \n "    }; " \n " " \n "    private [""_grp"",""_vehlist"",""_infantry"",""_cars"",""_apcs"",""_tanks"",""_aa"",""_helis"",""_planes"",""_boats"",""_veh"",""_type""]; " \n " " \n "    _grp = _group; " \n " " \n "    _vehlist = []; " \n "    _infantry = 0; " \n "    _cars = 0; " \n "    _apcs = 0; " \n "    _tanks = 0; " \n "    _aa = 0; " \n "    _helis = 0; " \n "    _planes = 0; " \n "    _uavs = 0; " \n "    _boats = 0; " \n "    _artys = 0; " \n "    _mortars = 0; " \n "    _support_reammo = 0; " \n "    _support_repair = 0; " \n "    _support_refuel = 0; " \n "    _support_medic = 0; " \n "    _support = 0; " \n "    { " \n "     if (!canstand vehicle _x && alive vehicle _x && !(vehicle _x in _vehlist)) then { " \n "      _veh = vehicle _x; " \n "      _vehlist = _vehlist + [_veh]; " \n " " \n "      if (_veh iskindof ""car"") then {_cars = _cars + 1}; " \n "      if (_veh iskindof ""tank"") then {_tanks = _tanks + 1;}; " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""artilleryScanner"") > 0) then{_artys = _artys + 1;}; " \n "      if (_veh iskindof ""Wheeled_APC_F"" || _veh iskindof ""APC_Tracked_01_base_F"" " \n "      || _veh iskindof ""APC_Tracked_02_base_F"" || _veh iskindof ""APC_Tracked_03_base_F"") then {_apcs = _apcs + 1}; " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""radarType"") > 0) then {_aa = _aa + 1}; " \n "      if (_veh iskindof ""helicopter"") then {_helis = _helis + 1}; " \n "      if (_veh iskindof ""plane"") then {_planes = _planes + 1;}; " \n "      if (_veh in allUnitsUAV) then {_uavs = _uavs + 1;}; " \n "      if (_veh iskindof ""staticcanon"") then {_artys = _artys + 1}; " \n "      if (_veh iskindof ""staticmortar"") then {_mortars = _mortars + 1}; " \n "      if (_veh iskindof ""ship"") then {_boats = _boats + 1}; " \n "      _canHeal = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""attendant"") > 0; " \n "      _canReammo = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportAmmo"") > 0; " \n "      _canRefuel = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportFuel"") > 0; " \n "      _canRepair = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportRepair"") > 0; " \n "      if (_canHeal) then {_support_medic = _support_medic + 1}; " \n "      if (_canReammo) then {_support_reammo = _support_reammo + 1}; " \n "      if (_canRefuel) then {_support_refuel = _support_refuel + 1}; " \n "      if (_canRepair) then {_support_repair = _support_repair + 1}; " \n "     }; " \n "     if ((vehicle _x isEqualTo _x)) then {_infantry = (_infantry + 1)}; " \n "    } foreach units _grp; " \n " " \n "    _type = ""unknown""; " \n "    if (_infantry >= 1) then {_type = ""inf""}; " \n "    if (_cars >= 1) then {_type = ""motor_inf""}; " \n "    if (_tanks >= 1) then {_type = ""armor""}; " \n "    if (_apcs >= 1) then {_type = ""mech_inf""}; " \n "    if (_aa >= 1) then {_type = ""antiair""}; " \n "    if (_artys >= 1) then {_type = ""art""}; " \n "    if (_mortars >= 1) then {_type = ""mortar""}; " \n "    if ((_support_reammo + _support_refuel) >= 1) then {_type = ""support""}; " \n "    if (_support_repair >= 1) then {_type = ""maint""}; " \n "    if (_support_medic >= 1) then {_type = ""med""}; " \n "    if ((_support_medic + _support_reammo + _support_refuel + _support_repair) > 1) then {_type = ""support""}; " \n "    if (_boats >= 1) then {_type = ""naval""}; " \n "    if (_helis >= 1) then {_type = ""air""}; " \n "    if (_planes >= 1) then {_type = ""plane""}; " \n "    if (_uavs >= 1) then {_type = ""uav""}; " \n "     " \n "    _mkr = (_prefix+_type); " \n "    _mkr " \n "   }; " \n " " \n "   RKAG_fnc_spawnRevealGroup = { " \n "    params[""_group""]; " \n " " \n "    clearGroupIcons (_group); " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "    private _id = (_group) addGroupIcon [_mkrType, [0,0]]; " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true]; " \n " " \n "    while {!(_group isEqualTo grpNull) && (_group in RKAGRevealedGroups)} do  " \n "    { " \n "     _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "     _group setGroupIcon [_id, _mkrType]; " \n " " \n "     comment ""Check if any units are alive""; " \n "     private _i = units _group findIf {alive _x}; " \n "     if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],"""",1,true];}; " \n " " \n "     sleep 1; " \n "    }; " \n " " \n "    comment ""Show last location""; " \n "    private _j = units _group findIf {alive _x}; " \n "    if (!(_group isEqualTo grpNull) && (_j > -1) && (side _group != side player)) then {[_group] spawn RKAG_fnc_spawnLastKnownPositionMarker;}; " \n " " \n "    clearGroupIcons (_group); " \n "   }; " \n " " \n "   RKAG_fnc_hideGroup = { " \n "    params[""_group""]; " \n "    RKAGRevealedGroups = (RKAGRevealedGroups-[_group]); " \n "   }; " \n " " \n "   RKAG_fnc_hideMapTooltip = { " \n "    with uiNamespace do  " \n "    { " \n "     RKAGMapTooltipGroup ctrlShow false; " \n "     RKAGMapInfantryTooltipHeader ctrlShow false; " \n "     RKAGMapInfantryTooltipBody ctrlShow false; " \n "     RKAGMapVehicleTooltipHeader ctrlShow false; " \n "     RKAGMapVehicleTooltipBody ctrlShow false; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_showMapTooltip = { " \n "    params[""_group"",""_vehicleCount"",""_footCount""]; " \n " " \n "    with uiNamespace do  " \n "    { " \n "     private _sideColor = ([side _group, false] call BIS_fnc_sideColor); " \n "     _sideColor set[3,0.75]; " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor (_sideColor); " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor (_sideColor); " \n "     RKAGMapTooltipGroup ctrlShow true; " \n " " \n "     private _footText = """"; " \n "     private _vehicleText = """"; " \n "     private _vehs = []; " \n "     { " \n "      private _unit = _x; " \n " " \n "      if (!alive _unit) then {continue}; " \n " " \n "      if (_footCount > 0 && (vehicle _unit isEqualTo _unit)) then  " \n "      { " \n "       _iconName = getText (configFile >> ""CfgVehicles"" >> typeOf _unit >> ""icon""); " \n "       _iconPath = getText(configfile >> ""CfgVehicleIcons"" >> _iconName); " \n "       _footText=(_footText+""<img image='""+_iconPath+""' shadow='0' size='1.2' valign='middle'></img>""); " \n "      }; " \n "     " \n "      if (_vehicleCount > 0 && !(vehicle _unit isEqualTo _unit) && !(vehicle _unit in _vehs)) then " \n "      { " \n "       _vehs pushBack vehicle _unit; " \n "        " \n " " \n "       _vehicleText=(_vehicleText+""<img image='""+(getText (configfile >> 'CfgVehicles' >> typeOf vehicle _unit >> 'picture'))+""' shadow='0' size='1.33' valign='middle'></img>""); " \n "      }; " \n "     } foreach units _group; " \n " " \n "     if !(_footText isEqualTo """") then  " \n "     { " \n "      RKAGMapInfantryTooltipHeader ctrlShow true; " \n "      RKAGMapInfantryTooltipBody ctrlShow true; " \n "      RKAGMapInfantryTooltipBody ctrlSetStructuredText parseText (""<t size='0.1'>&#160;</t><br/>""+_footText); " \n "      RKAGMapInfantryTooltipBody ctrlCommit 0; " \n "     } " \n "     else  " \n "     { " \n "      RKAGMapInfantryTooltipHeader ctrlShow false; " \n "      RKAGMapInfantryTooltipBody ctrlShow false; " \n "     }; " \n " " \n "     if !(_vehicleText isEqualTo """") then  " \n "     { " \n "      RKAGMapVehicleTooltipHeader ctrlShow true; " \n "      RKAGMapVehicleTooltipBody ctrlShow true; " \n "      RKAGMapVehicleTooltipBody ctrlSetStructuredText parseText (""<t size='0.5'>&#160;</t><br/>""+_vehicleText); " \n "      RKAGMapVehicleTooltipBody ctrlCommit 0; " \n " " \n "      if (_footText isEqualTo """") then  " \n "      { " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04]; " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1]; " \n "       RKAGMapVehicleTooltipHeader ctrlcommit 0.05; " \n "       RKAGMapVehicleTooltipBody ctrlcommit 0.05; " \n "      } " \n "      else  " \n "      { " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04]; " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1]; " \n "       RKAGMapVehicleTooltipHeader ctrlCommit 0.05; " \n "       RKAGMapVehicleTooltipBody ctrlCommit 0.05; " \n " " \n "      }; " \n "     } " \n "     else  " \n "     {  " \n "      RKAGMapVehicleTooltipHeader ctrlShow false; " \n "      RKAGMapVehicleTooltipBody ctrlShow false; " \n "     }; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_spawnLastKnownPositionMarker = { " \n "    params[""_group""]; " \n "     " \n "    private _mkr = createMarkerLocal [""marker_""+str(count allMapMarkers),getPos leader _group]; " \n "    _mkr setMarkerTypeLocal ""mil_unknown""; " \n " " \n "    _colorName = switch (side _group) do  " \n "    { " \n "     case west: {""colorBLUFOR""}; " \n "     case east: {""colorOPFOR""}; " \n "     case independent: {""colorIndependent""}; " \n "     case civilian: {""colorCivilian""}; " \n "     default {""ColorUNKNOWN""}; " \n "    }; " \n "    _mkr setMarkerColorLocal _colorName; " \n "    _mkr setMarkerSizeLocal [0.5,0.5]; " \n " " \n "    _time = 0; " \n "    _maxTime = RKAGLastKnownLocationMarkerTime; " \n "    while {!(_group isEqualTo grpNull) && !(_group in RKAGRevealedGroups)} do  " \n "    { " \n "     uisleep 1; " \n "     _time=_time+1; " \n "     if (_time >= _maxTime) exitWith {}; " \n "    }; " \n "    deleteMarkerLocal _mkr; " \n "   }; " \n " " \n "   RKAG_fnc_spawnFireEffect = { " \n "    params[""_unit""]; " \n " " \n "    private _group = group _unit; " \n "    _group spawn  " \n "    { " \n "     _this setGroupIconParams [[1,1,0.9,0.75],"""",1,true]; " \n "     uisleep 0.05; " \n "     _this setGroupIconParams [([side _this, false] call BIS_fnc_sideColor),"""",1,true]; " \n "    }; " \n " " \n "    _unit spawn  " \n "    {  " \n "     comment ""Calculate vector forward for turret or man and convert to direction angle""; " \n "     private _forwardVectorFlat = [0,0,0]; " \n "     private _angle = 0; " \n "      " \n "     _forwardVectorFlat = (vehicle _this weaponDirection ((weaponState [vehicle _this,(vehicle _this unitTurret _this)]) select 0)); " \n "     if (_forwardVectorFlat isEqualTo [0,0,0]) then {_forwardVectorFlat = _this weaponDirection currentWeapon _this;}; " \n "     _forwardVectorFlat set[2,0]; " \n "     _forwardVectorFlat = vectorNormalized _forwardVectorFlat; " \n " " \n "     _angle = acos ([0,1,0] vectorDotProduct _forwardVectorFlat); " \n "     if ((_forwardVectorFlat select 0) < 0) then {_angle = _angle * -1}; " \n " " \n "     private _bulletMkr = createMarkerLocal [""marker_""+str(round random 1000000),getPosWorldVisual _this]; " \n "     _bulletMkr setMarkerShapeLocal ""RECTANGLE""; " \n "     _bulletMkr setMarkerBrushLocal ""SolidFull""; " \n "     _bulletMkr setMarkerColorLocal RKAGBulletMarkerColor; " \n "     _bulletMkr setMarkerSizeLocal RKAGBulletMarkerSize; " \n "     _bulletMkr setMarkerDirLocal _angle; " \n "     private _frameEvent = addMissionEventHandler [""EachFrame"",{ " \n "      private _unit = _thisArgs select 0; " \n "      private _bulletMkr = _thisArgs select 1; " \n "      private _forwardVector = _thisArgs select 2; " \n "      private _currentPos = getMarkerPos _bulletMkr; " \n "      _bulletMkr setMarkerPosLocal (_currentPos vectorAdd (_forwardVector vectorMultiply RKAGBulletMarkerSpeed)); " \n "     },[_this,_bulletMkr,_forwardVectorFlat]]; " \n " " \n "     uisleep RKAGBulletMarkerLifetime; " \n " " \n "     removeMissionEventHandler [""EachFrame"",_frameEvent]; " \n "     deleteMarkerLocal _bulletMkr; " \n "    }; " \n "   }; " \n " " \n "   RKAG_fnc_tryInitUnit = { " \n "    params[""_unit""]; " \n "     " \n "    private _initValue = _unit getVariable ""RKAGInit""; " \n "    if (isNil ""_initValue"") then  " \n "    { " \n "     _unit addEventHandler [""FiredMan"",{ " \n "      params[""_unit""]; " \n "      [_unit] spawn RKAG_fnc_spawnFireEffect; " \n "     }]; " \n "     _unit setVariable [""RKAGInit"",true]; " \n "    }; " \n "   }; " \n " " \n "   onGroupIconOverEnter " \n "   { " \n "    private _group = _this select 1; " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType; " \n "    private _text = (getText(configfile >> ""CfgMarkers"" >> _mkrType >> ""name"")); " \n "    private _vehCount = 0; " \n "    private _footCount = 0; " \n "    private _vehName = ''; " \n "    private _vehs = []; " \n " " \n "    comment ""Determine marker name based on vehicle count and type""; " \n "    { " \n "     if (!(vehicle _x isEqualTo _x) && !(vehicle _x in _vehs)) then  " \n "     { " \n "      _vehCount = (_vehCount+1); " \n "      _vehs pushBack vehicle _x; " \n "      if (_vehName isEqualTo '') then {_vehName = [configFile >> ""CfgVehicles"" >> typeOf vehicle _x] call BIS_fnc_displayName;}; " \n "     }; " \n "     if (vehicle _x isEqualTo _x) then {_footCount = (_footCount+1);}; " \n "    } foreach units _group; " \n "    if (_vehCount == 1) then {_text = _vehName;}; " \n " " \n "    comment ""Check if any units alive""; " \n "    _i = units _group findIf {alive _x}; " \n "    if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],_text+"" (DEAD)"",1.25,true];} " \n "    else {_group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),_text,1.25,true];}; " \n " " \n "    comment ""Show map tooltip""; " \n "    if (visibleMap) then {[_group,_vehCount,_footCount] call RKAG_fnc_showMapTooltip;}; " \n "   }; " \n " " \n "   onGroupIconOverLeave " \n "   { " \n "    private _group = _this select 1; " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true]; " \n "    call RKAG_fnc_hideMapTooltip; " \n "   }; " \n " " \n "   RKAGRevealedGroups = []; " \n " " \n "   call RKAG_fnc_createMapTooltip; " \n "   call RKAG_fnc_hideMapTooltip; " \n "   call RKAG_fnc_createMapHideMarkersCheckbox; " \n " " \n "   addMissionEventHandler  " \n "   [ ""Map"",{  " \n "    params [""_isOpened"",""_isForced""];  " \n "     " \n "    if (RKAGOnlyShowMarkersOnMap && !_isOpened) then  " \n "    { " \n "     setGroupIconsVisible [false,false]; " \n "     setGroupIconsSelectable false; " \n "    }; " \n " " \n "    if (RKAGOnlyShowMarkersOnMap && _isOpened && RKAGShowGroups) then  " \n "    { " \n "     setGroupIconsVisible [true,true]; " \n "     setGroupIconsSelectable true; " \n "    }; " \n " " \n "    if (!_isOpened) then {call RKAG_fnc_hideMapTooltip;}; " \n "   }]; " \n " " \n "   if (RKAGOnlyShowMarkersOnMap) then  " \n "   { " \n "    setGroupIconsVisible [false,false]; " \n "    setGroupIconsSelectable false; " \n "   }; " \n " " \n "   while {!isNil ""RKAGRevealedGroups""} do  " \n "   { " \n "    if (alive player) then  " \n "    { " \n "     { " \n "      private _group = _x; " \n "      _inVehicle = !(vehicle (units _group select 0) isEqualTo (units _group select 0)); " \n "      if (isNil ""_inVehicle"") then {_inVehicle = false;}; " \n "       " \n "      private _i = -1; " \n "      if (RKAGIncludePlayerGroups) then {_i = -1;} " \n "      else {_i = units _group findIf {_x in allPlayers};}; " \n "       " \n "      if (_i > -1 || (side _group isEqualTo side player && (count units _group <= 1) && !_inVehicle) || side _group isEqualTo civilian) then {continue}; " \n " " \n "      private _spottedAnyGroupMember = false; " \n "      { " \n "       _spottedAnyGroupMember = ((side player) knowsAbout vehicle _x == 4); " \n "       [_x] call RKAG_fnc_tryInitUnit; " \n "      } forEach units _group; " \n " " \n "      if (_spottedAnyGroupMember) then  " \n "      { " \n "       if (_group in RKAGRevealedGroups) exitWith {}; " \n "       if (count units _group < RKAGMinGroupSize && ((vehicle (units _group select 0)) isEqualTo (units _group select 0))) exitWith {}; " \n "       RKAGRevealedGroups pushBack _group; " \n "       [_group] spawn RKAG_fnc_spawnRevealGroup; " \n "      } " \n "      else  " \n "      { " \n "       [_group] call RKAG_fnc_hideGroup; " \n "      }; " \n "     } foreach allGroups; " \n " " \n "     comment ""Try Init Players""; " \n "     if (RKAGBulletIncludePlayers) then {  " \n "      { " \n "       if !(side _x isEqualTo side player) then {continue}; " \n "       [_x] call RKAG_fnc_tryInitUnit; " \n "      } foreach allPlayers; " \n "     }; " \n "    }; " \n "    RKAGRevealedGroups = (RKAGRevealedGroups - [grpNull]); " \n "    {deleteGroup _x;} foreach allGroups; " \n "    uisleep 1; " \n "   }; " \n "  }; " \n " } remoteExec [""BIS_fnc_call"",0,""JIP_ID_ShowRKAGMilitaryMarkers""]; " \n "}; " \n " " \n "SLT_fnc_disableScript = { " \n "}; " \n " " \n "SLT_fnc_init = { " \n " params[[""_useToggleOptions"",true]]; " \n " " \n " with uiNamespace do { " \n "   " \n "  createDialog ""RscDisplayEmpty""; " \n "  private _display = findDisplay -1; " \n "  {_x ctrlShow false;} foreach allControls _display; " \n " " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1]; " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH]; " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66]; " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>""); " \n "  _ctrlHeader ctrlCommit 0; " \n " " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH]; " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5]; " \n "  _ctrlBorder ctrlCommit 0; " \n " " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1]; " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH]; " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)""; " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75]; " \n "  _ctrlBackground ctrlCommit 0; " \n " " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTEnableButton ctrlSetText ""ENABLE""; " \n "  SLTEnableButton ctrlCommit 0; " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1]; " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH]; " \n "  SLTDisableButton ctrlSetText ""DISABLE""; " \n "  SLTDisableButton ctrlCommit 0; " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{ " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server""); " \n "   closeDialog 0; " \n "  }]; " \n " " \n "  if (!_useToggleOptions) then  " \n "  { " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?""; " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!""; " \n "   SLTEnableButton ctrlCommit 0; " \n " " \n "   SLTDisableButton ctrlSetText ""CANCEL""; " \n "   SLTDisableButton ctrlCommit 0; " \n "  }; " \n " }; " \n " deleteVehicle this; " \n "}; " \n " " \n "if (time < 1) then  " \n "{ " \n " call SLT_fnc_enableScript; " \n "} " \n "else  " \n "{ " \n " [false] call SLT_fnc_init; " \n "};";
+						init="SLT_fnc_RE_Server = {   " \n " params[""_arguments"",""_code""];   " \n " _varName = (""SLT""+str (round random 10000));   " \n "   " \n " TempCode = compile (""if(!isServer) exitWith{};_this call ""+str _code+""; ""+(_varName+"" = nil;""));   " \n " TempArgs = _arguments;   " \n "   " \n " call compile (_varName +"" = [TempArgs,TempCode];   " \n " publicVariable '""+_varName+""';   " \n "   " \n " [[], {   " \n " (""+_varName+"" select 0) spawn (""+_varName+"" select 1);   " \n " }] remoteExec ['spawn',2];"");   " \n "};   " \n "   " \n "with uiNamespace do {SLTScriptDisplayName = ""Team Map Intel"";};   " \n "   " \n "SLT_fnc_enableScript = {   " \n " {   " \n "  [] spawn {   " \n "      " \n "   if (isMultiplayer) then {waitUntil {sleep 0.1; getClientState == ""BRIEFING READ""};};   " \n "   waitUntil {sleep 0.1; !((findDisplay 12 displayCtrl 51) isEqualTo controlNull)};   " \n "      " \n "   if !(isNil ""RKAGRevealedGroups"") exitWith {};   " \n "   " \n "   comment ""Parameters"";   " \n "   RKAGOnlyShowMarkersOnMap = true;   " \n "   RKAGIncludePlayerGroups = false;   " \n "   RKAGHideFriendlyForces = true;   " \n "   RKAGMinGroupSize = 5;   " \n "   RKAGLastKnownLocationMarkerTime = 180;   " \n "   RKAGBulletMarkerSpeed = 7.5;   " \n "   RKAGBulletMarkerSize = [1,4];   " \n "   RKAGBulletMarkerColor = ""ColorWhite"";   " \n "   RKAGBulletMarkerLifetime = 0.5;   " \n "   RKAGBulletIncludePlayers = false;   " \n "   RKAGShowGroups = true;   " \n "   " \n "   setGroupIconsVisible [true,true];   " \n "   setGroupIconsSelectable true;   " \n "   disableMapIndicators [RKAGHideFriendlyForces,true,false,false];   " \n "   uiNamespace setVariable [""_map"",findDisplay 12 displayCtrl 51];    " \n "   " \n "   RKAG_fnc_createMapTooltip = {   " \n "    with uiNamespace do {   " \n "     _display = (finddisplay 12);   " \n "   " \n "     RKAGMapTooltipGroup = _display ctrlCreate [""RscControlsGroup"", 2300];   " \n "     RKAGMapTooltipGroup ctrlSetPosition [0, 0, 0.4625, 0.34];   " \n "     RKAGMapTooltipGroup ctrlCommit 0;    " \n "   " \n "     RKAGMapInfantryTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1100,RKAGMapTooltipGroup];   " \n "     RKAGMapInfantryTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04];   " \n "     RKAGMapInfantryTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Infantry Intel</t>"");   " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75];   " \n "     RKAGMapInfantryTooltipHeader ctrlCommit 0;   " \n "   " \n "     RKAGMapInfantryTooltipBody = _display ctrlCreate [""RscStructuredText"", 1101,RKAGMapTooltipGroup];   " \n "     RKAGMapInfantryTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1];   " \n "     RKAGMapInfantryTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75];   " \n "     RKAGMapInfantryTooltipBody ctrlCommit 0;   " \n "   " \n "     RKAGMapVehicleTooltipHeader = _display ctrlCreate [""RscStructuredText"", 1102,RKAGMapTooltipGroup];   " \n "     RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04];   " \n "     RKAGMapVehicleTooltipHeader ctrlSetStructuredText parseText (""<t font='PuristaSemibold' valign='middle' size='1' shadow='0' align='center'>Vehicle Intel</t>"");   " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor [0.15,0.15,0.15,0.75];   " \n "     RKAGMapVehicleTooltipHeader ctrlCommit 0;   " \n "   " \n "     RKAGMapVehicleTooltipBody = _display ctrlCreate [""RscStructuredText"", 1103,RKAGMapTooltipGroup];   " \n "     RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1];   " \n "     RKAGMapVehicleTooltipBody ctrlSetBackgroundColor [0.05,0.05,0.05,0.75];   " \n "     RKAGMapVehicleTooltipBody ctrlCommit 0;   " \n "    };   " \n "   " \n "    addMissionEventHandler [""EachFrame"", {   " \n "     with uiNamespace do    " \n "     {   " \n "      _mousePos = getMousePosition;   " \n "      RKAGMapTooltipGroup ctrlSetPosition [(getMousePosition select 0),(getMousePosition select 1)+0.05,0.4625, 0.34];   " \n "      RKAGMapTooltipGroup ctrlCommit 0;   " \n "     };   " \n "    }];   " \n "   };   " \n "   " \n "   RKAG_fnc_createMapHideMarkersCheckbox = {   " \n "    with uiNamespace do {   " \n "     private _display = finddisplay 12;   " \n "     private _RscCheckbox_2800 = _display ctrlCreate [""RscCheckbox"", 2800];   " \n "     _RscCheckbox_2800 ctrlSetPosition [0.965937 * safezoneW + safezoneX, 0.948 * safezoneH + safezoneY, 0.018125 * safezoneW, 0.0336666 * safezoneH];   " \n "     _RscCheckbox_2800 ctrlSetTooltip ""Show Unit Markers: ON"";   " \n "     _RscCheckbox_2800 cbSetChecked true;   " \n "     _RscCheckbox_2800 ctrlSetBackgroundColor [0,0.5,0,1];   " \n "     _RscCheckbox_2800 ctrlCommit 0;   " \n "     _RscCheckbox_2800 ctrlAddEventHandler [""CheckedChanged"",{   " \n "      params [""_control"", ""_checked""];   " \n "   " \n "      if (_checked == 1) then    " \n "      {   " \n "       setGroupIconsVisible [true,true];   " \n "       setGroupIconsSelectable true;   " \n "       disableMapIndicators [RKAGHideFriendlyForces,true,false,false];   " \n "       RKAGShowGroups = true;   " \n "       _control ctrlSetTooltip ""Show Unit Markers: ON"";   " \n "      }   " \n "      else    " \n "      {   " \n "       setGroupIconsVisible [false,false];   " \n "       setGroupIconsSelectable false;   " \n "       RKAGShowGroups = false;   " \n "       _control ctrlSetTooltip ""Show Unit Markers: OFF"";   " \n "      };   " \n "     }];   " \n "    };   " \n "   };   " \n "   " \n "   RKAG_fnc_getGroupNATOMarkerType = {   " \n "    params[""_group""];   " \n "    private _side = sideUnknown;   " \n "    private _mkr = """";   " \n "   " \n "    private _prefix = """";   " \n "    _prefix = switch (side _group) do    " \n "    {   " \n "     case west: {""b_""};   " \n "     case east: {""o_""};   " \n "     case independent: {""n_""};   " \n "     default {""""};   " \n "    };   " \n "   " \n "    private [""_grp"",""_vehlist"",""_infantry"",""_cars"",""_apcs"",""_tanks"",""_aa"",""_helis"",""_planes"",""_boats"",""_veh"",""_type""];   " \n "   " \n "    _grp = _group;   " \n "   " \n "    _vehlist = [];   " \n "    _infantry = 0;   " \n "    _cars = 0;   " \n "    _apcs = 0;   " \n "    _tanks = 0;   " \n "    _aa = 0;   " \n "    _helis = 0;   " \n "    _planes = 0;   " \n "    _uavs = 0;   " \n "    _boats = 0;   " \n "    _artys = 0;   " \n "    _mortars = 0;   " \n "    _support_reammo = 0;   " \n "    _support_repair = 0;   " \n "    _support_refuel = 0;   " \n "    _support_medic = 0;   " \n "    _support = 0;   " \n "    {   " \n "     if (!canstand vehicle _x && alive vehicle _x && !(vehicle _x in _vehlist)) then {   " \n "      _veh = vehicle _x;   " \n "      _vehlist = _vehlist + [_veh];   " \n "   " \n "      if (_veh iskindof ""car"") then {_cars = _cars + 1};   " \n "      if (_veh iskindof ""tank"") then {_tanks = _tanks + 1;};   " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""artilleryScanner"") > 0) then{_artys = _artys + 1;};   " \n "      if (_veh iskindof ""Wheeled_APC_F"" || _veh iskindof ""APC_Tracked_01_base_F""   " \n "      || _veh iskindof ""APC_Tracked_02_base_F"" || _veh iskindof ""APC_Tracked_03_base_F"") then {_apcs = _apcs + 1};   " \n "      if (getnumber(configfile >> ""cfgvehicles"" >> typeof _veh >> ""radarType"") > 0) then {_aa = _aa + 1};   " \n "      if (_veh iskindof ""helicopter"") then {_helis = _helis + 1};   " \n "      if (_veh iskindof ""plane"") then {_planes = _planes + 1;};   " \n "      if (_veh in allUnitsUAV) then {_uavs = _uavs + 1;};   " \n "      if (_veh iskindof ""staticcanon"") then {_artys = _artys + 1};   " \n "      if (_veh iskindof ""staticmortar"") then {_mortars = _mortars + 1};   " \n "      if (_veh iskindof ""ship"") then {_boats = _boats + 1};   " \n "      _canHeal = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""attendant"") > 0;   " \n "      _canReammo = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportAmmo"") > 0;   " \n "      _canRefuel = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportFuel"") > 0;   " \n "      _canRepair = getnumber (configfile >> ""cfgvehicles"" >> typeof _veh >> ""transportRepair"") > 0;   " \n "      if (_canHeal) then {_support_medic = _support_medic + 1};   " \n "      if (_canReammo) then {_support_reammo = _support_reammo + 1};   " \n "      if (_canRefuel) then {_support_refuel = _support_refuel + 1};   " \n "      if (_canRepair) then {_support_repair = _support_repair + 1};   " \n "     };   " \n "     if ((vehicle _x isEqualTo _x)) then {_infantry = (_infantry + 1)};   " \n "    } foreach units _grp;   " \n "   " \n "    _type = ""unknown"";   " \n "    if (_infantry >= 1) then {_type = ""inf""};   " \n "    if (_cars >= 1) then {_type = ""motor_inf""};   " \n "    if (_tanks >= 1) then {_type = ""armor""};   " \n "    if (_apcs >= 1) then {_type = ""mech_inf""};   " \n "    if (_aa >= 1) then {_type = ""antiair""};   " \n "    if (_artys >= 1) then {_type = ""art""};   " \n "    if (_mortars >= 1) then {_type = ""mortar""};   " \n "    if ((_support_reammo + _support_refuel) >= 1) then {_type = ""support""};   " \n "    if (_support_repair >= 1) then {_type = ""maint""};   " \n "    if (_support_medic >= 1) then {_type = ""med""};   " \n "    if ((_support_medic + _support_reammo + _support_refuel + _support_repair) > 1) then {_type = ""support""};   " \n "    if (_boats >= 1) then {_type = ""naval""};   " \n "    if (_helis >= 1) then {_type = ""air""};   " \n "    if (_planes >= 1) then {_type = ""plane""};   " \n "    if (_uavs >= 1) then {_type = ""uav""};   " \n "       " \n "    _mkr = (_prefix+_type);   " \n "    _mkr   " \n "   };   " \n "   " \n "   RKAG_fnc_spawnRevealGroup = {   " \n "    params[""_group""];   " \n "   " \n "    clearGroupIcons (_group);   " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType;   " \n "    private _id = (_group) addGroupIcon [_mkrType, [0,0]];   " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true];   " \n "   " \n "    while {!(_group isEqualTo grpNull) && (_group in RKAGRevealedGroups)} do    " \n "    {   " \n "     _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType;   " \n "     _group setGroupIcon [_id, _mkrType];   " \n "   " \n "     comment ""Check if any units are alive"";   " \n "     private _i = units _group findIf {alive _x};   " \n "     if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],"""",1,true];};   " \n "   " \n "     sleep 1;   " \n "    };   " \n "   " \n "    comment ""Show last location"";   " \n "    private _j = units _group findIf {alive _x};   " \n "    if (!(_group isEqualTo grpNull) && (_j > -1) && (side _group != side player)) then {[_group] spawn RKAG_fnc_spawnLastKnownPositionMarker;};   " \n "   " \n "    clearGroupIcons (_group);   " \n "   };   " \n "   " \n "   RKAG_fnc_hideGroup = {   " \n "    params[""_group""];   " \n "    RKAGRevealedGroups = (RKAGRevealedGroups-[_group]);   " \n "   };   " \n "   " \n "   RKAG_fnc_hideMapTooltip = {   " \n "    with uiNamespace do    " \n "    {   " \n "     RKAGMapTooltipGroup ctrlShow false;   " \n "     RKAGMapInfantryTooltipHeader ctrlShow false;   " \n "     RKAGMapInfantryTooltipBody ctrlShow false;   " \n "     RKAGMapVehicleTooltipHeader ctrlShow false;   " \n "     RKAGMapVehicleTooltipBody ctrlShow false;   " \n "    };   " \n "   };   " \n "   " \n "   RKAG_fnc_showMapTooltip = {   " \n "    params[""_group"",""_vehicleCount"",""_footCount""];   " \n "   " \n "    with uiNamespace do    " \n "    {   " \n "     private _sideColor = ([side _group, false] call BIS_fnc_sideColor);   " \n "     _sideColor set[3,0.75];   " \n "     RKAGMapInfantryTooltipHeader ctrlSetBackgroundColor (_sideColor);   " \n "     RKAGMapVehicleTooltipHeader ctrlSetBackgroundColor (_sideColor);   " \n "     RKAGMapTooltipGroup ctrlShow true;   " \n "   " \n "     private _footText = """";   " \n "     private _vehicleText = """";   " \n "     private _vehs = [];   " \n "     {   " \n "      private _unit = _x;   " \n "   " \n "      if (!alive _unit) then {continue};   " \n "   " \n "      if (_footCount > 0 && (vehicle _unit isEqualTo _unit)) then    " \n "      {   " \n "       _iconName = getText (configFile >> ""CfgVehicles"" >> typeOf _unit >> ""icon"");   " \n "       _iconPath = getText(configfile >> ""CfgVehicleIcons"" >> _iconName);   " \n "       _footText=(_footText+""<img image='""+_iconPath+""' shadow='0' size='1.2' valign='middle'></img>"");   " \n "      };   " \n "       " \n "      if (_vehicleCount > 0 && !(vehicle _unit isEqualTo _unit) && !(vehicle _unit in _vehs)) then   " \n "      {   " \n "       _vehs pushBack vehicle _unit;   " \n "          " \n "   " \n "       _vehicleText=(_vehicleText+""<img image='""+(getText (configfile >> 'CfgVehicles' >> typeOf vehicle _unit >> 'picture'))+""' shadow='0' size='1.33' valign='middle'></img>"");   " \n "      };   " \n "     } foreach units _group;   " \n "   " \n "     if !(_footText isEqualTo """") then    " \n "     {   " \n "      RKAGMapInfantryTooltipHeader ctrlShow true;   " \n "      RKAGMapInfantryTooltipBody ctrlShow true;   " \n "      RKAGMapInfantryTooltipBody ctrlSetStructuredText parseText (""<t size='0.1'>&#160;</t><br/>""+_footText);   " \n "      RKAGMapInfantryTooltipBody ctrlCommit 0;   " \n "     }   " \n "     else    " \n "     {   " \n "      RKAGMapInfantryTooltipHeader ctrlShow false;   " \n "      RKAGMapInfantryTooltipBody ctrlShow false;   " \n "     };   " \n "   " \n "     if !(_vehicleText isEqualTo """") then    " \n "     {   " \n "      RKAGMapVehicleTooltipHeader ctrlShow true;   " \n "      RKAGMapVehicleTooltipBody ctrlShow true;   " \n "      RKAGMapVehicleTooltipBody ctrlSetStructuredText parseText (""<t size='0.5'>&#160;</t><br/>""+_vehicleText);   " \n "      RKAGMapVehicleTooltipBody ctrlCommit 0;   " \n "   " \n "      if (_footText isEqualTo """") then    " \n "      {   " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.02, 0.4375, 0.04];   " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.06, 0.4375, 0.1];   " \n "       RKAGMapVehicleTooltipHeader ctrlcommit 0.05;   " \n "       RKAGMapVehicleTooltipBody ctrlcommit 0.05;   " \n "      }   " \n "      else    " \n "      {   " \n "       RKAGMapVehicleTooltipHeader ctrlSetPosition [0.0125, 0.18, 0.4375, 0.04];   " \n "       RKAGMapVehicleTooltipBody ctrlSetPosition [0.0125, 0.22, 0.4375, 0.1];   " \n "       RKAGMapVehicleTooltipHeader ctrlCommit 0.05;   " \n "       RKAGMapVehicleTooltipBody ctrlCommit 0.05;   " \n "   " \n "      };   " \n "     }   " \n "     else    " \n "     {    " \n "      RKAGMapVehicleTooltipHeader ctrlShow false;   " \n "      RKAGMapVehicleTooltipBody ctrlShow false;   " \n "     };   " \n "    };   " \n "   };   " \n "   " \n "   RKAG_fnc_spawnLastKnownPositionMarker = {   " \n "    params[""_group""];   " \n "       " \n "    private _mkr = createMarkerLocal [""marker_""+str(count allMapMarkers),getPos leader _group];   " \n "    _mkr setMarkerTypeLocal ""mil_unknown"";   " \n "   " \n "    _colorName = switch (side _group) do    " \n "    {   " \n "     case west: {""colorBLUFOR""};   " \n "     case east: {""colorOPFOR""};   " \n "     case independent: {""colorIndependent""};   " \n "     case civilian: {""colorCivilian""};   " \n "     default {""ColorUNKNOWN""};   " \n "    };   " \n "    _mkr setMarkerColorLocal _colorName;   " \n "    _mkr setMarkerSizeLocal [0.5,0.5];   " \n "   " \n "    _time = 0;   " \n "    _maxTime = RKAGLastKnownLocationMarkerTime;   " \n "    while {!(_group isEqualTo grpNull) && !(_group in RKAGRevealedGroups)} do    " \n "    {   " \n "     uisleep 1;   " \n "     _time=_time+1;   " \n "     if (_time >= _maxTime) exitWith {};   " \n "    };   " \n "    deleteMarkerLocal _mkr;   " \n "   };   " \n "   " \n "   RKAG_fnc_spawnFireEffect = {   " \n "    params[""_unit""];   " \n "   " \n "    private _group = group _unit;   " \n "    _group spawn    " \n "    {   " \n "     _this setGroupIconParams [[1,1,0.9,0.75],"""",1,true];   " \n "     uisleep 0.05;   " \n "     _this setGroupIconParams [([side _this, false] call BIS_fnc_sideColor),"""",1,true];   " \n "    }; " \n "   };   " \n "   " \n "   RKAG_fnc_tryInitUnit = {   " \n "    params[""_unit""];   " \n "       " \n "    private _initValue = _unit getVariable ""RKAGInit"";   " \n "    if (isNil ""_initValue"") then    " \n "    {   " \n "     _unit addEventHandler [""FiredMan"",{   " \n "      params[""_unit""];   " \n "      [_unit] spawn RKAG_fnc_spawnFireEffect;   " \n "     }];   " \n "     _unit setVariable [""RKAGInit"",true];   " \n "    };   " \n "   };   " \n "   " \n "   onGroupIconOverEnter   " \n "   {   " \n "    private _group = _this select 1;   " \n "    private _mkrType = [_group] call RKAG_fnc_getGroupNATOMarkerType;   " \n "    private _text = (getText(configfile >> ""CfgMarkers"" >> _mkrType >> ""name""));   " \n "    private _vehCount = 0;   " \n "    private _footCount = 0;   " \n "    private _vehName = '';   " \n "    private _vehs = [];   " \n "   " \n "    comment ""Determine marker name based on vehicle count and type"";   " \n "    {   " \n "     if (!(vehicle _x isEqualTo _x) && !(vehicle _x in _vehs)) then    " \n "     {   " \n "      _vehCount = (_vehCount+1);   " \n "      _vehs pushBack vehicle _x;   " \n "      if (_vehName isEqualTo '') then {_vehName = [configFile >> ""CfgVehicles"" >> typeOf vehicle _x] call BIS_fnc_displayName;};   " \n "     };   " \n "     if (vehicle _x isEqualTo _x) then {_footCount = (_footCount+1);};   " \n "    } foreach units _group;   " \n "    if (_vehCount == 1) then {_text = _vehName;};   " \n "   " \n "    comment ""Check if any units alive"";   " \n "    _i = units _group findIf {alive _x};   " \n "    if (_i < 0) then {_group setGroupIconParams [[0,0,0,0.75],_text+"" (DEAD)"",1.25,true];}   " \n "    else {_group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),_text,1.25,true];};   " \n "   " \n "    comment ""Show map tooltip"";   " \n "    if (visibleMap) then {[_group,_vehCount,_footCount] call RKAG_fnc_showMapTooltip;};   " \n "   };   " \n "   " \n "   onGroupIconOverLeave   " \n "   {   " \n "    private _group = _this select 1;   " \n "    _group setGroupIconParams [([side _group, false] call BIS_fnc_sideColor),"""",1,true];   " \n "    call RKAG_fnc_hideMapTooltip;   " \n "   };   " \n "   " \n "   RKAGRevealedGroups = [];   " \n "   " \n "   call RKAG_fnc_createMapTooltip;   " \n "   call RKAG_fnc_hideMapTooltip;   " \n "   call RKAG_fnc_createMapHideMarkersCheckbox;   " \n "   " \n "   addMissionEventHandler    " \n "   [ ""Map"",{    " \n "    params [""_isOpened"",""_isForced""];    " \n "       " \n "    if (RKAGOnlyShowMarkersOnMap && !_isOpened) then    " \n "    {   " \n "     setGroupIconsVisible [false,false];   " \n "     setGroupIconsSelectable false;   " \n "    };   " \n "   " \n "    if (RKAGOnlyShowMarkersOnMap && _isOpened && RKAGShowGroups) then    " \n "    {   " \n "     setGroupIconsVisible [true,true];   " \n "     setGroupIconsSelectable true;   " \n "    };   " \n "   " \n "    if (!_isOpened) then {call RKAG_fnc_hideMapTooltip;};   " \n "   }];   " \n "   " \n "   if (RKAGOnlyShowMarkersOnMap) then    " \n "   {   " \n "    setGroupIconsVisible [false,false];   " \n "    setGroupIconsSelectable false;   " \n "   };   " \n "   " \n "   while {!isNil ""RKAGRevealedGroups""} do    " \n "   {   " \n "    if (alive player) then    " \n "    {   " \n "     {   " \n "      private _group = _x;   " \n "      _inVehicle = !(vehicle (units _group select 0) isEqualTo (units _group select 0));   " \n "      if (isNil ""_inVehicle"") then {_inVehicle = false;};   " \n "         " \n "      private _i = -1;   " \n "      if (RKAGIncludePlayerGroups) then {_i = -1;}   " \n "      else {_i = units _group findIf {_x in allPlayers};};   " \n "         " \n "      if (_i > -1 || (side _group isEqualTo side player && (count units _group <= 1) && !_inVehicle) || side _group isEqualTo civilian) then {continue};   " \n "   " \n "      private _spottedAnyGroupMember = false;   " \n "      {   " \n "       _spottedAnyGroupMember = ((side player) knowsAbout vehicle _x == 4);   " \n "       [_x] call RKAG_fnc_tryInitUnit;   " \n "      } forEach units _group;   " \n "   " \n "      if (_spottedAnyGroupMember) then    " \n "      {   " \n "       if (_group in RKAGRevealedGroups) exitWith {};   " \n "       if (count units _group < RKAGMinGroupSize && ((vehicle (units _group select 0)) isEqualTo (units _group select 0))) exitWith {};   " \n "       RKAGRevealedGroups pushBack _group;   " \n "       [_group] spawn RKAG_fnc_spawnRevealGroup;   " \n "      }   " \n "      else    " \n "      {   " \n "       [_group] call RKAG_fnc_hideGroup;   " \n "      };   " \n "     } foreach allGroups;   " \n "   " \n "     comment ""Try Init Players"";   " \n "     if (RKAGBulletIncludePlayers) then {    " \n "      {   " \n "       if !(side _x isEqualTo side player) then {continue};   " \n "       [_x] call RKAG_fnc_tryInitUnit;   " \n "      } foreach allPlayers;   " \n "     };   " \n "    };   " \n "    RKAGRevealedGroups = (RKAGRevealedGroups - [grpNull]);   " \n "    {deleteGroup _x;} foreach allGroups;   " \n "    uisleep 1;   " \n "   };   " \n "  };   " \n " } remoteExec [""BIS_fnc_call"",0,""JIP_ID_ShowRKAGMilitaryMarkers""];   " \n "};   " \n "   " \n "SLT_fnc_disableScript = {   " \n "};   " \n "   " \n "SLT_fnc_init = {   " \n " params[[""_useToggleOptions"",true]];   " \n "   " \n " with uiNamespace do {   " \n "     " \n "  createDialog ""RscDisplayEmpty"";   " \n "  private _display = findDisplay -1;   " \n "  {_x ctrlShow false;} foreach allControls _display;   " \n "   " \n "  private _ctrlHeader = _display ctrlCreate [""RscStructuredText"",-1];   " \n "  _ctrlHeader ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.445 * safezoneH + safezoneY,0.20625 * safezoneW,0.022 * safezoneH];   " \n "  _ctrlHeader ctrlSetBackgroundColor [1,0.7,0,0.66];   " \n "  _ctrlHeader ctrlSetStructuredText parseText (""<t size='0.85' font='PuristaMedium'>""+toUpper SLTScriptDisplayName+""</t>"");   " \n "  _ctrlHeader ctrlCommit 0;   " \n "   " \n "  private _ctrlBorder = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBorder ctrlSetPosition [0.396875 * safezoneW + safezoneX,0.467 * safezoneH + safezoneY,0.20625 * safezoneW,0.077 * safezoneH];   " \n "  _ctrlBorder ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBorder ctrlSetTextColor [0,0,0,0.5];   " \n "  _ctrlBorder ctrlCommit 0;   " \n "   " \n "  private _ctrlBackground = _display ctrlCreate [""RscPicture"",-1];   " \n "  _ctrlBackground ctrlSetPosition [0.402031 * safezoneW + safezoneX,0.478 * safezoneH + safezoneY,0.195937 * safezoneW,0.055 * safezoneH];   " \n "  _ctrlBackground ctrlSetText ""#(rgb,1,1,1)color(1,1,1,1)"";   " \n "  _ctrlBackground ctrlSetTextColor [0.1,0.1,0.1,0.75];   " \n "  _ctrlBackground ctrlCommit 0;   " \n "   " \n "  SLTEnableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTEnableButton ctrlSetPosition [0.407187 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTEnableButton ctrlSetText ""ENABLE"";   " \n "  SLTEnableButton ctrlCommit 0;   " \n "  SLTEnableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_enableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  SLTDisableButton = _display ctrlCreate [""RscButtonMenu"",-1];   " \n "  SLTDisableButton ctrlSetPosition [0.5 * safezoneW + safezoneX,0.489 * safezoneH + safezoneY,0.0928125 * safezoneW,0.033 * safezoneH];   " \n "  SLTDisableButton ctrlSetText ""DISABLE"";   " \n "  SLTDisableButton ctrlCommit 0;   " \n "  SLTDisableButton ctrlAddEventHandler [""ButtonClick"",{   " \n "   [[],missionNamespace getVariable ""SLT_fnc_disableScript""] call (missionNamespace getVariable ""SLT_fnc_RE_Server"");   " \n "   closeDialog 0;   " \n "  }];   " \n "   " \n "  if (!_useToggleOptions) then    " \n "  {   " \n "   SLTEnableButton ctrlSetText ""ARE YOU SURE?"";   " \n "   SLTEnableButton ctrlSetTooltip ""This script cannot be disabled!"";   " \n "   SLTEnableButton ctrlCommit 0;   " \n "   " \n "   SLTDisableButton ctrlSetText ""CANCEL"";   " \n "   SLTDisableButton ctrlCommit 0;   " \n "  };   " \n " };   " \n " deleteVehicle this;   " \n "};   " \n "   " \n "if (time < 1) then    " \n "{   " \n " call SLT_fnc_enableScript;   " \n "}   " \n "else    " \n "{   " \n " [false] call SLT_fnc_init;   " \n "};";
 					};
 					id=557;
 					type="Land_HelipadEmpty_F";
-					atlOffset=3455.7542;
+					atlOffset=3455.7539;
 				};
 			};
 			id=558;
-			atlOffset=3455.7542;
+			atlOffset=3455.7539;
 		};
 		class Item208
 		{
@@ -12016,17 +13037,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15052.246,21.093798,16989.266};
+				position[]={15052.246,21.232798,16989.266};
 				angles[]={0,1.0965031,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
 			};
 			id=564;
 			type="I_Plane_Fighter_03_dynamicLoadout_F";
-			atlOffset=0.76099968;
+			atlOffset=0.13826942;
 		};
 		class Item210
 		{
@@ -12187,6 +13210,251 @@ class Mission
 			};
 			id=571;
 			type="B_Truck_01_box_F";
+		};
+		class Item216
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15085.467,19.596216,17231.047};
+				angles[]={0,2.3205025,6.282208};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=575;
+			type="C_Plane_Civil_01_racing_F";
+			atlOffset=0.00029754639;
+		};
+		class Item217
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14465.839,20.702724,16744.824};
+				angles[]={0,5.4902472,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=577;
+			type="O_MRAP_02_hmg_F";
+		};
+		class Item218
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14471.893,20.702724,16751.107};
+				angles[]={0,5.4812412,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=578;
+			type="O_MRAP_02_hmg_F";
+		};
+		class Item219
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14480.498,19.63982,16758.002};
+				angles[]={0,5.4678373,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=579;
+			type="O_LSV_02_armed_F";
+		};
+		class Item220
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14485.814,19.626841,16763.592};
+				angles[]={0.012007865,5.4874721,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=580;
+			type="O_LSV_02_AT_F";
+		};
+		class Item221
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14454.127,20.553661,16733.568};
+				angles[]={0.010664274,5.5379472,0.0026520467};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=581;
+			type="O_APC_Tracked_02_cannon_F";
+			atlOffset=-0.0022296906;
+		};
+		class Item222
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14460.795,20.468441,16739.385};
+				angles[]={0.014664836,5.5436149,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=582;
+			type="O_APC_Wheeled_02_rcws_v2_F";
+			atlOffset=-0.0076885223;
+		};
+		class Item223
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14464.668,20.380829,16723.568};
+				angles[]={6.2778621,2.3554263,0.0026529003};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=583;
+			type="O_MBT_02_railgun_F";
+			atlOffset=-0.014467239;
+		};
+		class Item224
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14470.028,20.522839,16729.391};
+				angles[]={0.0026529003,2.35232,0.047961645};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=584;
+			type="O_MBT_02_cannon_F";
+		};
+		class Item225
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14466.013,19.829893,16777.633};
+				angles[]={0.017329043,3.9451773,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=585;
+			type="B_G_Offroad_01_armed_F";
+			atlOffset=0.00032806396;
+		};
+		class Item226
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14470.712,19.374102,16772.518};
+				angles[]={0.037314966,3.935473,6.2791886};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=586;
+			type="B_G_Offroad_01_AT_F";
+			atlOffset=-3.8146973e-06;
+		};
+		class Item227
+		{
+			dataType="Layer";
+			name="[XMAS] Christmas Tree";
+			id=589;
+			atlOffset=185.97;
+		};
+		class Item228
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15106.741,19.596214,17254.252};
+				angles[]={0,2.3205025,6.282208};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
+			};
+			id=576;
+			type="C_Plane_Civil_01_racing_F";
+			atlOffset=8.5830688e-05;
+		};
+		class Item229
+		{
+			dataType="Layer";
+			name="[XMAS] Santa's Battle Sleigh";
+			id=591;
+			atlOffset=185.97;
+		};
+		class Item230
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14923.061,21.008396,16774.066};
+				angles[]={0.010663962,5.5090971,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
+			};
+			id=592;
+			type="B_Heli_Transport_03_F";
+			atlOffset=1.9073486e-06;
 		};
 	};
 };
