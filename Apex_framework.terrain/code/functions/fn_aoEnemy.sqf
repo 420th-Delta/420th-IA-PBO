@@ -617,12 +617,12 @@ if (
 /*/=============================================================== AO MORTAR PIT/*/
 
 private _close2Base = _basePos distance2D _aoPos;
-private _mortarChance = [false,true] select (_playerCount > 10);
+private _mortarChance = true;
 if (worldName isEqualTo 'Stratis') then {
 	_mortarChance = _mortarChance && (_playerCount > 15);
 };
 if (_mortarChance) then {
-	if (_close2Base > 3000) {
+	if (_close2Base > 3000) then {
 	diag_log '****************************************************';
 	diag_log '***** AO ENEMY ***** Spawning Mortar Pit *****';
 	diag_log '****************************************************';
