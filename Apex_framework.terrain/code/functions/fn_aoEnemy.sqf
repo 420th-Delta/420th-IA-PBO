@@ -473,20 +473,20 @@ diag_log '****************************************************';
 diag_log '***** AO ENEMY ***** Spawning Armored Vehicles *****';
 diag_log '****************************************************';
 
-private _vehCount = [1,1] select _allowVehicles;
+private _vehCount = [0,2] select _allowVehicles;
 if (_playerCount > 10) then {
-	_vehCount = [1,2] select _allowVehicles;
+	_vehCount = [0,3] select _allowVehicles;
 };
 if (_playerCount > 30) then {
-	_vehCount = [4,6] select _allowVehicles;
+	_vehCount = [0,6] select _allowVehicles;
 };
 if (_playerCount > 60) then {
-	_vehCount = [8,10] select _allowVehicles;
+	_vehCount = [0,12] select _allowVehicles;
 };
 private _motorPool = [0,7] select _allowVehicles;
 if (worldName in ['Stratis']) then {
 	_vehCount = _vehCount min 2;
-	_motorPool = 8;
+	_motorPool = 10;
 };
 private _AOveh = objNull;
 private _AOvehGroup = grpNull;
@@ -586,15 +586,14 @@ if (_allowVehicles) then {
 /*/=============================================================== SNIPERS/*/
 
 if (
-	(_playerCount > 10) ||
-	{((_playerCount <= 10) && ((random 1) > 0.8))}
+	(_playerCount > 10)
 ) then {
 	diag_log '****************************************************';
 	diag_log '***** AO ENEMY ***** Spawning Snipers *****';
 	diag_log '****************************************************';
 	private _sniperGroup = grpNull;
 	private _towerPos = getPosATL (missionNamespace getVariable 'QS_radioTower');
-	for '_x' from 0 to ([1,2] select (_playerCount > 30)) step 1 do {
+	for '_x' from 0 to ([2,4] select (_playerCount > 20)) step 1 do {
 		private _watchPos = selectRandom [(ATLToASL _towerPos),(AGLToASL _QS_HQpos)];
 		_randomPos = [_watchPos,(_aoSize * 1.25),(_aoSize * 0.5),10,[[objNull,'VIEW'],0.75]] call (missionNamespace getVariable 'QS_fnc_findOverwatchPos');
 		_sniperGroup = [_randomPos,(random 360),EAST,'OI_SniperTeam_2',FALSE] call (missionNamespace getVariable 'QS_fnc_spawnGroup');
@@ -617,19 +616,22 @@ if (
 
 /*/=============================================================== AO MORTAR PIT/*/
 
-private _mortarChance = (random 1) > 0.5;
+private _close2Base = _basePos distance2D _aoPos;
+private _mortarChance = [false,true] select (_playerCount > 10);
 if (worldName isEqualTo 'Stratis') then {
 	_mortarChance = _mortarChance && (_playerCount > 15);
 };
 if (_mortarChance) then {
+	if (_close2Base > 3000) {
 	diag_log '****************************************************';
 	diag_log '***** AO ENEMY ***** Spawning Mortar Pit *****';
 	diag_log '****************************************************';
 	private _mortarPit = [_centerPos] call (missionNamespace getVariable 'QS_fnc_aoMortarPit');
-	if (_mortarPit isNotEqualTo []) then {
-		{
-			0 = _enemiesArray pushBack _x;
-		} count _mortarPit;
+		if (_mortarPit isNotEqualTo []) then {
+			{
+				0 = _enemiesArray pushBack _x;
+			} count _mortarPit;
+		};
 	};
 };
 
