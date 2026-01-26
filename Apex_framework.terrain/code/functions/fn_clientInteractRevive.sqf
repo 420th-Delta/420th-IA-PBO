@@ -181,6 +181,7 @@ if (!(_player getVariable ['QS_client_animCancel',FALSE])) then {
 				if ((lifeState _t) isEqualTo 'INCAPACITATED') then {
 					if (isNull (attachedTo _t)) then {
 						_t setVariable ['QS_revive_healer',profileName,TRUE];
+						_t setVariable ['fdelta_stats_revived_by',_player,2];
 						if ((lifeState _t) isEqualTo 'INCAPACITATED') then {
 						
 							if (local _t) then {
