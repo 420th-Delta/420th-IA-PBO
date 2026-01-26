@@ -1393,13 +1393,13 @@ missionNamespace setVariable [
 /*/================================================== SERVER EVENT HANDLERS/*/
 /*/===== Mission Event Handlers/*/
 
-{
-	removeAllMissionEventHandlers _x;
-} forEach [
-	'HandleDisconnect',
-	'EachFrame',
-	'Draw3D'
-];
+// {
+// 	removeAllMissionEventHandlers _x;
+// } forEach [
+// 	'HandleDisconnect',
+// 	'EachFrame',
+// 	'Draw3D'
+// ];
 {
 	addMissionEventHandler _x;
 } forEach [
