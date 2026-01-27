@@ -66,8 +66,8 @@ __________________________________________________________________________/*/
 _worldName = worldName;
 if (_worldName isEqualTo 'Altis') exitWith {
 	[
-		[objNull,1800,false,{},"B_T_VTOL_01_infantry_olive_F",[14807.2,16890.7,0.00701141],181.951,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
-		[objNull,900,false,{},"B_T_VTOL_01_vehicle_blue_F",[14848.8,16849.5,0.0284901],182.292,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_infantry_olive_F",[14807.2,16890.7,0.00701141],181.951,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_vehicle_blue_F",[14848.8,16849.5,0.0284901],182.292,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
 		[objNull,30,false,{},"B_Heli_Light_01_F",[14760.3,16827.1,-0.000232697],181.183,false,0,-1,150,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,TRUE,{},"B_Heli_Light_01_F",[14791.5,16795.6,-0.000232697],178.31,false,0,-1,150,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_Heli_Transport_01_F",[14780.6,16849.3,-0.000883102],177.929,false,0,-1,150,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
@@ -175,8 +175,8 @@ if (_worldName isEqualTo 'Altis') exitWith {
 };
 if (_worldName isEqualTo 'Tanoa') exitWith {
 	[
-		[objNull,1800,false,{},"B_T_VTOL_01_infantry_olive_F",[6986.09,7231.91,0.00295281],316.646,false,0,-1,150,250,-1,8,TRUE,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
-		[objNull,900,false,{},"B_T_VTOL_01_vehicle_blue_F",[6929.84,7230.63,0.0327709],38.9913,false,0,-1,150,250,-1,8,TRUE,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_infantry_olive_F",[6986.09,7231.91,0.00295281],316.646,false,0,-1,150,250,-1,8,TRUE,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_vehicle_blue_F",[6929.84,7230.63,0.0327709],38.9913,false,0,-1,150,250,-1,8,TRUE,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
 		[objNull,30,false,{},"B_Heli_Light_01_F",[7066.74,7280.26,-0.000231743],30.3855,false,0,-1,150,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_Heli_Transport_03_unarmed_F",[7130.8,7207.77,-0.134476],24.6675,false,0,-1,150,500,-1,6,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"I_Heli_Transport_02_F",[7123.42,7247.66,0.0199199],30.4196,false,0,-1,150,500,-1,6,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
@@ -268,8 +268,8 @@ if (_worldName isEqualTo 'Tanoa') exitWith {
 };
 if (_worldName isEqualTo 'Malden') exitWith {
 	[
-		[objNull,1800,false,{},"B_T_VTOL_01_infantry_olive_F",[8097.4,10500.7,0.000347137],232.913,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
-		[objNull,900,false,{},"B_T_VTOL_01_vehicle_blue_F",[8101.2,10448.1,0.000274658],306.993,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_infantry_olive_F",[8097.4,10500.7,0.000347137],232.913,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_vehicle_blue_F",[8101.2,10448.1,0.000274658],306.993,false,0,-1,150,500,-1,8,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
 		[objNull,30,TRUE,{},"B_MBT_01_TUSK_F",[8223.27,10165.8,0.81424],270.102,false,0,-1,50,500,-1,4,true,0,{TRUE},FALSE,FALSE,[],[],0.3,{TRUE}],
 		[objNull,30,false,{},"B_Truck_01_covered_F",[8222.68,10173.7,-0.0965805],268.15,false,0,-1,50,500,-1,4,true,0,{TRUE},FALSE,FALSE,[],[],0.3,{TRUE}],
 		[objNull,30,false,{},"B_G_Van_02_vehicle_F",[8209.44,10186.3,0.08498],180.484,false,0,-1,50,500,-1,4,true,0,{TRUE},FALSE,FALSE,[],[],0.3,{TRUE}],
@@ -382,8 +382,8 @@ if (_worldName isEqualTo 'Enoch') exitWith {
 		[objNull,30,false,{},"B_Heli_Light_01_F",[3885.16,10190,0.00582123],11.2232,false,0,-1,50,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_Heli_Transport_01_F",[3844.55,10150.9,0.00763702],10.4954,false,0,-1,50,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_Heli_Transport_03_F",[3838.95,10116.4,-0.151215],11.534,false,0,-1,50,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
-		[objNull,600,false,{},"B_T_VTOL_01_infantry_olive_F",[3753.3,10044.6,0.0175247],0,false,0,-1,50,500,-1,10,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
-		[objNull,1200,false,{},"B_T_VTOL_01_vehicle_blue_F",[3793.56,10083,0.000328064],0,false,0,-1,50,500,-1,10,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_infantry_olive_F",[3753.3,10044.6,0.0175247],0,false,0,-1,50,500,-1,10,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
+		[objNull,30,false,{},"B_T_VTOL_01_vehicle_blue_F",[3793.56,10083,0.000328064],0,false,0,-1,50,500,-1,10,true,0,{TRUE},FALSE,FALSE,[],[],1,{TRUE}],
 		[objNull,30,false,{},"b_quadbike_01_f",[3871.39,10132,0.205505],141.162,false,0,-1,50,500,-1,-1,true,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_CargoNet_01_ammo_F",[3970.81,10250.6,5.34058e-005],134.44,false,0,-1,50,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
 		[objNull,30,false,{},"B_CargoNet_01_ammo_F",[3970.81,10250.6,5.34058e-005],134.44,false,0,-1,50,500,-1,4,false,0,{TRUE},FALSE,FALSE,[],[],0,{FALSE}],
