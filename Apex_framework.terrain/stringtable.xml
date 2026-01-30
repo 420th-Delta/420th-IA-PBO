@@ -8132,7 +8132,7 @@ _____________________________________________________________-->
             <Chinese>伺服器設定已關閉固定翼飛行員位置</Chinese>
         </Key>
         <Key ID="STR_QS_Role_007">
-            <Original>Not in CAS role whitelist (contact admins to get whitelisted)</Original>
+            <Original>You are not whitelisted. Visit my.420thdelta.net to get whitelisted!</Original>
             <Chinesesimp>未拥有固定翼白名单（联系管理员获取白名单）</Chinesesimp>
             <Chinese>未擁有固定翼白名單（聯繫管理員獲取白名單）</Chinese>
         </Key>
@@ -8142,12 +8142,12 @@ _____________________________________________________________-->
             <Chinese>已突破固定翼飛行員上限</Chinese>
         </Key>
         <Key ID="STR_QS_Role_009">
-            <Original>Whitelisted slot</Original>
+            <Original>You are not whitelisted. Visit my.420thdelta.net to get whitelisted!</Original>
             <Chinesesimp>白名单兵种或保留给白名单的普通兵种</Chinesesimp>
             <Chinese>白名單兵種或保留給白名單的普通兵種</Chinese>
         </Key>
         <Key ID="STR_QS_Role_010">
-            <Original>contact admins to get whitelisted</Original>
+            <Original>You are not whitelisted. Visit my.420thdelta.net to get whitelisted!</Original>
             <Chinesesimp>联系管理员获取白名单</Chinesesimp>
             <Chinese>聯繫管理員獲取白名單</Chinese>
         </Key>
@@ -8465,7 +8465,7 @@ _____________________________________________________________-->
             <Chinese>需要固定翼駕駛員白名單</Chinese>
         </Key>
         <Key ID="STR_QS_Dialogs_010">
-            <Original>You are not whitelisted as a Fighter Pilot.</Original>
+            <Original>You are not whitelisted. Visit my.420thdelta.net to get whitelisted!</Original>
             <Chinesesimp>你目前不在固定翼驾驶员白名单内。</Chinesesimp>
             <Chinese>你目前不在固定翼駕駛員白名單內。</Chinese>
         </Key>
