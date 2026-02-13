@@ -27,9 +27,8 @@ _media = ['MEDIA'] call (missionNamespace getVariable 'QS_fnc_whitelist');
 _moderators = ['MODERATOR'] call (missionNamespace getVariable 'QS_fnc_whitelist');
 _admins = ['ADMIN'] call (missionNamespace getVariable 'QS_fnc_whitelist');
 _developers = ['DEVELOPER'] call (missionNamespace getVariable 'QS_fnc_whitelist');
-_allUIDs = _moderators + _admins + _developers;
 private _actionIDs = -1;
-if (!(_uid in _allUIDs)) exitWith {};
+if !(_uid in _media || {_uid in _moderators || {_uid in _admins || {_uid in _developers}}}) exitWith {};
 if (!isNil {player getVariable 'QS_staff_spectating'}) then {
 	closeDialog 0;
 	60492 cutText ['','PLAIN'];
