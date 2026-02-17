@@ -14,13 +14,17 @@ Description:
 _______________________________________________/*/
 
 params ['_unit'];
-(((attachedObjects _unit) findIf {
-	(!isNull _x) &&
-	{
-		(!(
-			(_x isKindOf 'Sign_Sphere10cm_F') ||
-			(_x isKindOf 'Logic') ||
-			((toLowerANSI (typeOf _x)) in ['#lightpoint'])
-		))
-	}
-}) isNotEqualTo -1)
+attachedObjects _unit findIf {
+	!isNull _x
+	&& {!(typeOf _x in [
+		'#lightpoint',
+		'#particlesource',
+		'DummyWeapon_Wbk_Melee',		// Improved Melee System
+		'hatg_mirror',					// Hide Among The Grass
+		'Land_Can_V2_F',				// Advanced Rappelling
+		'WBK_BrassKnuckles_LEFTHAND'	// Improved Melee System
+	])
+	&& {!(_x isKindOf 'Helper_Base_F')
+	&& {!(_x isKindOf 'Logic')
+	&& {!(_x isKindOf 'LaserTarget')}}}}
+} isNotEqualTo -1
