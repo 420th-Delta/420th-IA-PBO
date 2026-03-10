@@ -3,11 +3,11 @@ File: security.hpp
 Author:
 
 	Quiksilver
-	
+
 Last Modified:
 
 	25/10/2022 A3 2.10 by Quiksilver
-	
+
 Description:
 
 	CfgDisabledCommands
@@ -29,8 +29,8 @@ class CfgDisabledCommands {
             args[] = {{"GROUP"},{"ARRAY"}};
         };
     };
-	
-	
+
+
 	/*/ Required for Zeus map markers.    RE-ENABLE THIS SECTION TO STRENGTHEN ANTICHEAT SECURITY. DISABLED FOR ZEUS MARKER FUNCTIONALITY.
     class SETMARKERTEXT
     {
@@ -51,8 +51,8 @@ class CfgDisabledCommands {
             args[] = {{"OBJECT"},{"ARRAY"}};
         };
     };
-	
-	
+
+
 	/*/ Enabling this will cause some issues with vanilla UAV logic
     class SETWAYPOINTSTATEMENTS
     {
@@ -63,8 +63,8 @@ class CfgDisabledCommands {
         };
     };
 	/*/
-	
-	
+
+
     class PUBLICVARIABLE
     {
         class SYNTAX1
@@ -170,7 +170,7 @@ class CfgRemoteExec {
 		allowedTargets = 0;
 		class BIS_fnc_callScriptedEventHandler {};
 		class BIS_fnc_curatorRespawn {};
-		class BIS_fnc_deleteTask {jip = 1;}; 
+		class BIS_fnc_deleteTask {jip = 1;};
 		class BIS_fnc_dynamicGroups {};
 		class BIS_fnc_effectKilled {};
 		class BIS_fnc_effectKilledSecondaries {};
