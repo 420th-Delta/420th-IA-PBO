@@ -160,14 +160,52 @@ class CfgDisabledCommands {
 class CfgRemoteExec {
 	class Commands {
 		mode = 1;
-		class lock {};			    // required for zeus
-		class setFuel {};		    // required for zeus
-		class lockturret {};		// required for "Global Mobilization" DLC
+		class lock {};          // required for zeus
+		class playActionNow {}; // mod compatibility
+		class reveal {};        // mod compatibility
+		class say3D {};         // mod compatibility
+		class setFuel {};       // required for zeus
+		class setRandomLip {};  // mod compatibility
 	};
+	/*
+	Generate a list of all functions from the given tags:
+
+	_tags = [];
+	flatten (
+		_tags apply {
+			_tag = _x;
+			_categories = 'true' configClasses (configFile >> 'CfgFunctions' >> _tag);
+			flatten (
+				_categories apply {
+					_functions = 'true' configClasses _x;
+					_functions apply {
+						format ['%1_fnc_%2', _tag, configName _x]
+					};
+				}
+			);
+		}
+	);
+	*/
 	class Functions {
 		mode = 1;
 		jip = 0;
 		allowedTargets = 0;
+		class AUR_Enable_Rappelling_Animation_Global {allowedTargets = 2;};
+		class AUR_Hide_Object_Global {allowedTargets = 2;};
+		class AUR_Hint {allowedTargets = 1;};
+		class AUR_Play_Rappelling_Sounds_Global {allowedTargets = 2;};
+		class ASL_Hide_Object_Global {allowedTargets = 2;};
+		class ASL_Pickup_Ropes {};
+		class ASL_Deploy_Ropes_Index {};
+		class ASL_Rope_Set_Mass {};
+		class ASL_Extend_Ropes {};
+		class ASL_Shorten_Ropes {};
+		class ASL_Release_Cargo {};
+		class ASL_Retract_Ropes {};
+		class ASL_Deploy_Ropes {};
+		class ASL_Hint {allowedTargets = 1;};
+		class ASL_Attach_Ropes {};
+		class ASL_Drop_Ropes {};
 		class BIS_fnc_callScriptedEventHandler {};
 		class BIS_fnc_curatorRespawn {};
 		class BIS_fnc_deleteTask {jip = 1;};
@@ -183,6 +221,7 @@ class CfgRemoteExec {
 		class BIS_fnc_playSound {allowedTargets = 1;};
 		class BIS_fnc_sayMessage {allowedTargets = 1;};
 		class BIS_fnc_setCustomSoundController {};
+		class BIS_fnc_setDate {};	// zeus (risky)
 		class BIS_fnc_setIdentity {};
 		class BIS_fnc_setTask {jip = 1;};
 		class BIS_fnc_setTaskLocal {jip = 1;};
@@ -191,5 +230,10 @@ class CfgRemoteExec {
 		class QS_fnc_remoteExec {allowedTargets = 0;};
 		class QS_fnc_remoteExecCmd {allowedTargets = 0;};
 		class TGC_fnc_lockDroneByUID {};
+
+		// class RHS_fnc_flashbang_effect {}; // RHSAFRF incorrectly remote executes this
+		// class RHS_fnc_usf_flashbang_effect {}; // RHSUSAF incorrectly remote executes this
+
+		class usaf_ext_fuel_fnc_fuel_usage {};
 	};
 };
