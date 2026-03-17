@@ -64,12 +64,14 @@ player setCustomAimCoef ((player getVariable 'QS_stamina') # 1);
 player disableConversation TRUE;
 player enableAIFeature ['RADIOPROTOCOL',FALSE];
 showSubtitles FALSE;
+
+private _isAdmin = (getPlayerUID player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'));
 enableRadio TRUE;
 {
 	(_x # 0) enableChannel (_x # 1);
 } count [
 	[0,[FALSE,FALSE]],
-	[1,[TRUE,FALSE]],
+	[1,[TRUE,_isAdmin]],
 	[2,[TRUE,TRUE]],
 	[3,[TRUE,TRUE]],
 	[4,[TRUE,TRUE]],

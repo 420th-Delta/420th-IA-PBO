@@ -33,7 +33,8 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	['BASE'] spawn (missionNamespace getVariable 'QS_fnc_localObjects');
 };
 if (!([getPlayerUID player] call (missionNamespace getVariable 'QS_fnc_atNameCheck'))) exitWith {};
-if ((getPlayerUID player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'))) then {
+private _isAdmin = (getPlayerUID player) in (['ALL'] call (missionNamespace getVariable 'QS_fnc_whitelist'));
+if (_isAdmin) then {
 	_code = {
 		params ['','','','_array'];
 		_array params ['_object','_action'];
@@ -858,7 +859,7 @@ enableRadio TRUE;
 	(_x # 0) enableChannel (_x # 1);
 } count [
 	[0,[FALSE,FALSE]],
-	[1,[TRUE,FALSE]],
+	[1,[TRUE,_isAdmin]],
 	[2,[TRUE,TRUE]],
 	[3,[TRUE,TRUE]],
 	[4,[TRUE,TRUE]],
@@ -867,7 +868,10 @@ enableRadio TRUE;
 if (currentChannel isEqualTo 4) then {
 	setCurrentChannel 5;
 };
-private _QS_radioChannels = [1];
+private _QS_radioChannels = [];
+if (_isAdmin) then {
+	_QS_radioChannels pushBack 1;
+};
 if ((player getUnitTrait 'QS_trait_pilot') || {(player getUnitTrait 'uavhacker')} || {(player getUnitTrait 'QS_trait_HQ')}) then {
 	_QS_radioChannels pushBack 2;
 };
