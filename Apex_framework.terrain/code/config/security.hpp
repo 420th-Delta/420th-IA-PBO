@@ -229,6 +229,7 @@ class CfgRemoteExec {
 		class BIS_fnc_showNotification {allowedTargets = 1;};
 		class QS_fnc_remoteExec {allowedTargets = 0;};
 		class QS_fnc_remoteExecCmd {allowedTargets = 0;};
+		class TGC_fnc_addCuratorAddons {allowedTargets = 2;};
 		class TGC_fnc_lockDroneByUID {};
 
 		// class RHS_fnc_flashbang_effect {}; // RHSAFRF incorrectly remote executes this
