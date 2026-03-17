@@ -69,7 +69,7 @@ class CfgDisabledCommands {
     {
         class SYNTAX1
         {
-            targets[] = {1,0,1};
+            targets[] = {1,1,1}; // will break mods, don't restrict this
             args[] = {{},{"STRING"}};
         };
     };
