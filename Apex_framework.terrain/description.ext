@@ -80,25 +80,8 @@ respawnOnStart = 0;
 
 zeusCompositionScriptLevel = 2;
 
-
 // Security - CfgRemoteExec + CfgDisabledCommands
 #include "code\config\security.hpp"						// Delete this line if you are having issues with Mod/DLC compatibility. This file contains CfgRemoteExec + CfgDisabledCommands
-
-//class CfgRemoteExec
-//{
-//	class Functions
-//	{
-//		mode = 2;
-//		jip = 1;
-//	};
-//
-//	class Commands
-//	{
-//		mode = 2;
-//		jip = 1;
-//	};
-//};
-
 
 // Pylon Manager
 class CfgPylonManager
