@@ -59,6 +59,11 @@ Notes:
 	
 _____________________________________________________________-->
 <Project name="Apex Framework">
+    <Container name="QS_420th">
+        <Key ID="STR_QS_420th_staff_only_channel">
+            <Original>This channel is reserved for staff only.</Original>
+        </Key>
+    </Container>
     <Container name="QS_xml_userActions">
         <Key ID="STR_QS_Interact_001">
             <Original>Drag</Original>
