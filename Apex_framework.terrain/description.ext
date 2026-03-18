@@ -743,6 +743,7 @@ class CfgFunctions {
             class getChannelMask {};
             class refreshChannels {};
             class setChannelMasks {};
+        };
         class Curators {
             file = "TGC\Functions\Curators";
             class addCuratorAddons {};
