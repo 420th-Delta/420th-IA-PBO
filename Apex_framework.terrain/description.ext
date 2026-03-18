@@ -737,6 +737,12 @@ class CfgFunctions {
 		};
 	};
     class TGC {
+        class Channels {
+            file = "TGC\Functions\Channels";
+            class enableChannel {};
+            class getChannelMask {};
+            class refreshChannels {};
+            class setChannelMasks {};
         class Curators {
             file = "TGC\Functions\Curators";
             class addCuratorAddons {};
@@ -761,6 +767,13 @@ class CfgFunctions {
         class Setting {
             file = "TGC\Functions\Setting";
             class addSetting {};
+        };
+        class Staff {
+            file = "TGC\Functions\Staff";
+            class initStaffKeybinds { postInit = 1; };
+            class isStaff {};
+            class staffChannelsGUI {};
+            class staffGUI {};
         };
     };
 };
