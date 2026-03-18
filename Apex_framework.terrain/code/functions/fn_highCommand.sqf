@@ -43,7 +43,7 @@ private _displayEvents = [];
 player setVariable ['QS_HC_selectedGroups',[],FALSE];
 player setVariable ['QS_HComm_groupIconOver',FALSE,FALSE];
 player setVariable ['QS_HComm_groupIconClick_delay',-1,FALSE];
-removeAllMissionEventHandlers 'GroupIconClick';
+// removeAllMissionEventHandlers 'GroupIconClick';
 QS_HComm_testEvent_3 = addMissionEventHandler [
 	'GroupIconClick',
 	{
@@ -67,7 +67,7 @@ QS_HComm_testEvent_3 = addMissionEventHandler [
 	}
 ];
 _missionEvents pushBack ['GroupIconClick',QS_HComm_testEvent_3];
-removeAllMissionEventHandlers 'GroupIconOverEnter';
+// removeAllMissionEventHandlers 'GroupIconOverEnter';
 QS_HComm_testEvent_4 = addMissionEventHandler [
 	'GroupIconOverEnter',
 	{
@@ -78,7 +78,7 @@ QS_HComm_testEvent_4 = addMissionEventHandler [
 	}
 ];
 _missionEvents pushBack ['GroupIconOverEnter',QS_HComm_testEvent_4];
-removeAllMissionEventHandlers 'GroupIconOverLeave';
+// removeAllMissionEventHandlers 'GroupIconOverLeave';
 QS_HComm_testEvent_5 = addMissionEventHandler [
 	'GroupIconOverLeave',
 	{
