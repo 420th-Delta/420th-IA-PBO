@@ -10,6 +10,7 @@ Author:
 */
 if (isNil "TGC_channels_masks") then {TGC_channels_masks = []};
 if (isNil "TGC_channels_enabled") then {isNil {
+    private _channelEnabled = {channelEnabled _this select [0, 2]};
     TGC_channels_enabled = [];
     for "_i" from 0 to 15 do {
         TGC_channels_enabled pushBack [_i, _i call _channelEnabled];
