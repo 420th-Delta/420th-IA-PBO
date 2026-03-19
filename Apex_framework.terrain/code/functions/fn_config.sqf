@@ -192,7 +192,15 @@ if (_has_extDB3) then {
 	if (_ret isNotEqualTo "[1]") exitWith {diag_log format ["extDB3 ADD_DATABASE_PROTOCOL failed with: %1", _ret]};
 
 	diag_log format ["extDB3 OUTPUTSIZE: %1", "extDB3" callExtension "9:OUTPUTSIZE"];
-	diag_log format ["extDB3 LOCK: %1", "extDB3" callExtension "9:LOCK"];
+
+	0 spawn {
+		scriptName "QS_fnc_config_extDB3_lock";
+		sleep 60;
+		if (!isNil "QS_fnc_config_extDB3_lock") exitWith {diag_log format [
+			diag_log "extDB3 locking skipped, variable QS_fnc_config_extDB3_lock was set";
+		]};
+		diag_log format ["extDB3 LOCK: %1", "extDB3" callExtension "9:LOCK"];
+	};
 
 	_extDB3_ready = true;
 };
