@@ -3,8 +3,8 @@ File: config.sqf
 Author:
 
 	Quiksilver
-	
-Last modified: 
+
+Last modified:
 
 	9/10/2023 A3 2.14 by Quiksilver
 
@@ -50,7 +50,7 @@ if (!isDedicated) exitWith {
 					uisleep 1;
 				};
 			};
-		} 
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 if (((productVersion # 7) isNotEqualTo 'x64') && ((productVersion # 6) isNotEqualTo 'Linux')) exitWith {
@@ -64,7 +64,7 @@ if (((productVersion # 7) isNotEqualTo 'x64') && ((productVersion # 6) isNotEqua
 					uisleep 1;
 				};
 			};
-		} 	
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 if (!isFilePatchingEnabled) exitWith {
@@ -78,7 +78,7 @@ if (!isFilePatchingEnabled) exitWith {
 					uisleep 1;
 				};
 			};
-		} 
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 private _difficultyData = [];
@@ -122,7 +122,7 @@ if (_difficultyInvalid) exitWith {
 					uisleep 1;
 				};
 			};
-		} 
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 private _addonActive = FALSE;
@@ -147,7 +147,7 @@ if (!(_addonActive)) exitWith {
 					uisleep 1;
 				};
 			};
-		} 
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 if (isNil {uiNamespace getVariable 'QS_fnc_serverCommandPassword'}) exitWith {
@@ -160,7 +160,7 @@ if (isNil {uiNamespace getVariable 'QS_fnc_serverCommandPassword'}) exitWith {
 					uisleep 1;
 				};
 			};
-		} 
+		}
 	] remoteExec ['call',-2,TRUE];
 };
 
@@ -196,9 +196,9 @@ if (_has_extDB3) then {
 	0 spawn {
 		scriptName "QS_fnc_config_extDB3_lock";
 		sleep 60;
-		if (!isNil "QS_fnc_config_extDB3_lock") exitWith {diag_log format [
+		if (!isNil "QS_fnc_config_extDB3_lock") exitWith {
 			diag_log "extDB3 locking skipped, variable QS_fnc_config_extDB3_lock was set";
-		]};
+		};
 		diag_log format ["extDB3 LOCK: %1", "extDB3" callExtension "9:LOCK"];
 	};
 
@@ -789,15 +789,15 @@ private _weaponsList = configFile >> 'CfgWeapons';
 ];
 // Local Namespace
 {
-	localNamespace setVariable _x;	
+	localNamespace setVariable _x;
 } forEach [
 	['QS_uniqueScriptErrors',0]
 ];
 // Server Namespace
 {
-	serverNamespace setVariable _x;	
+	serverNamespace setVariable _x;
 } forEach [
-	
+
 ];
 ///////////////////////////////////
 _weaponsList = nil;
@@ -1070,7 +1070,7 @@ if (_worldName isEqualTo 'Stratis') then {
 		_obj allowDamage FALSE;
 		//['setFeatureType',_obj,2] remoteExec ['QS_fnc_remoteExecCmd',-2,_obj];
 		missionNamespace setVariable ['QS_setFeatureType',((missionNamespace getVariable 'QS_setFeatureType') + [[_obj,2]]),TRUE];
-		
+
 		([2715.07,951.489,-0.0169754] nearestObject 'Land_LightHouse_F') hideObjectGlobal (!isObjectHidden ([4357.12,3893.8,-0.00238037] nearestObject 'Land_LightHouse_F'));
 		_obj = createVehicle ['Land_LightHouse_F',[2715.07,951.489,-0.0169754]];
 		_obj setVectorDirAndUp [[0.612695,0.79032,-0.000299167],[0.000488281,0,1]];
@@ -1078,7 +1078,7 @@ if (_worldName isEqualTo 'Stratis') then {
 		_obj allowDamage FALSE;
 		//['setFeatureType',_obj,2] remoteExec ['QS_fnc_remoteExecCmd',-2,_obj];
 		missionNamespace setVariable ['QS_setFeatureType',((missionNamespace getVariable 'QS_setFeatureType') + [[_obj,2]]),TRUE];
-		
+
 		([6602.79,5192.66,-0.0202332] nearestObject 'Land_LightHouse_F') hideObjectGlobal (!isObjectHidden ([6602.79,5192.66,-0.0202332] nearestObject 'Land_LightHouse_F'));
 		_obj = createVehicle ['Land_LightHouse_F',[6602.79,5192.66,-0.0202332]];
 		_obj setVectorDirAndUp [[-0.986766,-0.162154,0.000963638],[0.000976563,0,1]];
@@ -1201,14 +1201,14 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	missionNamespace setVariable ['QS_baseProtection_polygons',(call (compileScript ['code\config\QS_data_speedLimitAreas.sqf'])),TRUE];
 	missionNamespace setVariable ['QS_prisonPopulation',0,TRUE];
 	if (_worldName isEqualTo 'Altis') then {
-	
+
 		'QS_marker_respawn_uavoperator' setMarkerPos [14624.7,16721.2,30.8307];
 		'QS_marker_respawn_uavoperator' setMarkerDir 110;
 		'QS_marker_respawn_jetpilot' setMarkerPos [14461.8,16265.6,18.6627];
 		'QS_marker_respawn_jetpilot' setMarkerDir 314;
 		'QS_marker_respawn_helipilot' setMarkerPos [14752.6,16856.8,18.001];
 		'QS_marker_respawn_helipilot' setMarkerDir 130;
-	
+
 		missionNamespace setVariable ['QS_prisonPos',[14687.747,16808.996,0],TRUE];
 		{
 			((_x # 0) nearestObject (_x # 1)) hideObjectGlobal (!isObjectHidden ((_x # 0) nearestObject (_x # 1)));
@@ -1220,11 +1220,11 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 			[[14572.2,16668.5,3.8147e-006],'Land_LampAirport_F']
 		];
 		{
-			_x hideObjectGlobal TRUE; 
+			_x hideObjectGlobal TRUE;
 			_x enableSimulationGlobal FALSE;
-		} forEach (nearestTerrainObjects [[16899.4,9935.51,0.00149155],['BUSH'],5,FALSE,TRUE]);	
+		} forEach (nearestTerrainObjects [[16899.4,9935.51,0.00149155],['BUSH'],5,FALSE,TRUE]);
 		{
-			_x hideObjectGlobal TRUE; 
+			_x hideObjectGlobal TRUE;
 			_x enableSimulationGlobal FALSE;
 		} forEach (nearestTerrainObjects [[14521.2,16778.4,0.0017128],[],5,FALSE,TRUE]);
 		0 spawn {
@@ -1242,16 +1242,16 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 		};
 	};
 	if (_worldName isEqualTo 'Tanoa') then {
-	
+
 		diag_log 'Setting marker Pos';
-	
+
 		'QS_marker_respawn_uavoperator' setMarkerPos [6899.05,7423.78,15.7328];
 		'QS_marker_respawn_uavoperator' setMarkerDir 76;
 		'QS_marker_respawn_jetpilot' setMarkerPos [6830,7261,2.69];
 		'QS_marker_respawn_jetpilot' setMarkerDir 72;
 		'QS_marker_respawn_helipilot' setMarkerPos [7089.77,7300,2.66144];
 		'QS_marker_respawn_helipilot' setMarkerDir 0;
-	
+
 		missionNamespace setVariable ['QS_prisonPos',[6924.40,7370.55,0],TRUE];
 		{
 			_x hideObjectGlobal TRUE;
@@ -1259,14 +1259,14 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 		} forEach (nearestTerrainObjects [[4009.65,11793.7,0.00143814],['TREE'],10,FALSE,TRUE]);
 	};
 	if (_worldName isEqualTo 'Malden') then {
-	
+
 		'QS_marker_respawn_uavoperator' setMarkerPos [8106.64,10104.3,42.5627];
 		'QS_marker_respawn_uavoperator' setMarkerDir 252.468;
 		'QS_marker_respawn_jetpilot' setMarkerPos [8055.05,10014.9,30.0609];
 		'QS_marker_respawn_jetpilot' setMarkerDir 100;
 		'QS_marker_respawn_helipilot' setMarkerPos [8057.48,10291,29.8258];
 		'QS_marker_respawn_helipilot' setMarkerDir 0;
-	
+
 		missionNamespace setVariable ['QS_prisonPos',[8106.4,10049.15,0],TRUE];
 		{
 			((_x # 0) nearestObject (_x # 1)) hideObjectGlobal (!isObjectHidden ((_x # 0) nearestObject (_x # 1)));
@@ -1281,25 +1281,25 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 		];
 	};
 	if (_worldName isEqualTo 'Enoch') then {
-	
+
 		'QS_marker_respawn_uavoperator' setMarkerPos [4110.76,10286.7,77.2023];
 		'QS_marker_respawn_uavoperator' setMarkerDir 258.922;
 		'QS_marker_respawn_jetpilot' setMarkerPos [4306.76,10501.5,68.1707];
 		'QS_marker_respawn_jetpilot' setMarkerDir 68.4751;
 		'QS_marker_respawn_helipilot' setMarkerPos [3864.66,10137,67.7403];
 		'QS_marker_respawn_helipilot' setMarkerDir 0;
-	
+
 		missionNamespace setVariable ['QS_prisonPos',[4104.49,10211.3,0],TRUE];
 	};
 	if (_worldName isEqualTo 'Stratis') then {
-	
+
 		'QS_marker_respawn_uavoperator' setMarkerPos [1906.07,5713.91,18.4492];
 		'QS_marker_respawn_uavoperator' setMarkerDir 294.613;
 		'QS_marker_respawn_jetpilot' setMarkerPos [1910.55,5938.28,5.50144];
 		'QS_marker_respawn_jetpilot' setMarkerDir 341;
 		'QS_marker_respawn_helipilot' setMarkerPos [1947.32,5820.64,5.50144];
 		'QS_marker_respawn_helipilot' setMarkerDir 0;
-	
+
 		missionNamespace setVariable ['QS_prisonPos',[1913.8,5777.7,0.00142908],TRUE];
 		// Hide some key buildings in the base area
 		{
@@ -1501,7 +1501,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_startDate',[]]) isNotEqualT
 		if (!isNil {missionProfileNamespace getVariable (format ['QS_QRF_date_%1',worldName])}) then {
 			_QS_date = missionProfileNamespace getVariable (format ['QS_QRF_date_%1',worldName]);
 			setDate _QS_date;
-			missionProfileNamespace setVariable [(format ['QS_QRF_date_%1',worldName]),_QS_date]; 
+			missionProfileNamespace setVariable [(format ['QS_QRF_date_%1',worldName]),_QS_date];
 			saveMissionProfileNamespace;
 		};
 	};
@@ -1564,7 +1564,7 @@ missionNamespace setVariable ['QS_mission_init',TRUE,TRUE];
 } count [
 	'*****************************************************************************',
 	'************************* Server Config Complete ****************************',
-	'*****************************************************************************'	
+	'*****************************************************************************'
 ];
 if (fileExists '@Apex_cfg\custom.sqf') then {
 	call (compileScript ['@Apex_cfg\custom.sqf']);
