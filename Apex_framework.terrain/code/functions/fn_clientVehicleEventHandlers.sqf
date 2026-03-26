@@ -67,5 +67,5 @@ if (_type isEqualTo 1) then {
 	if (isNil {_vehicle getVariable 'TGC_vehicle_side'} && {!isNull player}) then {
 		_vehicle setVariable ['TGC_vehicle_side', side group player, true];
 	};
-	_vehicle call TGC_fnc_addEmptyVehicleDamageHandlers;
+	_vehicle call TGC_fnc_addEmptyVehicleHandlers;
 };
