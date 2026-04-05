@@ -64,4 +64,8 @@ if (_type isEqualTo 1) then {
 		};
 		_vehicle setVariable ['QS_client_vehicleEventHandlers',_vehicleEventHandlers,FALSE];
 	};
+	if (isNil {_vehicle getVariable 'TGC_vehicle_side'} && {!isNull player}) then {
+		_vehicle setVariable ['TGC_vehicle_side', side group player, true];
+	};
+	_vehicle call TGC_fnc_addEmptyVehicleHandlers;
 };

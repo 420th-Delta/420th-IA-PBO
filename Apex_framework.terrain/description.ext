@@ -748,6 +748,12 @@ class CfgFunctions {
             file = "TGC\Functions\Curators";
             class addCuratorAddons {};
         };
+        class Damage {
+            file = "TGC\Functions\Damage";
+            class addEmptyVehicleHandlers {};
+            class isFriendlyFire {};
+            class setFriendlyName {};
+        };
         class Database {
             file = "TGC\Functions\Database";
             class dbQuery {};
