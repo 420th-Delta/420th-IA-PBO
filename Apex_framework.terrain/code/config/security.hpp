@@ -232,7 +232,6 @@ class CfgRemoteExec {
 		class TGC_fnc_addCuratorAddons {allowedTargets = 2;};
 		class TGC_fnc_lockDroneByUID {};
 		class TGC_fnc_setChannelMasks {};
-		class TGC_fnc_setFriendlyName {};
 
 		// class RHS_fnc_flashbang_effect {}; // RHSAFRF incorrectly remote executes this
 		// class RHS_fnc_usf_flashbang_effect {}; // RHSUSAF incorrectly remote executes this

@@ -53,7 +53,7 @@ private _getOutEH = ["GetOut", _vehicle addEventHandler ["GetOut", {
     private _createUnit = {
         _group = createGroup [_side, true];
         _unit = _group createUnit ["B_UAV_AI", [0,0,0], [], 0, "CAN_COLLIDE"];
-        [_unit] remoteExec ["TGC_fnc_setFriendlyName", 0, _unit];
+        // [_unit] remoteExec ["TGC_fnc_setFriendlyName", 0, _unit];
         [_unit] joinSilent _group;
         _unit disableAI "ALL";
         _unit
