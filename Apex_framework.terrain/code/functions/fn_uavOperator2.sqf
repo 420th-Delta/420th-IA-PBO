@@ -98,7 +98,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_destroyerEnabled',0]) isNot
 if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0) then {
 	if (_worldName isEqualTo 'Altis') then {
 		_uavLoiterPosition = [0,3000,500];
-		_uavData = [
+		_uavData = _uavData + [
 			[objNull,'b_ugv_01_rcws_f',(AGLToASL [14477,16790.4,0]),43.2471,[],{},TRUE,-1],
 			[objNull,'b_ugv_01_f',(AGLToASL [14484.3,16782.7,0]),43.2471,[],{},TRUE,-1],
 			[objNull,'b_t_uav_03_dynamicloadout_f',(AGLToASL [14249,16224.1,0]),305.479,[],{},TRUE,_uavRespawnDelay],
@@ -107,7 +107,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	};
 	if (_worldName isEqualTo 'Tanoa') then {
 		_uavLoiterPosition = [((_worldSize / 2) + (250 - (random 500))),0,(500 + (random 500))];
-		_uavData = [
+		_uavData = _uavData + [
 			[objNull,'b_t_ugv_01_rcws_olive_f',(AGLToASL [6851.85,7436.02,0]),137.086,[],{},TRUE,-1],
 			[objNull,'b_t_ugv_01_olive_f',(AGLToASL [6845.19,7443.85,0]),138.766,[],{},TRUE,-1],
 			[objNull,'b_t_uav_03_dynamicloadout_f',(AGLToASL [6902.32,7400.82,4.22622]),76.2204,[],{},TRUE,_uavRespawnDelay],
@@ -116,7 +116,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	};
 	if (_worldName isEqualTo 'Malden') then {
 		_uavLoiterPosition = [((_worldSize / 2) + (250 - (random 500))),0,(500 + (random 500))];
-		_uavData = [
+		_uavData = _uavData + [
 			[objNull,'b_ugv_01_rcws_f',(AGLToASL [8195.94,10101.6,0]),268.097,[],{},TRUE,-1],
 			[objNull,'b_ugv_01_f',(AGLToASL [8196.02,10096.1,0]),270.973,[],{},TRUE,-1],
 			[objNull,'b_t_uav_03_dynamicloadout_f',(AGLToASL [8108.06,10183.9,0]),267.806,[],{},TRUE,_uavRespawnDelay],
@@ -125,7 +125,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	};
 	if (_worldName isEqualTo 'Enoch') then {
 		_uavLoiterPosition = [0,_worldSize + 2000,(500 + (random 500))];
-		_uavData = [
+		_uavData = _uavData + [
 			[objNull,'b_ugv_01_rcws_f',(AGLToASL [4287.99,10422.7,0]),134.995,[],{},TRUE,-1],
 			[objNull,'b_ugv_01_f',(AGLToASL [4276.89,10433.9,0]),134.995,[],{},TRUE,-1],
 			[objNull,'b_t_uav_03_dynamicloadout_f',(AGLToASL [4148.64,10428.8,0]),(random 360),[],{},TRUE,_uavRespawnDelay],
@@ -134,7 +134,7 @@ if ((missionNamespace getVariable ['QS_missionConfig_baseLayout',0]) isEqualTo 0
 	};
 	if (_worldName isEqualTo 'Stratis') then {
 		_uavLoiterPosition = [_worldSize,((_worldSize / 2) + (250 - (random 500))),(500 + (random 500))];
-		_uavData = [
+		_uavData = _uavData + [
 			[objNull,'b_ugv_01_rcws_f',(AGLToASL [1910.58,5636.2,0]),196.07,[],{},TRUE,-1],
 			[objNull,'b_ugv_01_f',(AGLToASL [1901.76,5638.54,0]),192.739,[],{},TRUE,-1],
 			[objNull,'b_t_uav_03_dynamicloadout_f',(AGLToASL [8108.06,10183.9,0]),267.806,[],{},TRUE,_uavRespawnDelay],
