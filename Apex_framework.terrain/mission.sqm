@@ -8,22 +8,22 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=594;
+		nextID=606;
 	};
 	class LayerIndexProvider
 	{
-		nextID=365;
+		nextID=378;
 	};
 	class Camera
 	{
-		pos[]={14710.947,95.499413,16682.779};
-		dir[]={-0.67724603,-0.57519144,0.45903721};
-		up[]={-0.47620103,0.81793803,0.32277405};
-		aside[]={0.56112701,-4.6720379e-07,0.82786363};
+		pos[]={14572.043,67.078667,16751.482};
+		dir[]={-0.80984104,-0.58085144,0.083789609};
+		up[]={-0.57789719,0.81387049,0.059791733};
+		aside[]={0.10292871,-1.4679972e-06,0.99480718};
 	};
 };
 binarizationWanted=0;
-sourceName="Apex_framework_420th_20251216";
+sourceName="Apex_framework_420th_20260320";
 addons[]=
 {
 	"A3_Ui_F",
@@ -73,13 +73,18 @@ addons[]=
 	"A3_Armor_F_Decade_MBT_02",
 	"A3_Armor_F_Gamma_MBT_02",
 	"A3_Soft_F_Offroad_01",
-	"A3_Air_F_Heli_Heli_Transport_03"
+	"A3_Air_F_Heli_Heli_Transport_03",
+	"A3_Soft_F_Quadbike_01",
+	"A3_Soft_F_Gamma_Hatchback_01",
+	"A3_Soft_F_Gamma_SUV_01",
+	"A3_Soft_F_Enoch_Tractor_01",
+	"A3_Soft_F_Gamma_Van_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -297,6 +302,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item31
+		{
+			className="A3_Soft_F_Enoch";
+			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -307,7 +319,8 @@ dlcs[]=
 	"Expansion",
 	"Tank",
 	"Orange",
-	"Argo"
+	"Argo",
+	"Enoch"
 };
 randomSeed=2038443;
 class ScenarioData
@@ -388,7 +401,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=231;
+		items=238;
 		class Item0
 		{
 			dataType="Marker";
@@ -6495,7 +6508,7 @@ class Mission
 					name="Helicopters";
 					class Entities
 					{
-						items=7;
+						items=9;
 						class Item0
 						{
 							dataType="Object";
@@ -6747,8 +6760,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14744.098,19.739143,16788.701};
-								angles[]={0,5.4302773,0};
+								position[]={14749.511,19.689144,16794.217};
+								angles[]={-0,5.4302773,0};
 							};
 							side="Empty";
 							flags=4;
@@ -6759,7 +6772,6 @@ class Mission
 							};
 							id=379;
 							type="B_Heli_Light_01_F";
-							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6783,8 +6795,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14734.438,19.739143,16779.174};
-								angles[]={0,5.4541187,0};
+								position[]={14739.852,19.689144,16784.689};
+								angles[]={-0,5.4541187,0};
 							};
 							side="Empty";
 							flags=4;
@@ -6795,7 +6807,6 @@ class Mission
 							};
 							id=380;
 							type="B_Heli_Light_01_F";
-							atlOffset=0.049999237;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6901,9 +6912,79 @@ class Mission
 								nAttributes=2;
 							};
 						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14730.592,19.689144,16774.537};
+								angles[]={-0,5.4541187,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,30,false,{_this addWeapon ""CMFlareLauncher"";_this addMagazine ""168Rnd_CMFlare_Chaff_Magazine"";_this setVehicleAmmo 1;},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=602;
+							type="B_Heli_Light_01_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14669.827,19.689144,16643.869};
+								angles[]={0,5.4857616,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,30,false,{_this addWeapon ""CMFlareLauncher"";_this addMagazine ""168Rnd_CMFlare_Chaff_Magazine"";_this setVehicleAmmo 1;},50,250,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=604;
+							type="B_Heli_Light_01_dynamicLoadout_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=322;
-					atlOffset=0.049999237;
+					atlOffset=0.0078125;
 				};
 				class Item6
 				{
@@ -6911,7 +6992,7 @@ class Mission
 					name="Objects";
 					class Entities
 					{
-						items=23;
+						items=25;
 						class Item0
 						{
 							dataType="Object";
@@ -8348,8 +8429,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14744.036,17.91,16789.096};
-								angles[]={0,5.4857616,0};
+								position[]={14749.449,17.91,16794.611};
+								angles[]={-0,5.4857616,0};
 							};
 							side="Empty";
 							flags=4;
@@ -8383,8 +8464,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={14733.988,17.91,16779.373};
-								angles[]={0,5.4857616,0};
+								position[]={14739.401,17.91,16784.889};
+								angles[]={-0,5.4857616,0};
 							};
 							side="Empty";
 							flags=4;
@@ -8555,9 +8636,79 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item23
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14730.142,17.91,16774.736};
+								angles[]={-0,5.4857616,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,5,false,{},1,1,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=603;
+							type="Land_HelipadCircle_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item24
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={14669.827,17.91,16643.867};
+								angles[]={-0,5.4857616,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="0 = [this,5,false,{},1,1,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+								disableSimulation=1;
+							};
+							id=605;
+							type="Land_HelipadCircle_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=328;
-					atlOffset=0.071596146;
+					atlOffset=0.0102005;
 				};
 				class Item7
 				{
@@ -8801,7 +8952,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="0 = [this,10,false,{},50,100,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+						init="0 = [this,10,false,{},50,100,-1,false,3,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 						disableSimulation=1;
 					};
 					id=377;
@@ -9105,7 +9256,7 @@ class Mission
 				};
 			};
 			id=306;
-			atlOffset=-0.01965332;
+			atlOffset=-0.02041626;
 		};
 		class Item110
 		{
@@ -13216,18 +13367,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15085.467,19.596216,17231.047};
+				position[]={15085.467,19.596214,17231.047};
 				angles[]={0,2.3205025,6.282208};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="0 = [this,10,false,{},15,15,-1,false,4,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
 				disableSimulation=1;
 			};
 			id=575;
 			type="C_Plane_Civil_01_racing_F";
-			atlOffset=0.00029754639;
+			atlOffset=0.00029563904;
 		};
 		class Item217
 		{
@@ -13416,8 +13568,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15106.741,19.596214,17254.252};
-				angles[]={0,2.3205025,6.282208};
+				position[]={15106.741,19.596128,17254.252};
+				angles[]={-0,2.3205025,6.2822089};
 			};
 			side="Empty";
 			flags=4;
@@ -13428,7 +13580,6 @@ class Mission
 			};
 			id=576;
 			type="C_Plane_Civil_01_racing_F";
-			atlOffset=8.5830688e-05;
 		};
 		class Item229
 		{
@@ -13455,6 +13606,207 @@ class Mission
 			id=592;
 			type="B_Heli_Transport_03_F";
 			atlOffset=1.9073486e-06;
+		};
+		class Item231
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14889.656,19.546286,16556.061};
+				angles[]={-0,5.7589355,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,5,false,{},10,10,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=594;
+			type="B_Quadbike_01_F";
+		};
+		class Item232
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14879.336,19.537121,16545.623};
+				angles[]={6.2818937,5.3743482,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,5,false,{},10,10,-1,false,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=595;
+			type="B_Quadbike_01_F";
+		};
+		class Item233
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14560.14,17.91,16734.975};
+				angles[]={-0,0.76592028,0};
+			};
+			init="this setvariable [""QS_missionObject_protected"",true];";
+			areaSize[]={10,0,20};
+			areaIsRectangle=1;
+			flags=1;
+			id=596;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item234
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14568.44,19.360123,16730.824};
+				angles[]={-0,0.77241611,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
+			};
+			id=597;
+			type="C_Hatchback_01_sport_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item235
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14565.646,19.506462,16733.82};
+				angles[]={-0,0.76243073,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
+			};
+			id=598;
+			type="C_SUV_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item236
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14562.404,19.655493,16736.822};
+				angles[]={-0,0.75647801,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+				disableSimulation=1;
+			};
+			id=599;
+			type="C_Tractor_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item237
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14559.608,19.767778,16739.695};
+				angles[]={-0,0.76686275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [this,30,false,{},50,250,-1,true,1,0,{TRUE},[],0,{FALSE}] call QS_fnc_registerVehicle;" \n "this setvariable [""QS_missionObject_protected"",true];";
+			};
+			id=600;
+			type="C_Van_01_fuel_F";
 		};
 	};
 };
